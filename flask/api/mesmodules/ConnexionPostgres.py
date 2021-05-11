@@ -337,7 +337,7 @@ class ConnexionPostgres:
 
         record = cursor.fetchall()
         nbre = len(record)
-        print("nbre", nbre)
+        print("nbre de declencheurs: {}".format(nbre))
         # print(self.user,self.password,self.host,self.port,self.database)
         # exit(1)
         return record

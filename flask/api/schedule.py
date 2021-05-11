@@ -230,21 +230,26 @@ def main():
                     }
 
                     destination = Courant+"/" + processus_nom+"/" + rep_destination
-                    Path(destination).mkdir(parents=True, exist_ok=True)
 
-                    # now = datetime.now()
-                    # print(now)
-                    now_str = now.strftime("%Y%m%d_%H%M%S")
-                    # print(now_str)
-                    # print(libelle_req)
+                    try:
+                        Path(destination).mkdir(parents=True, exist_ok=True)
+                        
+                        # now = datetime.now()
+                        # print(now)
+                        now_str = now.strftime("%Y%m%d_%H%M%S")
+                        # print(now_str)
+                        # print(libelle_req)
 
-                    nomfichier = libelle_req+ '_'+now_str+'.'+Extension
-                    nomfichier = str(nomfichier).replace(' ','_')
+                        nomfichier = libelle_req+ '_'+now_str+'.'+Extension
+                        nomfichier = str(nomfichier).replace(' ','_')
 
-                    # df.to_excel(repDestination+"/"+libelle+'.xlsx', sheet_name='Sheet_name_1', engine='xlsxwriter')
-                    # df.to_excel(destination+"/" + libelle + '_'+now_str+'.'+Extension,                                sheet_name=SheetName, engine=Engine)
+                        # df.to_excel(repDestination+"/"+libelle+'.xlsx', sheet_name='Sheet_name_1', engine='xlsxwriter')
+                        # df.to_excel(destination+"/" + libelle + '_'+now_str+'.'+Extension,                                sheet_name=SheetName, engine=Engine)
 
-                    genererFichier(connexion, destination, nomfichier, SheetName, Engine)
+                        genererFichier(connexion, destination, nomfichier, SheetName, Engine)
+                    except OSError as erreur:
+                        print("<= erreur: {}: ".format(erreur))
+
                     
 
 
