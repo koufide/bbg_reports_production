@@ -278,8 +278,8 @@ class ConnexionPostgres:
                 connection.close()
 
     def getAllConnexionsDB(self):
-        # print(__name__)
-        # print("getAllConnexionsDB")
+        print(__name__)
+        print("__getAllConnexionsDB__")
 
         cnx = None
         curseur = None
@@ -327,10 +327,10 @@ class ConnexionPostgres:
         SELECT rd.requete_id, rd.declencheur_id, d.date_exec, d.heure_exec, d.frequence, d.mois, d.jours_du_mois,
             r.libelle libelle_req, r.rep_destination, r.sqlstr,
             c.serveur, c.port, c.basedonnees, c.utidb, c.passdb, c.nom connexion_nom,
-            tc.code typeconnexion_code, tc.libelle typeconnexion_libelle 
-        FROM requete_declencheur rd, declencheur d, requete r, connexion c, type_connexion tc
+            tc.code typeconnexion_code, tc.libelle typeconnexion_libelle , p.nom processus_nom
+        FROM requete_declencheur rd, declencheur d, requete r, connexion c, type_connexion tc, processus p
         WHERE d.id=rd.declencheur_id AND r.id=rd.requete_id AND c.id=r.connexion_id
-            AND tc.id=c.type_connexion_id
+            AND tc.id=c.type_connexion_id AND p.id=r.processus_id
         ORDER BY d.frequence
         """
         cursor.execute(sqlstr)
@@ -338,6 +338,8 @@ class ConnexionPostgres:
         record = cursor.fetchall()
         nbre = len(record)
         print("nbre", nbre)
+        # print(self.user,self.password,self.host,self.port,self.database)
+        # exit(1)
         return record
 
         

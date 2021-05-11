@@ -1074,3 +1074,362 @@
 [Mon May 10 10:45:03.888647 2021] [wsgi:info] [pid 6357] mod_wsgi (pid=6357): Attach interpreter ''.
 [Mon May 10 10:45:04.062472 2021] [wsgi:info] [pid 6358] mod_wsgi (pid=6358): Imported 'mod_wsgi'.
 [Mon May 10 10:45:04.074703 2021] [wsgi:info] [pid 6357] mod_wsgi (pid=6357): Imported 'mod_wsgi'.
+[Tue May 11 16:15:12.571186 2021] [wsgi:info] [pid 13510] mod_wsgi (pid=13510): Attach interpreter ''.
+[Tue May 11 16:15:12.576274 2021] [wsgi:info] [pid 13511] mod_wsgi (pid=13511): Attach interpreter ''.
+[Tue May 11 16:15:12.666028 2021] [wsgi:info] [pid 13511] mod_wsgi (pid=13511): Imported 'mod_wsgi'.
+[Tue May 11 16:15:12.697197 2021] [wsgi:info] [pid 13510] mod_wsgi (pid=13510): Imported 'mod_wsgi'.
+[Tue May 11 16:15:30.831062 2021] [wsgi:info] [pid 13511] mod_wsgi (pid=13511): Create interpreter '192.168.56.220:5000|'.
+[Tue May 11 16:15:30.852012 2021] [wsgi:info] [pid 13511] [remote 192.168.56.1:50181] mod_wsgi (pid=13511, process='flask.koufide.com', application='192.168.56.220:5000|'): Loading Python script file '/var/www/html/bbg-reports/flask/wsgi/flask.wsgi'.
+[Tue May 11 16:15:30.852263 2021] [wsgi:error] [pid 13511] KF PREF : '/usr' 
+[Tue May 11 16:15:30.852278 2021] [wsgi:error] [pid 13511] KF PATH : ['/var/www/html/bbg-reports/flask/api', '/var/www/html/bbg-reports/flask/venv2', '/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages', '/usr/lib64/python36.zip', '/usr/lib64/python3.6', '/usr/lib64/python3.6/lib-dynload', '/home/iexploit/.local/lib/python3.6/site-packages', '/usr/local/lib64/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages', '/usr/lib64/python3.6/site-packages', '/usr/lib/python3.6/site-packages']  
+[Tue May 11 16:15:30.852297 2021] [wsgi:error] [pid 13511] PYTHONPATH: None
+[Tue May 11 16:15:30.852310 2021] [wsgi:error] [pid 13511] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+[Tue May 11 16:15:31.170044 2021] [wsgi:error] [pid 13511] __ConnexionSqlServer__
+[Tue May 11 16:15:31.770896 2021] [wsgi:error] [pid 13511] listorigins: ["http://192.168.56.220:4200","http://192.168.56.220","http://192.168.56.1"]
+[Tue May 11 16:15:31.796183 2021] [wsgi:info] [pid 13510] mod_wsgi (pid=13510): Create interpreter '192.168.56.220:5000|'.
+[Tue May 11 16:15:31.816812 2021] [wsgi:info] [pid 13510] [remote 192.168.56.1:50181] mod_wsgi (pid=13510, process='flask.koufide.com', application='192.168.56.220:5000|'): Loading Python script file '/var/www/html/bbg-reports/flask/wsgi/flask.wsgi'.
+[Tue May 11 16:15:31.817057 2021] [wsgi:error] [pid 13510] KF PREF : '/usr' 
+[Tue May 11 16:15:31.817072 2021] [wsgi:error] [pid 13510] KF PATH : ['/var/www/html/bbg-reports/flask/api', '/var/www/html/bbg-reports/flask/venv2', '/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages', '/usr/lib64/python36.zip', '/usr/lib64/python3.6', '/usr/lib64/python3.6/lib-dynload', '/home/iexploit/.local/lib/python3.6/site-packages', '/usr/local/lib64/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages', '/usr/lib64/python3.6/site-packages', '/usr/lib/python3.6/site-packages']  
+[Tue May 11 16:15:31.817090 2021] [wsgi:error] [pid 13510] PYTHONPATH: None
+[Tue May 11 16:15:31.817173 2021] [wsgi:error] [pid 13510] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+[Tue May 11 16:15:32.131738 2021] [wsgi:error] [pid 13510] __ConnexionSqlServer__
+[Tue May 11 16:15:32.603646 2021] [wsgi:error] [pid 13510] listorigins: ["http://192.168.56.220:4200","http://192.168.56.220","http://192.168.56.1"]
+[Tue May 11 16:15:32.610698 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] __testrequete___
+[Tue May 11 16:15:32.611201 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] testrequete data: {'port': '1521', 'processus': 'CONTROLE', 'code': 'CNX_ORACLE', 'libelle': 'decantonnement', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'sqlstr': "SELECT cli.nom nom_client,\\n       c.client,\\n       c.nom,\\n       c.ncg,\\n       m.*\\n  FROM CGB.mvtc m, cgb.cpt c, cgb.cli\\n WHERE    \\n c.ncg = '272520' AND\\n        c.compte = m.compte\\n      AND m.datoper BETWEEN '01/01/2021' AND '16/04/2021'\\n       AND cli.client = c.client\\n", 'repDestination': 'MENSUEL - DECANTONEMENT', 'nom': 'CONNEXION  ORACLE PROD', 'serveur': '192.168.2.204', 'utidb': 'bbgquery', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/requetes/636'}, 'requete': {'href': 'http://192.168.56.220:8085/api/requetes/636{?projection}', 'templated': True}, 'processus': {'href': 'http://192.168.56.220:8085/api/requetes/636/processus'}, 'requeteUtilisateurs': {'href': 'http://192.168.56.220:8085/api/requetes/636/requeteUtilisateurs{?projection}', 'templated': True}, 'connexion': {'href': 'http://192.168.56.220:8085/api/requetes/636/connexion{?projection}', 'templated': True}, 'requeteDeclencheurs': {'href': 'http://192.168.56.220:8085/api/requetes/636/requeteDeclencheurs'}}}
+[Tue May 11 16:15:32.611212 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] __testerLaConnexion__3__
+[Tue May 11 16:15:32.611219 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] code: CNX_ORACLE
+[Tue May 11 16:15:32.611225 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] nom: CONNEXION  ORACLE PROD
+[Tue May 11 16:15:32.611230 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] serveur: 192.168.2.204
+[Tue May 11 16:15:32.611235 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] port: 1521
+[Tue May 11 16:15:32.611241 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] utidb: bbgquery
+[Tue May 11 16:15:32.611246 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] basedonnees: EXP
+[Tue May 11 16:15:32.611255 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] mesmodules.ConnexionOracle
+[Tue May 11 16:15:32.611269 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 16:15:32.703193 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] __res__ {'connexion': 'OK'}
+[Tue May 11 16:15:32.703257 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] testrequete res:: {'connexion': 'OK'}
+[Tue May 11 16:15:32.703266 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] mesmodules.MesFonctions
+[Tue May 11 16:15:32.703272 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] __testerLaRequete2__
+[Tue May 11 16:15:32.703310 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Tue May 11 16:15:32.703317 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] __testerLaRequete2__ , sqlstr : SELECT cli.nom nom_client,
+[Tue May 11 16:15:32.703319 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181]        c.client,
+[Tue May 11 16:15:32.703321 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181]        c.nom,
+[Tue May 11 16:15:32.703322 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181]        c.ncg,
+[Tue May 11 16:15:32.703324 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181]        m.*
+[Tue May 11 16:15:32.703325 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181]   FROM CGB.mvtc m, cgb.cpt c, cgb.cli
+[Tue May 11 16:15:32.703327 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181]  WHERE    
+[Tue May 11 16:15:32.703334 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181]  c.ncg = '272520' AND
+[Tue May 11 16:15:32.703336 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181]         c.compte = m.compte
+[Tue May 11 16:15:32.703338 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181]       AND m.datoper BETWEEN '01/01/2021' AND '16/04/2021'
+[Tue May 11 16:15:32.703340 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181]        AND cli.client = c.client
+[Tue May 11 16:15:32.703344 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] 
+[Tue May 11 16:15:32.703353 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] mesmodules.ConnexionOracle
+[Tue May 11 16:15:32.703367 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50181] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 16:16:31.049250 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] __testrequete___
+[Tue May 11 16:16:31.049540 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] testrequete data: {'port': '1521', 'serveur': '192.168.2.204', 'sqlstr': 'select count(*) from pers', 'repDestination': 'QUOTIDIEN - ETAT DES HABILITATIONS SGB', 'libelle': 'habilitations cgb', 'nom': 'CONNEXION  ORACLE PROD', 'utidb': 'bbgquery', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'code': 'CNX_ORACLE'}
+[Tue May 11 16:16:31.049550 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] __testerLaConnexion__3__
+[Tue May 11 16:16:31.049557 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] code: CNX_ORACLE
+[Tue May 11 16:16:31.049563 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] nom: CONNEXION  ORACLE PROD
+[Tue May 11 16:16:31.049568 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] serveur: 192.168.2.204
+[Tue May 11 16:16:31.049576 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] port: 1521
+[Tue May 11 16:16:31.049581 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] utidb: bbgquery
+[Tue May 11 16:16:31.049587 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] basedonnees: EXP
+[Tue May 11 16:16:31.049595 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] mesmodules.ConnexionOracle
+[Tue May 11 16:16:31.049610 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 16:16:31.111199 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] __res__ {'connexion': 'OK'}
+[Tue May 11 16:16:31.111299 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] testrequete res:: {'connexion': 'OK'}
+[Tue May 11 16:16:31.111335 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] mesmodules.MesFonctions
+[Tue May 11 16:16:31.111359 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] __testerLaRequete2__
+[Tue May 11 16:16:31.111642 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Tue May 11 16:16:31.111694 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] __testerLaRequete2__ , sqlstr : select count(*) from pers
+[Tue May 11 16:16:31.111736 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] mesmodules.ConnexionOracle
+[Tue May 11 16:16:31.111802 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50329] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 16:17:45.189866 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] app
+[Tue May 11 16:17:45.189931 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] createxmlfile
+[Tue May 11 16:17:45.190547 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 16:17:45.190583 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 16:17:45.190609 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Tue May 11 16:17:45.190618 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] contructeur __init__
+[Tue May 11 16:17:45.190623 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] mesmodules.ConnexionPostgres
+[Tue May 11 16:17:45.197313 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+[Tue May 11 16:17:45.197333 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] 
+[Tue May 11 16:17:45.197343 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+[Tue May 11 16:17:45.197383 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] testconnexion res: {'connexion': 'OK'}
+[Tue May 11 16:17:45.197393 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] contructeur __init__
+[Tue May 11 16:17:45.197399 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] mesmodules.ConnexionPostgres
+[Tue May 11 16:17:45.215139 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:50499] 1
+[Tue May 11 16:17:57.497063 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] __testrequete___
+[Tue May 11 16:17:57.497598 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] testrequete data: {'port': '1521', 'processus': 'ORGANISATION', 'code': 'CNX_ORACLE', 'libelle': 'habilitations cgb', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'sqlstr': 'select count(*) from pers', 'repDestination': 'QUOTIDIEN - ETAT DES HABILITATIONS SGB', 'nom': 'CONNEXION  ORACLE PROD', 'serveur': '192.168.2.204', 'utidb': 'bbgquery', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/requetes/2892'}, 'requete': {'href': 'http://192.168.56.220:8085/api/requetes/2892{?projection}', 'templated': True}, 'processus': {'href': 'http://192.168.56.220:8085/api/requetes/2892/processus'}, 'requeteUtilisateurs': {'href': 'http://192.168.56.220:8085/api/requetes/2892/requeteUtilisateurs{?projection}', 'templated': True}, 'connexion': {'href': 'http://192.168.56.220:8085/api/requetes/2892/connexion{?projection}', 'templated': True}, 'requeteDeclencheurs': {'href': 'http://192.168.56.220:8085/api/requetes/2892/requeteDeclencheurs'}}}
+[Tue May 11 16:17:57.497612 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] __testerLaConnexion__3__
+[Tue May 11 16:17:57.497620 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] code: CNX_ORACLE
+[Tue May 11 16:17:57.497626 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] nom: CONNEXION  ORACLE PROD
+[Tue May 11 16:17:57.497631 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] serveur: 192.168.2.204
+[Tue May 11 16:17:57.497636 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] port: 1521
+[Tue May 11 16:17:57.497641 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] utidb: bbgquery
+[Tue May 11 16:17:57.497647 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] basedonnees: EXP
+[Tue May 11 16:17:57.497657 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] mesmodules.ConnexionOracle
+[Tue May 11 16:17:57.497673 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 16:17:57.609754 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] __res__ {'connexion': 'OK'}
+[Tue May 11 16:17:57.609887 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] testrequete res:: {'connexion': 'OK'}
+[Tue May 11 16:17:57.609904 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] mesmodules.MesFonctions
+[Tue May 11 16:17:57.609910 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] __testerLaRequete2__
+[Tue May 11 16:17:57.609982 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Tue May 11 16:17:57.609993 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] __testerLaRequete2__ , sqlstr : select count(*) from pers
+[Tue May 11 16:17:57.610003 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] mesmodules.ConnexionOracle
+[Tue May 11 16:17:57.610017 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:50527] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 17:04:36.471006 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] __testrequete___
+[Tue May 11 17:04:36.471354 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] testrequete data: {'port': '1521', 'serveur': '192.168.2.204', 'sqlstr': 'select * from mvtd', 'repDestination': 'QUOTIDIEN - MVTD', 'libelle': 'mvts disponible', 'nom': 'CONNEXION  ORACLE PROD', 'utidb': 'bbgquery', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'code': 'CNX_ORACLE'}
+[Tue May 11 17:04:36.471368 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] __testerLaConnexion__3__
+[Tue May 11 17:04:36.471376 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] code: CNX_ORACLE
+[Tue May 11 17:04:36.471381 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] nom: CONNEXION  ORACLE PROD
+[Tue May 11 17:04:36.471387 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] serveur: 192.168.2.204
+[Tue May 11 17:04:36.471392 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] port: 1521
+[Tue May 11 17:04:36.471397 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] utidb: bbgquery
+[Tue May 11 17:04:36.471402 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] basedonnees: EXP
+[Tue May 11 17:04:36.471413 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] mesmodules.ConnexionOracle
+[Tue May 11 17:04:36.471428 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 17:04:36.572945 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] __res__ {'connexion': 'OK'}
+[Tue May 11 17:04:36.572980 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] testrequete res:: {'connexion': 'OK'}
+[Tue May 11 17:04:36.572990 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] mesmodules.MesFonctions
+[Tue May 11 17:04:36.572995 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] __testerLaRequete2__
+[Tue May 11 17:04:36.573048 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Tue May 11 17:04:36.573057 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] __testerLaRequete2__ , sqlstr : select * from mvtd
+[Tue May 11 17:04:36.573067 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] mesmodules.ConnexionOracle
+[Tue May 11 17:04:36.573080 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54001] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 17:04:55.577520 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] __testrequete___
+[Tue May 11 17:04:55.577909 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] testrequete data: {'port': '1521', 'serveur': '192.168.2.204', 'sqlstr': 'select count(*) from mvtd', 'repDestination': 'QUOTIDIEN - MVTD', 'libelle': 'mvts disponible', 'nom': 'CONNEXION  ORACLE PROD', 'utidb': 'bbgquery', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'code': 'CNX_ORACLE'}
+[Tue May 11 17:04:55.577922 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] __testerLaConnexion__3__
+[Tue May 11 17:04:55.577932 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] code: CNX_ORACLE
+[Tue May 11 17:04:55.577945 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] nom: CONNEXION  ORACLE PROD
+[Tue May 11 17:04:55.577964 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] serveur: 192.168.2.204
+[Tue May 11 17:04:55.577978 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] port: 1521
+[Tue May 11 17:04:55.577986 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] utidb: bbgquery
+[Tue May 11 17:04:55.577991 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] basedonnees: EXP
+[Tue May 11 17:04:55.578006 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] mesmodules.ConnexionOracle
+[Tue May 11 17:04:55.578026 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 17:04:55.660552 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] __res__ {'connexion': 'OK'}
+[Tue May 11 17:04:55.660670 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] testrequete res:: {'connexion': 'OK'}
+[Tue May 11 17:04:55.660682 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] mesmodules.MesFonctions
+[Tue May 11 17:04:55.660687 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] __testerLaRequete2__
+[Tue May 11 17:04:55.660736 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Tue May 11 17:04:55.660748 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] __testerLaRequete2__ , sqlstr : select count(*) from mvtd
+[Tue May 11 17:04:55.660759 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] mesmodules.ConnexionOracle
+[Tue May 11 17:04:55.660780 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54017] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 17:06:01.477166 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] app
+[Tue May 11 17:06:01.477202 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] createxmlfile
+[Tue May 11 17:06:01.477651 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 17:06:01.477688 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 17:06:01.477707 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Tue May 11 17:06:01.477716 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] contructeur __init__
+[Tue May 11 17:06:01.477721 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] mesmodules.ConnexionPostgres
+[Tue May 11 17:06:01.487488 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+[Tue May 11 17:06:01.487534 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] 
+[Tue May 11 17:06:01.487553 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+[Tue May 11 17:06:01.487611 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] testconnexion res: {'connexion': 'OK'}
+[Tue May 11 17:06:01.487628 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] contructeur __init__
+[Tue May 11 17:06:01.487640 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] mesmodules.ConnexionPostgres
+[Tue May 11 17:06:01.513185 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54074] 2
+[Tue May 11 17:07:00.858089 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] app
+[Tue May 11 17:07:00.858115 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] createxmlfile
+[Tue May 11 17:07:00.858475 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 17:07:00.858508 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 17:07:00.858526 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Tue May 11 17:07:00.858536 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] contructeur __init__
+[Tue May 11 17:07:00.858541 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] mesmodules.ConnexionPostgres
+[Tue May 11 17:07:00.864602 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+[Tue May 11 17:07:00.864616 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] 
+[Tue May 11 17:07:00.864626 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+[Tue May 11 17:07:00.864661 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] testconnexion res: {'connexion': 'OK'}
+[Tue May 11 17:07:00.864670 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] contructeur __init__
+[Tue May 11 17:07:00.864675 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] mesmodules.ConnexionPostgres
+[Tue May 11 17:07:00.878131 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54134] 2
+[Tue May 11 17:07:42.399228 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] __testrequete___
+[Tue May 11 17:07:42.399517 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] testrequete data: {'port': '1521', 'serveur': '192.168.2.204', 'sqlstr': 'SElect count(*) from mvtd', 'repDestination': 'MENSUEL - MVTD', 'libelle': 'mvtds', 'nom': 'CONNEXION  ORACLE PROD', 'utidb': 'bbgquery', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'code': 'CNX_ORACLE'}
+[Tue May 11 17:07:42.399528 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] __testerLaConnexion__3__
+[Tue May 11 17:07:42.399535 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] code: CNX_ORACLE
+[Tue May 11 17:07:42.399541 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] nom: CONNEXION  ORACLE PROD
+[Tue May 11 17:07:42.399546 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] serveur: 192.168.2.204
+[Tue May 11 17:07:42.399552 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] port: 1521
+[Tue May 11 17:07:42.399557 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] utidb: bbgquery
+[Tue May 11 17:07:42.399562 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] basedonnees: EXP
+[Tue May 11 17:07:42.399571 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] mesmodules.ConnexionOracle
+[Tue May 11 17:07:42.399585 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 17:07:42.471951 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] __res__ {'connexion': 'OK'}
+[Tue May 11 17:07:42.471984 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] testrequete res:: {'connexion': 'OK'}
+[Tue May 11 17:07:42.471993 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] mesmodules.MesFonctions
+[Tue May 11 17:07:42.471998 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] __testerLaRequete2__
+[Tue May 11 17:07:42.472030 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Tue May 11 17:07:42.472037 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] __testerLaRequete2__ , sqlstr : SElect count(*) from mvtd
+[Tue May 11 17:07:42.472046 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] mesmodules.ConnexionOracle
+[Tue May 11 17:07:42.472060 2021] [wsgi:error] [pid 13510] [remote 192.168.56.1:54174] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 17:08:19.224670 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] app
+[Tue May 11 17:08:19.224699 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] createxmlfile
+[Tue May 11 17:08:19.225232 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 17:08:19.225279 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 17:08:19.225298 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Tue May 11 17:08:19.225306 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] contructeur __init__
+[Tue May 11 17:08:19.225312 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] mesmodules.ConnexionPostgres
+[Tue May 11 17:08:19.232830 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+[Tue May 11 17:08:19.232853 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] 
+[Tue May 11 17:08:19.232867 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+[Tue May 11 17:08:19.232912 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] testconnexion res: {'connexion': 'OK'}
+[Tue May 11 17:08:19.232922 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] contructeur __init__
+[Tue May 11 17:08:19.232927 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] mesmodules.ConnexionPostgres
+[Tue May 11 17:08:19.255819 2021] [wsgi:error] [pid 13511] [remote 192.168.56.1:54205] 2
+[Tue May 11 17:17:52.657478 2021] [wsgi:info] [pid 13511] mod_wsgi (pid=13511): Shutdown requested 'flask.koufide.com'.
+[Tue May 11 17:17:52.657638 2021] [wsgi:info] [pid 13511] mod_wsgi (pid=13511): Stopping process 'flask.koufide.com'.
+[Tue May 11 17:17:52.657642 2021] [wsgi:info] [pid 13511] mod_wsgi (pid=13511): Destroying interpreters.
+[Tue May 11 17:17:52.657647 2021] [wsgi:info] [pid 13511] mod_wsgi (pid=13511): Destroy interpreter '192.168.56.220:5000|'.
+[Tue May 11 17:17:52.657761 2021] [wsgi:info] [pid 13511] mod_wsgi (pid=13511): End interpreter '192.168.56.220:5000|'.
+[Tue May 11 17:17:52.660970 2021] [wsgi:info] [pid 13510] mod_wsgi (pid=13510): Shutdown requested 'flask.koufide.com'.
+[Tue May 11 17:17:52.661095 2021] [wsgi:info] [pid 13510] mod_wsgi (pid=13510): Stopping process 'flask.koufide.com'.
+[Tue May 11 17:17:52.661099 2021] [wsgi:info] [pid 13510] mod_wsgi (pid=13510): Destroying interpreters.
+[Tue May 11 17:17:52.661104 2021] [wsgi:info] [pid 13510] mod_wsgi (pid=13510): Destroy interpreter '192.168.56.220:5000|'.
+[Tue May 11 17:17:52.661197 2021] [wsgi:info] [pid 13510] mod_wsgi (pid=13510): End interpreter '192.168.56.220:5000|'.
+[Tue May 11 17:17:52.918199 2021] [wsgi:info] [pid 13510] mod_wsgi (pid=13510): Cleanup interpreter ''.
+[Tue May 11 17:17:52.922000 2021] [wsgi:info] [pid 13511] mod_wsgi (pid=13511): Cleanup interpreter ''.
+[Tue May 11 17:17:52.937008 2021] [wsgi:info] [pid 13510] mod_wsgi (pid=13510): Terminating Python.
+[Tue May 11 17:17:52.940731 2021] [wsgi:info] [pid 13511] mod_wsgi (pid=13511): Terminating Python.
+[Tue May 11 17:17:53.014111 2021] [wsgi:info] [pid 13511] mod_wsgi (pid=13511): Python has shutdown.
+[Tue May 11 17:17:53.014140 2021] [wsgi:info] [pid 13511] mod_wsgi (pid=13511): Exiting process 'flask.koufide.com'.
+[Tue May 11 17:17:53.026171 2021] [wsgi:info] [pid 13510] mod_wsgi (pid=13510): Python has shutdown.
+[Tue May 11 17:17:53.026197 2021] [wsgi:info] [pid 13510] mod_wsgi (pid=13510): Exiting process 'flask.koufide.com'.
+[Tue May 11 17:17:55.461195 2021] [wsgi:info] [pid 14745] mod_wsgi (pid=14745): Attach interpreter ''.
+[Tue May 11 17:17:55.487078 2021] [wsgi:info] [pid 14744] mod_wsgi (pid=14744): Attach interpreter ''.
+[Tue May 11 17:17:55.589819 2021] [wsgi:info] [pid 14745] mod_wsgi (pid=14745): Imported 'mod_wsgi'.
+[Tue May 11 17:17:55.605097 2021] [wsgi:info] [pid 14744] mod_wsgi (pid=14744): Imported 'mod_wsgi'.
+[Tue May 11 17:20:04.042885 2021] [wsgi:info] [pid 14744] mod_wsgi (pid=14744): Create interpreter '192.168.56.220:5000|'.
+[Tue May 11 17:20:04.063889 2021] [wsgi:info] [pid 14744] [remote 192.168.56.1:54865] mod_wsgi (pid=14744, process='flask.koufide.com', application='192.168.56.220:5000|'): Loading Python script file '/var/www/html/bbg-reports/flask/wsgi/flask.wsgi'.
+[Tue May 11 17:20:04.064198 2021] [wsgi:error] [pid 14744] KF PREF : '/usr' 
+[Tue May 11 17:20:04.064218 2021] [wsgi:error] [pid 14744] KF PATH : ['/var/www/html/bbg-reports/flask/api', '/var/www/html/bbg-reports/flask/venv2', '/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages', '/usr/lib64/python36.zip', '/usr/lib64/python3.6', '/usr/lib64/python3.6/lib-dynload', '/home/iexploit/.local/lib/python3.6/site-packages', '/usr/local/lib64/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages', '/usr/lib64/python3.6/site-packages', '/usr/lib/python3.6/site-packages']  
+[Tue May 11 17:20:04.064238 2021] [wsgi:error] [pid 14744] PYTHONPATH: None
+[Tue May 11 17:20:04.064251 2021] [wsgi:error] [pid 14744] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+[Tue May 11 17:20:04.519008 2021] [wsgi:error] [pid 14744] __ConnexionSqlServer__
+[Tue May 11 17:20:06.103100 2021] [wsgi:error] [pid 14744] listorigins: ["http://192.168.56.220:4200","http://192.168.56.220","http://192.168.56.1"]
+[Tue May 11 17:20:06.129339 2021] [wsgi:info] [pid 14745] mod_wsgi (pid=14745): Create interpreter '192.168.56.220:5000|'.
+[Tue May 11 17:20:06.150093 2021] [wsgi:info] [pid 14745] [remote 192.168.56.1:54865] mod_wsgi (pid=14745, process='flask.koufide.com', application='192.168.56.220:5000|'): Loading Python script file '/var/www/html/bbg-reports/flask/wsgi/flask.wsgi'.
+[Tue May 11 17:20:06.150341 2021] [wsgi:error] [pid 14745] KF PREF : '/usr' 
+[Tue May 11 17:20:06.150357 2021] [wsgi:error] [pid 14745] KF PATH : ['/var/www/html/bbg-reports/flask/api', '/var/www/html/bbg-reports/flask/venv2', '/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages', '/usr/lib64/python36.zip', '/usr/lib64/python3.6', '/usr/lib64/python3.6/lib-dynload', '/home/iexploit/.local/lib/python3.6/site-packages', '/usr/local/lib64/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages', '/usr/lib64/python3.6/site-packages', '/usr/lib/python3.6/site-packages']  
+[Tue May 11 17:20:06.150383 2021] [wsgi:error] [pid 14745] PYTHONPATH: None
+[Tue May 11 17:20:06.150396 2021] [wsgi:error] [pid 14745] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+[Tue May 11 17:20:06.467813 2021] [wsgi:error] [pid 14745] __ConnexionSqlServer__
+[Tue May 11 17:20:06.942455 2021] [wsgi:error] [pid 14745] listorigins: ["http://192.168.56.220:4200","http://192.168.56.220","http://192.168.56.1"]
+[Tue May 11 17:20:06.949429 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] __testrequete___
+[Tue May 11 17:20:06.949717 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] testrequete data: {'port': '1521', 'serveur': '192.168.2.204', 'sqlstr': 'select count(*) from mvtc', 'repDestination': 'MENSUEL - MVTC', 'libelle': 'etat des mvtc', 'nom': 'CONNEXION  ORACLE PROD', 'utidb': 'bbgquery', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'code': 'CNX_ORACLE'}
+[Tue May 11 17:20:06.949726 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] __testerLaConnexion__3__
+[Tue May 11 17:20:06.949734 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] code: CNX_ORACLE
+[Tue May 11 17:20:06.949740 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] nom: CONNEXION  ORACLE PROD
+[Tue May 11 17:20:06.949745 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] serveur: 192.168.2.204
+[Tue May 11 17:20:06.949750 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] port: 1521
+[Tue May 11 17:20:06.949756 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] utidb: bbgquery
+[Tue May 11 17:20:06.949785 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] basedonnees: EXP
+[Tue May 11 17:20:06.949802 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] mesmodules.ConnexionOracle
+[Tue May 11 17:20:06.949816 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 17:20:07.823261 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] __res__ {'connexion': 'OK'}
+[Tue May 11 17:20:07.823299 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] testrequete res:: {'connexion': 'OK'}
+[Tue May 11 17:20:07.823309 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] mesmodules.MesFonctions
+[Tue May 11 17:20:07.823315 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] __testerLaRequete2__
+[Tue May 11 17:20:07.823437 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Tue May 11 17:20:07.823446 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] __testerLaRequete2__ , sqlstr : select count(*) from mvtc
+[Tue May 11 17:20:07.823457 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] mesmodules.ConnexionOracle
+[Tue May 11 17:20:07.823471 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54865] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 17:20:50.467835 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] app
+[Tue May 11 17:20:50.467864 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] createxmlfile
+[Tue May 11 17:20:50.468250 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 17:20:50.468285 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 17:20:50.468309 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Tue May 11 17:20:50.468318 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] contructeur __init__
+[Tue May 11 17:20:50.468325 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] mesmodules.ConnexionPostgres
+[Tue May 11 17:20:50.496039 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+[Tue May 11 17:20:50.496059 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] 
+[Tue May 11 17:20:50.496070 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+[Tue May 11 17:20:50.496108 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] testconnexion res: {'connexion': 'OK'}
+[Tue May 11 17:20:50.496116 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] contructeur __init__
+[Tue May 11 17:20:50.496121 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] mesmodules.ConnexionPostgres
+[Tue May 11 17:20:50.526994 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:54912] 2
+[Tue May 11 17:26:38.528354 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] __testrequete___
+[Tue May 11 17:26:38.528786 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] testrequete data: {'port': '1521', 'serveur': '192.168.2.204', 'sqlstr': 'select count(*) from cpt', 'repDestination': 'MENSUEL - ETAT DES COMPTES', 'libelle': 'etat des comptes', 'nom': 'CONNEXION  ORACLE PROD', 'utidb': 'bbgquery', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'code': 'CNX_ORACLE'}
+[Tue May 11 17:26:38.528798 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] __testerLaConnexion__3__
+[Tue May 11 17:26:38.528806 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] code: CNX_ORACLE
+[Tue May 11 17:26:38.528812 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] nom: CONNEXION  ORACLE PROD
+[Tue May 11 17:26:38.528818 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] serveur: 192.168.2.204
+[Tue May 11 17:26:38.528831 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] port: 1521
+[Tue May 11 17:26:38.528840 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] utidb: bbgquery
+[Tue May 11 17:26:38.528845 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] basedonnees: EXP
+[Tue May 11 17:26:38.528861 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] mesmodules.ConnexionOracle
+[Tue May 11 17:26:38.528887 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 17:26:38.613625 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] __res__ {'connexion': 'OK'}
+[Tue May 11 17:26:38.613731 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] testrequete res:: {'connexion': 'OK'}
+[Tue May 11 17:26:38.613752 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] mesmodules.MesFonctions
+[Tue May 11 17:26:38.613764 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] __testerLaRequete2__
+[Tue May 11 17:26:38.613848 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Tue May 11 17:26:38.613879 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] __testerLaRequete2__ , sqlstr : select count(*) from cpt
+[Tue May 11 17:26:38.613916 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] mesmodules.ConnexionOracle
+[Tue May 11 17:26:38.613932 2021] [wsgi:error] [pid 14745] [remote 192.168.56.1:55299] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Tue May 11 17:27:12.368346 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] app
+[Tue May 11 17:27:12.368380 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] createxmlfile
+[Tue May 11 17:27:12.368765 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 17:27:12.368794 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 17:27:12.368812 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Tue May 11 17:27:12.368821 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] contructeur __init__
+[Tue May 11 17:27:12.368828 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] mesmodules.ConnexionPostgres
+[Tue May 11 17:27:12.376074 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+[Tue May 11 17:27:12.376170 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] 
+[Tue May 11 17:27:12.376186 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+[Tue May 11 17:27:12.376243 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] testconnexion res: {'connexion': 'OK'}
+[Tue May 11 17:27:12.376253 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] contructeur __init__
+[Tue May 11 17:27:12.376258 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] mesmodules.ConnexionPostgres
+[Tue May 11 17:27:12.421574 2021] [wsgi:error] [pid 14744] [remote 192.168.56.1:55339] 2
+[Tue May 11 17:39:19.403385 2021] [wsgi:info] [pid 14745] mod_wsgi (pid=14745): Shutdown requested 'flask.koufide.com'.
+[Tue May 11 17:39:19.403552 2021] [wsgi:info] [pid 14745] mod_wsgi (pid=14745): Stopping process 'flask.koufide.com'.
+[Tue May 11 17:39:19.403557 2021] [wsgi:info] [pid 14745] mod_wsgi (pid=14745): Destroying interpreters.
+[Tue May 11 17:39:19.403563 2021] [wsgi:info] [pid 14745] mod_wsgi (pid=14745): Destroy interpreter '192.168.56.220:5000|'.
+[Tue May 11 17:39:19.403661 2021] [wsgi:info] [pid 14745] mod_wsgi (pid=14745): End interpreter '192.168.56.220:5000|'.
+[Tue May 11 17:39:19.409014 2021] [wsgi:info] [pid 14744] mod_wsgi (pid=14744): Shutdown requested 'flask.koufide.com'.
+[Tue May 11 17:39:19.409198 2021] [wsgi:info] [pid 14744] mod_wsgi (pid=14744): Stopping process 'flask.koufide.com'.
+[Tue May 11 17:39:19.409203 2021] [wsgi:info] [pid 14744] mod_wsgi (pid=14744): Destroying interpreters.
+[Tue May 11 17:39:19.409209 2021] [wsgi:info] [pid 14744] mod_wsgi (pid=14744): Destroy interpreter '192.168.56.220:5000|'.
+[Tue May 11 17:39:19.409297 2021] [wsgi:info] [pid 14744] mod_wsgi (pid=14744): End interpreter '192.168.56.220:5000|'.
+[Tue May 11 17:39:19.622369 2021] [wsgi:info] [pid 14745] mod_wsgi (pid=14745): Cleanup interpreter ''.
+[Tue May 11 17:39:19.646814 2021] [wsgi:info] [pid 14744] mod_wsgi (pid=14744): Cleanup interpreter ''.
+[Tue May 11 17:39:19.651530 2021] [wsgi:info] [pid 14745] mod_wsgi (pid=14745): Terminating Python.
+[Tue May 11 17:39:19.675802 2021] [wsgi:info] [pid 14744] mod_wsgi (pid=14744): Terminating Python.
+[Tue May 11 17:39:19.731807 2021] [wsgi:info] [pid 14745] mod_wsgi (pid=14745): Python has shutdown.
+[Tue May 11 17:39:19.731831 2021] [wsgi:info] [pid 14745] mod_wsgi (pid=14745): Exiting process 'flask.koufide.com'.
+[Tue May 11 17:39:19.759803 2021] [wsgi:info] [pid 14744] mod_wsgi (pid=14744): Python has shutdown.
+[Tue May 11 17:39:19.759824 2021] [wsgi:info] [pid 14744] mod_wsgi (pid=14744): Exiting process 'flask.koufide.com'.
+[Tue May 11 17:39:20.720103 2021] [wsgi:info] [pid 15249] mod_wsgi (pid=15249): Attach interpreter ''.
+[Tue May 11 17:39:20.723305 2021] [wsgi:info] [pid 15248] mod_wsgi (pid=15248): Attach interpreter ''.
+[Tue May 11 17:39:20.848827 2021] [wsgi:info] [pid 15249] mod_wsgi (pid=15249): Imported 'mod_wsgi'.
+[Tue May 11 17:39:20.885581 2021] [wsgi:info] [pid 15248] mod_wsgi (pid=15248): Imported 'mod_wsgi'.
+[Tue May 11 19:10:37.467881 2021] [wsgi:info] [pid 15249] mod_wsgi (pid=15249): Create interpreter '192.168.56.220:5000|'.
+[Tue May 11 19:10:37.488922 2021] [wsgi:info] [pid 15249] [remote 192.168.56.1:61537] mod_wsgi (pid=15249, process='flask.koufide.com', application='192.168.56.220:5000|'): Loading Python script file '/var/www/html/bbg-reports/flask/wsgi/flask.wsgi'.
+[Tue May 11 19:10:37.489235 2021] [wsgi:error] [pid 15249] KF PREF : '/usr' 
+[Tue May 11 19:10:37.489254 2021] [wsgi:error] [pid 15249] KF PATH : ['/var/www/html/bbg-reports/flask/api', '/var/www/html/bbg-reports/flask/venv2', '/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages', '/usr/lib64/python36.zip', '/usr/lib64/python3.6', '/usr/lib64/python3.6/lib-dynload', '/home/iexploit/.local/lib/python3.6/site-packages', '/usr/local/lib64/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages', '/usr/lib64/python3.6/site-packages', '/usr/lib/python3.6/site-packages']  
+[Tue May 11 19:10:37.489274 2021] [wsgi:error] [pid 15249] PYTHONPATH: None
+[Tue May 11 19:10:37.489287 2021] [wsgi:error] [pid 15249] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+[Tue May 11 19:10:37.818701 2021] [wsgi:error] [pid 15249] __ConnexionSqlServer__
+[Tue May 11 19:10:38.313335 2021] [wsgi:error] [pid 15249] listorigins: ["http://192.168.56.220:4200","http://192.168.56.220","http://192.168.56.1"]
+[Tue May 11 19:10:38.345162 2021] [wsgi:info] [pid 15248] mod_wsgi (pid=15248): Create interpreter '192.168.56.220:5000|'.
+[Tue May 11 19:10:38.366640 2021] [wsgi:info] [pid 15248] [remote 192.168.56.1:61537] mod_wsgi (pid=15248, process='flask.koufide.com', application='192.168.56.220:5000|'): Loading Python script file '/var/www/html/bbg-reports/flask/wsgi/flask.wsgi'.
+[Tue May 11 19:10:38.366904 2021] [wsgi:error] [pid 15248] KF PREF : '/usr' 
+[Tue May 11 19:10:38.366920 2021] [wsgi:error] [pid 15248] KF PATH : ['/var/www/html/bbg-reports/flask/api', '/var/www/html/bbg-reports/flask/venv2', '/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages', '/usr/lib64/python36.zip', '/usr/lib64/python3.6', '/usr/lib64/python3.6/lib-dynload', '/home/iexploit/.local/lib/python3.6/site-packages', '/usr/local/lib64/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages', '/usr/lib64/python3.6/site-packages', '/usr/lib/python3.6/site-packages']  
+[Tue May 11 19:10:38.366940 2021] [wsgi:error] [pid 15248] PYTHONPATH: None
+[Tue May 11 19:10:38.366953 2021] [wsgi:error] [pid 15248] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+[Tue May 11 19:10:38.690190 2021] [wsgi:error] [pid 15248] __ConnexionSqlServer__
+[Tue May 11 19:10:39.240072 2021] [wsgi:error] [pid 15248] listorigins: ["http://192.168.56.220:4200","http://192.168.56.220","http://192.168.56.1"]
+[Tue May 11 19:10:39.247029 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] __testconnection__
+[Tue May 11 19:10:39.247380 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] testconnection data: {'port': '5432', 'code': 'CNX_POSTGRES', 'passdb': 'postgres', 'basedonnees': 'reportsdb', 'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'utidb': 'postgres', 'libelletypeconnexion': 'CONNEXION POSTGRES', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 19:10:39.247417 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] testconnection data: {'port': '5432', 'code': 'CNX_POSTGRES', 'passdb': 'postgres', 'basedonnees': 'reportsdb', 'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'utidb': 'postgres', 'libelletypeconnexion': 'CONNEXION POSTGRES', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Tue May 11 19:10:39.247426 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] __testerLaConnexion__3__
+[Tue May 11 19:10:39.247433 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] code: CNX_POSTGRES
+[Tue May 11 19:10:39.247438 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] serveur: 192.168.56.220
+[Tue May 11 19:10:39.247444 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] port: 5432
+[Tue May 11 19:10:39.247449 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] utidb: postgres
+[Tue May 11 19:10:39.247454 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] basedonnees: reportsdb
+[Tue May 11 19:10:39.247461 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] contructeur __init__
+[Tue May 11 19:10:39.247466 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] mesmodules.ConnexionPostgres
+[Tue May 11 19:10:39.253315 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+[Tue May 11 19:10:39.253328 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] 
+[Tue May 11 19:10:39.253338 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+[Tue May 11 19:10:39.253374 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] __res__ {'connexion': 'OK'}
+[Tue May 11 19:10:39.253385 2021] [wsgi:error] [pid 15248] [remote 192.168.56.1:61537] testconnection res: {'connexion': 'OK'}

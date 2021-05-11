@@ -20,8 +20,12 @@ if this_python < min_version:
 def declencheurMensuel(jour_str, jours_du_mois,  mois_str, mois):
     print(__name__)
     print("__declencheurMensuel__")
+    res = False
+    # print(jour_str, jours_du_mois,  mois_str, mois)
 
     jours_du_moisTab = str(jours_du_mois).split(',')
+
+
 
     # print("\n date_exec: {} - heure_exec: {} - frequence: {} - libelle_req: {} - rep_destination: {} - connexion_nom: {} - mois: {} \n"
     #     .format(date_exec, heure_exec, frequence, libelle_req,rep_destination, connexion_nom, mois ))
@@ -32,6 +36,10 @@ def declencheurMensuel(jour_str, jours_du_mois,  mois_str, mois):
     # print("moisTab: {}".format(moisTab))
     moisTab = (mois).split(',')
     # print(type(moisTab))
+    # print("++++ mois_str: {}".format(moisTab))
+    # print("++++ moisTab: {}".format(moisTab))
+
+    # print("mois_str: {}".format(mois_str))
     # print("moisTab: {}".format(moisTab))
 
     # for m in moisTab:
@@ -47,12 +55,16 @@ def declencheurMensuel(jour_str, jours_du_mois,  mois_str, mois):
     # exit(1)
 
     if mois_str in moisTab:
-        print("=> trouve mois", mois_str)
+        # print("=> trouve mois", mois_str)
 
-        print("jour_str searched: x{}x".format(jour_str))
+        # print("jour_str searched: x{}x".format(jour_str))
+
+        # print("jour_str: {}".format(jour_str))
+        # print("jours_du_moisTab: {}".format(jours_du_moisTab))
 
         if jour_str in jours_du_moisTab:
-            print("=> trouve jour ", jour_str)
+            print("=> trouve => jour ", jour_str)
+            res = True
 
 
 
@@ -65,9 +77,12 @@ def declencheurMensuel(jour_str, jours_du_mois,  mois_str, mois):
         print("=> nontrouve mois ",mois_str)
         # print(":{}:".format(mois_str))
     
+    return res
+    
 
 def main():
     from datetime import datetime
+    from pathlib import Path
     from mesmodules.ConnexionPostgres import ConnexionPostgres
     from mesmodules.MesFonctions import genererFichier
     import configparser
@@ -77,13 +92,28 @@ def main():
     config = configparser.ConfigParser()
     config.read('/var/www/html/bbg-reports/flask/api/mesmodules/config.ini')
 
+    # print(config['Paths']['Courant'])
+    Courant = (config['Paths']['Courant'])
+
+    Archives = (config['Paths']['Archives'])
+
+    Extension = config['Fichiers']['Extension']
+
+    SheetName = config['Fichiers']['SheetName']
+
+    Engine = config['Fichiers']['Engine']
+
+    
+
+
     serveur = config['ConnexionPostgres']['Serveur']
     port = config['ConnexionPostgres']['Port']
     basedonnees = config['ConnexionPostgres']['BaseDonnees']
     utidb = config['ConnexionPostgres']['Username']
     passdb = config['ConnexionPostgres']['Password']
 
-    print(serveur, port, basedonnees, utidb, passdb)
+    # print(serveur, port, basedonnees, utidb, passdb)
+    # exit(1)
 
     cnx = ConnexionPostgres(
         utidb, passdb, serveur, port, basedonnees)
@@ -106,32 +136,32 @@ def main():
             # i += 1
         
         now = datetime.now()
-        print("now: {} ".format(now))
+        # print("now: {} ".format(now))
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-        print("dt_string: {} ".format(dt_string))
+        # print("dt_string: {} ".format(dt_string))
         today_str = now.strftime("%d/%m/%Y")
-        print("today_str: {} ".format(today_str))
+        # print("today_str: {} ".format(today_str))
         # time_str = now.strftime("%H:%M:%S")
         time_str = now.strftime("%H:%M")
-        print("time_str: {} ".format(time_str))
+        # print("time_str: {} ".format(time_str))
         
         jour_str = now.strftime("%d")
-        print("jour_str: {} ".format(jour_str))
+        # print("jour_str: {} ".format(jour_str))
         jour_str = str(int(jour_str))
-        print("jour_str: {} ".format(jour_str))
+        # print("jour_str: {} ".format(jour_str))
 
         mois_str = now.strftime("%m")
         mois_int = int(mois_str)
         mois_str = str(mois_int)
-        print("mois_str: {} ".format(mois_str))
-        print("mois_int: {} ".format(mois_int))
+        # print("mois_str: {} ".format(mois_str))
+        # print("mois_int: {} ".format(mois_int))
 
         annee_str = now.strftime("%Y")
         print("annee_str: {} ".format(annee_str))
         # exit(1)
         
         for i in range(len(record)):
-            # print(record[i]['date_exec'])
+            # print(record[i])
             # print(record[i]['date_exec'])
             # print(record[i][3])
             # print(record[i][4])
@@ -160,12 +190,12 @@ def main():
             utidb = (record[i]['utidb'])
             passdb = (record[i]['passdb'])
             connexion_nom = (record[i]['connexion_nom'])
+            processus_nom = (record[i]['processus_nom'])
             typeconnexion_code = (record[i]['typeconnexion_code'])
             typeconnexion_libelle = (record[i]['typeconnexion_libelle'])
 
             
             
-            # print("\n date_exec: {} - heure_exec: {} - frequence: {} - libelle_req: {} - rep_destination: {} - connexion_nom: {} \n".format(date_exec, heure_exec, frequence, libelle_req,rep_destination, connexion_nom))
 
             # print("heure_exec:",heure_exec)
             # print("frequence:",frequence)
@@ -179,8 +209,11 @@ def main():
 
                 res = False
                 if(frequence=='MENSUEL'):
+                    # print("\n date_exec: {} - heure_exec: {} - frequence: {} - libelle_req: {} - rep_destination: {} - connexion_nom: {} \n".format(date_exec, heure_exec, frequence, libelle_req,rep_destination, connexion_nom))
                     res = declencheurMensuel(jour_str, jours_du_mois,  mois_str, mois)
                 
+                # print("res: {} ".format(res))
+
                 if res == True:
                     connexion = {
                         'code': typeconnexion_code,
@@ -189,10 +222,29 @@ def main():
                         'serveur':serveur,
                         'port': port,
                         'basedonnees': basedonnees,
-                        'sqlstr':sqlstr
+                        'sqlstr':sqlstr,
+                        'processus':processus_nom,
+                        'libelle':libelle_req,
+                        'repDestination': rep_destination
 
                     }
-                    genererFichier(connexion, repertoire, nomfichier)
+
+                    destination = Courant+"/" + processus_nom+"/" + rep_destination
+                    Path(destination).mkdir(parents=True, exist_ok=True)
+
+                    # now = datetime.now()
+                    # print(now)
+                    now_str = now.strftime("%Y%m%d_%H%M%S")
+                    # print(now_str)
+                    # print(libelle_req)
+
+                    nomfichier = libelle_req+ '_'+now_str+'.'+Extension
+                    nomfichier = str(nomfichier).replace(' ','_')
+
+                    # df.to_excel(repDestination+"/"+libelle+'.xlsx', sheet_name='Sheet_name_1', engine='xlsxwriter')
+                    # df.to_excel(destination+"/" + libelle + '_'+now_str+'.'+Extension,                                sheet_name=SheetName, engine=Engine)
+
+                    genererFichier(connexion, destination, nomfichier, SheetName, Engine)
                     
 
 
