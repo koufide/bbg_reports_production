@@ -1615,3 +1615,446 @@
 [Wed May 12 00:12:56.432551 2021] [wsgi:info] [pid 18075] mod_wsgi (pid=18075): Attach interpreter ''.
 [Wed May 12 00:12:56.569061 2021] [wsgi:info] [pid 18076] mod_wsgi (pid=18076): Imported 'mod_wsgi'.
 [Wed May 12 00:12:56.603883 2021] [wsgi:info] [pid 18075] mod_wsgi (pid=18075): Imported 'mod_wsgi'.
+[Thu May 13 17:53:28.841100 2021] [wsgi:info] [pid 1993] mod_wsgi (pid=1993): Attach interpreter ''.
+[Thu May 13 17:53:28.842527 2021] [wsgi:info] [pid 1994] mod_wsgi (pid=1994): Attach interpreter ''.
+[Thu May 13 17:53:29.180054 2021] [wsgi:info] [pid 1994] mod_wsgi (pid=1994): Imported 'mod_wsgi'.
+[Thu May 13 17:53:29.183020 2021] [wsgi:info] [pid 1993] mod_wsgi (pid=1993): Imported 'mod_wsgi'.
+[Thu May 13 19:32:55.499696 2021] [wsgi:info] [pid 1993] mod_wsgi (pid=1993): Create interpreter '192.168.56.220:5000|'.
+[Thu May 13 19:32:55.527347 2021] [wsgi:info] [pid 1993] [remote 192.168.56.1:63904] mod_wsgi (pid=1993, process='flask.koufide.com', application='192.168.56.220:5000|'): Loading Python script file '/var/www/html/bbg-reports/flask/wsgi/flask.wsgi'.
+[Thu May 13 19:32:55.527779 2021] [wsgi:error] [pid 1993] KF PREF : '/usr' 
+[Thu May 13 19:32:55.527812 2021] [wsgi:error] [pid 1993] KF PATH : ['/var/www/html/bbg-reports/flask/api', '/var/www/html/bbg-reports/flask/venv2', '/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages', '/usr/lib64/python36.zip', '/usr/lib64/python3.6', '/usr/lib64/python3.6/lib-dynload', '/home/iexploit/.local/lib/python3.6/site-packages', '/usr/local/lib64/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages', '/usr/lib64/python3.6/site-packages', '/usr/lib/python3.6/site-packages']  
+[Thu May 13 19:32:55.527840 2021] [wsgi:error] [pid 1993] PYTHONPATH: None
+[Thu May 13 19:32:55.527857 2021] [wsgi:error] [pid 1993] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+[Thu May 13 19:32:56.357664 2021] [wsgi:error] [pid 1993] __ConnexionSqlServer__
+[Thu May 13 19:32:57.774553 2021] [wsgi:error] [pid 1993] listorigins: ["http://192.168.56.220:4200","http://192.168.56.220","http://192.168.56.1"]
+[Thu May 13 19:32:57.812226 2021] [wsgi:info] [pid 1994] mod_wsgi (pid=1994): Create interpreter '192.168.56.220:5000|'.
+[Thu May 13 19:32:57.843375 2021] [wsgi:info] [pid 1994] [remote 192.168.56.1:63904] mod_wsgi (pid=1994, process='flask.koufide.com', application='192.168.56.220:5000|'): Loading Python script file '/var/www/html/bbg-reports/flask/wsgi/flask.wsgi'.
+[Thu May 13 19:32:57.843693 2021] [wsgi:error] [pid 1994] KF PREF : '/usr' 
+[Thu May 13 19:32:57.843712 2021] [wsgi:error] [pid 1994] KF PATH : ['/var/www/html/bbg-reports/flask/api', '/var/www/html/bbg-reports/flask/venv2', '/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages', '/usr/lib64/python36.zip', '/usr/lib64/python3.6', '/usr/lib64/python3.6/lib-dynload', '/home/iexploit/.local/lib/python3.6/site-packages', '/usr/local/lib64/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages', '/usr/lib64/python3.6/site-packages', '/usr/lib/python3.6/site-packages']  
+[Thu May 13 19:32:57.843745 2021] [wsgi:error] [pid 1994] PYTHONPATH: None
+[Thu May 13 19:32:57.843761 2021] [wsgi:error] [pid 1994] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+[Thu May 13 19:32:58.286298 2021] [wsgi:error] [pid 1994] __ConnexionSqlServer__
+[Thu May 13 19:32:58.976619 2021] [wsgi:error] [pid 1994] listorigins: ["http://192.168.56.220:4200","http://192.168.56.220","http://192.168.56.1"]
+[Thu May 13 19:32:58.985351 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] __testrequete___
+[Thu May 13 19:32:58.986086 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] testrequete data: {'processus': 'IT TEAM', 'sqlstr': 'SELECT * FROM STATE', 'repDestination': 'MENSUEL - ETAT DE STATE', 'code': 'CNX_ORACLE', 'libelle': 'etat de state', 'nom': 'CONNEXION  ORACLE TEST', 'serveur': '192.168.56.210', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'port': '1521', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/requetes/139'}, 'requete': {'href': 'http://192.168.56.220:8085/api/requetes/139{?projection}', 'templated': True}, 'requeteDeclencheurs': {'href': 'http://192.168.56.220:8085/api/requetes/139/requeteDeclencheurs'}, 'processus': {'href': 'http://192.168.56.220:8085/api/requetes/139/processus'}, 'requeteUtilisateurs': {'href': 'http://192.168.56.220:8085/api/requetes/139/requeteUtilisateurs{?projection}', 'templated': True}, 'connexion': {'href': 'http://192.168.56.220:8085/api/requetes/139/connexion{?projection}', 'templated': True}}}
+[Thu May 13 19:32:58.986104 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] __testerLaConnexion__3__
+[Thu May 13 19:32:58.986113 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] code: CNX_ORACLE
+[Thu May 13 19:32:58.986120 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] serveur: 192.168.56.210
+[Thu May 13 19:32:58.986127 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] port: 1521
+[Thu May 13 19:32:58.986134 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] utidb: hr
+[Thu May 13 19:32:58.986140 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] basedonnees: DB11G
+[Thu May 13 19:32:58.986152 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] mesmodules.ConnexionOracle
+[Thu May 13 19:32:58.986168 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 19:32:59.603885 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] __res__ {'connexion': 'OK'}
+[Thu May 13 19:32:59.603964 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] testrequete res:: {'connexion': 'OK'}
+[Thu May 13 19:32:59.603981 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] mesmodules.MesFonctions
+[Thu May 13 19:32:59.604064 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] __testerLaRequete2__
+[Thu May 13 19:32:59.604087 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Thu May 13 19:32:59.604100 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] __testerLaRequete2__ , sqlstr : SELECT * FROM STATE
+[Thu May 13 19:32:59.604123 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] mesmodules.ConnexionOracle
+[Thu May 13 19:32:59.604149 2021] [wsgi:error] [pid 1994] [remote 192.168.56.1:63904] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 20:38:17.755368 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] __testrequete___
+[Thu May 13 20:38:17.756003 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] testrequete data: {'port': '1521', 'serveur': '192.168.56.210', 'sqlstr': 'select * from countries', 'repDestination': 'MENSUEL - ETAT DES PAYS', 'libelle': 'etat des pays', 'nom': 'CONNEXION  ORACLE TEST', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE'}
+[Thu May 13 20:38:17.756028 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] __testerLaConnexion__3__
+[Thu May 13 20:38:17.756040 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] code: CNX_ORACLE
+[Thu May 13 20:38:17.756060 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] serveur: 192.168.56.210
+[Thu May 13 20:38:17.756065 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] port: 1521
+[Thu May 13 20:38:17.756068 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] utidb: hr
+[Thu May 13 20:38:17.756072 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] basedonnees: DB11G
+[Thu May 13 20:38:17.756079 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] mesmodules.ConnexionOracle
+[Thu May 13 20:38:17.756089 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 20:38:17.816724 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] __res__ {'connexion': 'OK'}
+[Thu May 13 20:38:17.816757 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] testrequete res:: {'connexion': 'OK'}
+[Thu May 13 20:38:17.816767 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] mesmodules.MesFonctions
+[Thu May 13 20:38:17.816773 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] __testerLaRequete2__
+[Thu May 13 20:38:17.816783 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Thu May 13 20:38:17.816790 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] __testerLaRequete2__ , sqlstr : select * from countries
+[Thu May 13 20:38:17.816801 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] mesmodules.ConnexionOracle
+[Thu May 13 20:38:17.816883 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36626] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 20:53:38.753682 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] app
+[Thu May 13 20:53:38.753707 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] createxmlfile
+[Thu May 13 20:53:38.754155 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/16'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/16{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/16/typeConnexion'}}}
+[Thu May 13 20:53:38.754200 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/16'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/16{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/16/typeConnexion'}}}
+[Thu May 13 20:53:38.754225 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Thu May 13 20:53:38.754235 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] contructeur __init__
+[Thu May 13 20:53:38.754241 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] mesmodules.ConnexionPostgres
+[Thu May 13 20:53:38.793107 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+[Thu May 13 20:53:38.793139 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] 
+[Thu May 13 20:53:38.793162 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+[Thu May 13 20:53:38.793220 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] testconnexion res: {'connexion': 'OK'}
+[Thu May 13 20:53:38.793230 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] contructeur __init__
+[Thu May 13 20:53:38.793237 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] mesmodules.ConnexionPostgres
+[Thu May 13 20:53:38.844844 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] [2021-05-13 20:53:38,811] ERROR in app: Exception on /api/pyflask/createxmlfile [POST]
+[Thu May 13 20:53:38.844863 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] Traceback (most recent call last):
+[Thu May 13 20:53:38.844865 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]   File "/usr/lib64/python3.6/pathlib.py", line 1248, in mkdir
+[Thu May 13 20:53:38.844868 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]     self._accessor.mkdir(self, mode)
+[Thu May 13 20:53:38.844870 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]   File "/usr/lib64/python3.6/pathlib.py", line 387, in wrapped
+[Thu May 13 20:53:38.844873 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]     return strfunc(str(pathobj), *args)
+[Thu May 13 20:53:38.844875 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] FileNotFoundError: [Errno 2] No such file or directory: '/mnt/win/Courant'
+[Thu May 13 20:53:38.844877 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] 
+[Thu May 13 20:53:38.844879 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] During handling of the above exception, another exception occurred:
+[Thu May 13 20:53:38.844882 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] 
+[Thu May 13 20:53:38.844884 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] Traceback (most recent call last):
+[Thu May 13 20:53:38.844886 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+[Thu May 13 20:53:38.844889 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]     response = self.full_dispatch_request()
+[Thu May 13 20:53:38.844892 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+[Thu May 13 20:53:38.844894 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]     rv = self.handle_user_exception(e)
+[Thu May 13 20:53:38.844897 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+[Thu May 13 20:53:38.844899 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]     return cors_after_request(app.make_response(f(*args, **kwargs)))
+[Thu May 13 20:53:38.844901 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+[Thu May 13 20:53:38.844904 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]     reraise(exc_type, exc_value, tb)
+[Thu May 13 20:53:38.844906 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+[Thu May 13 20:53:38.844908 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]     raise value
+[Thu May 13 20:53:38.844911 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+[Thu May 13 20:53:38.844913 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]     rv = self.dispatch_request()
+[Thu May 13 20:53:38.844915 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+[Thu May 13 20:53:38.844918 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]     return self.view_functions[rule.endpoint](**req.view_args)
+[Thu May 13 20:53:38.844920 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]   File "/var/www/html/bbg-reports/flask/api/app.py", line 555, in createxmlfile
+[Thu May 13 20:53:38.844929 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]     Path(Courant).mkdir(parents=True, exist_ok=True)
+[Thu May 13 20:53:38.844932 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]   File "/usr/lib64/python3.6/pathlib.py", line 1252, in mkdir
+[Thu May 13 20:53:38.844934 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]     self.parent.mkdir(parents=True, exist_ok=True)
+[Thu May 13 20:53:38.844936 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]   File "/usr/lib64/python3.6/pathlib.py", line 1248, in mkdir
+[Thu May 13 20:53:38.844938 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]     self._accessor.mkdir(self, mode)
+[Thu May 13 20:53:38.844941 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]   File "/usr/lib64/python3.6/pathlib.py", line 387, in wrapped
+[Thu May 13 20:53:38.844943 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690]     return strfunc(str(pathobj), *args)
+[Thu May 13 20:53:38.844947 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] PermissionError: [Errno 13] Permission denied: '/mnt/win'
+[Thu May 13 20:53:38.844975 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36690] 
+[Thu May 13 20:53:52.835581 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] __testrequete___
+[Thu May 13 20:53:52.836865 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] testrequete data: {'processus': 'DRP', 'nom': 'CONNEXION  ORACLE TEST', 'serveur': '192.168.56.210', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE', 'libelle': 'etat des pays', 'sqlstr': 'select * from countries', 'repDestination': 'MENSUEL - ETAT DES PAYS', 'port': '1521', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/requetes/157'}, 'requete': {'href': 'http://192.168.56.220:8085/api/requetes/157{?projection}', 'templated': True}, 'requeteUtilisateurs': {'href': 'http://192.168.56.220:8085/api/requetes/157/requeteUtilisateurs{?projection}', 'templated': True}, 'processus': {'href': 'http://192.168.56.220:8085/api/requetes/157/processus'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/requetes/157/connexion{?projection}', 'templated': True}, 'requeteDeclencheurs': {'href': 'http://192.168.56.220:8085/api/requetes/157/requeteDeclencheurs'}}}
+[Thu May 13 20:53:52.836906 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] __testerLaConnexion__3__
+[Thu May 13 20:53:52.836916 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] code: CNX_ORACLE
+[Thu May 13 20:53:52.836923 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] serveur: 192.168.56.210
+[Thu May 13 20:53:52.836936 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] port: 1521
+[Thu May 13 20:53:52.836943 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] utidb: hr
+[Thu May 13 20:53:52.836950 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] basedonnees: DB11G
+[Thu May 13 20:53:52.836960 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] mesmodules.ConnexionOracle
+[Thu May 13 20:53:52.836977 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 20:53:52.886626 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] __res__ {'connexion': 'OK'}
+[Thu May 13 20:53:52.886673 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] testrequete res:: {'connexion': 'OK'}
+[Thu May 13 20:53:52.886688 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] mesmodules.MesFonctions
+[Thu May 13 20:53:52.886789 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] __testerLaRequete2__
+[Thu May 13 20:53:52.886804 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Thu May 13 20:53:52.886815 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] __testerLaRequete2__ , sqlstr : select * from countries
+[Thu May 13 20:53:52.886888 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] mesmodules.ConnexionOracle
+[Thu May 13 20:53:52.886914 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36704] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 20:55:53.214540 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] __testrequete___
+[Thu May 13 20:55:53.214892 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] testrequete data: {'port': '1521', 'serveur': '192.168.56.210', 'sqlstr': 'select count(*) from countries', 'repDestination': 'MENSUEL - ETAT DES PAYS', 'libelle': 'nombre des pays', 'nom': 'CONNEXION  ORACLE TEST', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE'}
+[Thu May 13 20:55:53.214905 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] __testerLaConnexion__3__
+[Thu May 13 20:55:53.214915 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] code: CNX_ORACLE
+[Thu May 13 20:55:53.214922 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] serveur: 192.168.56.210
+[Thu May 13 20:55:53.214929 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] port: 1521
+[Thu May 13 20:55:53.214935 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] utidb: hr
+[Thu May 13 20:55:53.214942 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] basedonnees: DB11G
+[Thu May 13 20:55:53.214953 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] mesmodules.ConnexionOracle
+[Thu May 13 20:55:53.214970 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 20:55:53.294161 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] __res__ {'connexion': 'OK'}
+[Thu May 13 20:55:53.294197 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] testrequete res:: {'connexion': 'OK'}
+[Thu May 13 20:55:53.294209 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] mesmodules.MesFonctions
+[Thu May 13 20:55:53.294215 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] __testerLaRequete2__
+[Thu May 13 20:55:53.294225 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Thu May 13 20:55:53.294232 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] __testerLaRequete2__ , sqlstr : select count(*) from countries
+[Thu May 13 20:55:53.294244 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] mesmodules.ConnexionOracle
+[Thu May 13 20:55:53.294275 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36712] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 20:56:16.442864 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] app
+[Thu May 13 20:56:16.442889 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] createxmlfile
+[Thu May 13 20:56:16.443312 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/16'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/16{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/16/typeConnexion'}}}
+[Thu May 13 20:56:16.443350 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/16'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/16{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/16/typeConnexion'}}}
+[Thu May 13 20:56:16.443372 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Thu May 13 20:56:16.443381 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] contructeur __init__
+[Thu May 13 20:56:16.443387 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] mesmodules.ConnexionPostgres
+[Thu May 13 20:56:16.533744 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+[Thu May 13 20:56:16.533775 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] 
+[Thu May 13 20:56:16.533788 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+[Thu May 13 20:56:16.533837 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] testconnexion res: {'connexion': 'OK'}
+[Thu May 13 20:56:16.533848 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] contructeur __init__
+[Thu May 13 20:56:16.533855 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] mesmodules.ConnexionPostgres
+[Thu May 13 20:56:16.538499 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] [2021-05-13 20:56:16,536] ERROR in app: Exception on /api/pyflask/createxmlfile [POST]
+[Thu May 13 20:56:16.538516 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] Traceback (most recent call last):
+[Thu May 13 20:56:16.538519 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]   File "/usr/lib64/python3.6/pathlib.py", line 1248, in mkdir
+[Thu May 13 20:56:16.538522 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]     self._accessor.mkdir(self, mode)
+[Thu May 13 20:56:16.538524 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]   File "/usr/lib64/python3.6/pathlib.py", line 387, in wrapped
+[Thu May 13 20:56:16.538526 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]     return strfunc(str(pathobj), *args)
+[Thu May 13 20:56:16.538529 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] FileNotFoundError: [Errno 2] No such file or directory: '/mnt/win/Courant'
+[Thu May 13 20:56:16.538531 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] 
+[Thu May 13 20:56:16.538533 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] During handling of the above exception, another exception occurred:
+[Thu May 13 20:56:16.538536 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] 
+[Thu May 13 20:56:16.538538 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] Traceback (most recent call last):
+[Thu May 13 20:56:16.538540 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+[Thu May 13 20:56:16.538543 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]     response = self.full_dispatch_request()
+[Thu May 13 20:56:16.538545 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+[Thu May 13 20:56:16.538548 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]     rv = self.handle_user_exception(e)
+[Thu May 13 20:56:16.538550 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+[Thu May 13 20:56:16.538553 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]     return cors_after_request(app.make_response(f(*args, **kwargs)))
+[Thu May 13 20:56:16.538555 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+[Thu May 13 20:56:16.538557 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]     reraise(exc_type, exc_value, tb)
+[Thu May 13 20:56:16.538560 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+[Thu May 13 20:56:16.538562 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]     raise value
+[Thu May 13 20:56:16.538564 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+[Thu May 13 20:56:16.538570 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]     rv = self.dispatch_request()
+[Thu May 13 20:56:16.538573 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+[Thu May 13 20:56:16.538575 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]     return self.view_functions[rule.endpoint](**req.view_args)
+[Thu May 13 20:56:16.538578 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]   File "/var/www/html/bbg-reports/flask/api/app.py", line 555, in createxmlfile
+[Thu May 13 20:56:16.538580 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]     Path(Courant).mkdir(parents=True, exist_ok=True)
+[Thu May 13 20:56:16.538582 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]   File "/usr/lib64/python3.6/pathlib.py", line 1252, in mkdir
+[Thu May 13 20:56:16.538584 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]     self.parent.mkdir(parents=True, exist_ok=True)
+[Thu May 13 20:56:16.538587 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]   File "/usr/lib64/python3.6/pathlib.py", line 1248, in mkdir
+[Thu May 13 20:56:16.538589 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]     self._accessor.mkdir(self, mode)
+[Thu May 13 20:56:16.538591 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]   File "/usr/lib64/python3.6/pathlib.py", line 387, in wrapped
+[Thu May 13 20:56:16.538593 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724]     return strfunc(str(pathobj), *args)
+[Thu May 13 20:56:16.538597 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] PermissionError: [Errno 13] Permission denied: '/mnt/win'
+[Thu May 13 20:56:16.538626 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36724] 
+[Thu May 13 20:56:48.471582 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] app
+[Thu May 13 20:56:48.471610 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] generatefile
+[Thu May 13 20:56:48.472328 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] data: {'processus': 'DRP', 'nom': 'CONNEXION  ORACLE TEST', 'serveur': '192.168.56.210', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE', 'libelle': 'nombre des pays', 'sqlstr': 'select count(*) from countries', 'repDestination': 'MENSUEL - ETAT DES PAYS', 'port': '1521', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/requetes/162'}, 'requete': {'href': 'http://192.168.56.220:8085/api/requetes/162{?projection}', 'templated': True}, 'requeteUtilisateurs': {'href': 'http://192.168.56.220:8085/api/requetes/162/requeteUtilisateurs{?projection}', 'templated': True}, 'processus': {'href': 'http://192.168.56.220:8085/api/requetes/162/processus'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/requetes/162/connexion{?projection}', 'templated': True}, 'requeteDeclencheurs': {'href': 'http://192.168.56.220:8085/api/requetes/162/requeteDeclencheurs'}}}
+[Thu May 13 20:56:48.472345 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] __testerLaConnexion__3__
+[Thu May 13 20:56:48.472354 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] code: CNX_ORACLE
+[Thu May 13 20:56:48.472361 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] serveur: 192.168.56.210
+[Thu May 13 20:56:48.472368 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] port: 1521
+[Thu May 13 20:56:48.472375 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] utidb: hr
+[Thu May 13 20:56:48.472382 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] basedonnees: DB11G
+[Thu May 13 20:56:48.472391 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] mesmodules.ConnexionOracle
+[Thu May 13 20:56:48.472408 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 20:56:48.494895 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] __res__ {'connexion': 'OK'}
+[Thu May 13 20:56:48.495025 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] testerLaConnexion:: {'connexion': 'OK'}
+[Thu May 13 20:56:48.495091 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] mesmodules.MesFonctions
+[Thu May 13 20:56:48.495103 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] __testerLaRequete2__
+[Thu May 13 20:56:48.495117 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Thu May 13 20:56:48.495127 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] __testerLaRequete2__ , sqlstr : select count(*) from countries
+[Thu May 13 20:56:48.495143 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] mesmodules.ConnexionOracle
+[Thu May 13 20:56:48.495165 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 20:56:48.517669 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] testerLaRequete:: {'nombreligne': 1}
+[Thu May 13 20:56:48.517910 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] genererLeFichier(data) data: {'processus': 'DRP', 'nom': 'CONNEXION  ORACLE TEST', 'serveur': '192.168.56.210', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE', 'libelle': 'nombre des pays', 'sqlstr': 'select count(*) from countries', 'repDestination': 'MENSUEL - ETAT DES PAYS', 'port': '1521', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/requetes/162'}, 'requete': {'href': 'http://192.168.56.220:8085/api/requetes/162{?projection}', 'templated': True}, 'requeteUtilisateurs': {'href': 'http://192.168.56.220:8085/api/requetes/162/requeteUtilisateurs{?projection}', 'templated': True}, 'processus': {'href': 'http://192.168.56.220:8085/api/requetes/162/processus'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/requetes/162/connexion{?projection}', 'templated': True}, 'requeteDeclencheurs': {'href': 'http://192.168.56.220:8085/api/requetes/162/requeteDeclencheurs'}}}
+[Thu May 13 20:56:48.517929 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] mesmodules.MesFonctions
+[Thu May 13 20:56:48.517957 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] __genererLeFichier__
+[Thu May 13 20:56:48.517999 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] {'processus': 'DRP', 'nom': 'CONNEXION  ORACLE TEST', 'serveur': '192.168.56.210', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE', 'libelle': 'nombre des pays', 'sqlstr': 'select count(*) from countries', 'repDestination': 'MENSUEL - ETAT DES PAYS', 'port': '1521', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/requetes/162'}, 'requete': {'href': 'http://192.168.56.220:8085/api/requetes/162{?projection}', 'templated': True}, 'requeteUtilisateurs': {'href': 'http://192.168.56.220:8085/api/requetes/162/requeteUtilisateurs{?projection}', 'templated': True}, 'processus': {'href': 'http://192.168.56.220:8085/api/requetes/162/processus'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/requetes/162/connexion{?projection}', 'templated': True}, 'requeteDeclencheurs': {'href': 'http://192.168.56.220:8085/api/requetes/162/requeteDeclencheurs'}}}
+[Thu May 13 20:56:48.518022 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] mesmodules.ConnexionOracle
+[Thu May 13 20:56:48.518044 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 20:56:48.777979 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728]    COUNT(*)
+[Thu May 13 20:56:48.778007 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] 0        25
+[Thu May 13 20:56:48.778014 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] 
+[Thu May 13 20:56:48.780140 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] /mnt/win/Courant
+[Thu May 13 20:56:48.780233 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] /mnt/win/Archives
+[Thu May 13 20:56:48.780323 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] xlsx
+[Thu May 13 20:56:48.780357 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] SheetName1
+[Thu May 13 20:56:48.780393 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] xlsxwriter
+[Thu May 13 20:56:48.781355 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] __genererLeFichier__except
+[Thu May 13 20:56:48.781391 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] (<class 'PermissionError'>, PermissionError(13, 'Permission denied'), <traceback object at 0x7f5f15b0cd48>)
+[Thu May 13 20:56:48.781401 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] sys.exc_info()[0] :[Errno 13] Permission denied: '/mnt/win'
+[Thu May 13 20:56:48.781430 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] <class 'PermissionError'> MesFonctions.py 307
+[Thu May 13 20:56:48.781439 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] (<class 'PermissionError'>, PermissionError(13, 'Permission denied'), <traceback object at 0x7f5f15b0cd48>)
+[Thu May 13 20:56:48.781444 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] sys.exc_info()[0] :[Errno 13] Permission denied: '/mnt/win'
+[Thu May 13 20:56:48.781460 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36728] {'erreur': "Programme: MesFonctions.py line: 307, Erreur: <class 'PermissionError'>, Message: [Errno 13] Permission denied: '/mnt/win'"}
+[Thu May 13 20:59:39.093794 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] __testrequete___
+[Thu May 13 20:59:39.094139 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] testrequete data: {'port': '1521', 'serveur': '192.168.56.210', 'sqlstr': 'select count(*) from dept', 'repDestination': 'MENSUEL - ETAT DES DEPT', 'libelle': 'etat des DEPT', 'nom': 'CONNEXION  ORACLE TEST', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE'}
+[Thu May 13 20:59:39.094152 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] __testerLaConnexion__3__
+[Thu May 13 20:59:39.094161 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] code: CNX_ORACLE
+[Thu May 13 20:59:39.094168 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] serveur: 192.168.56.210
+[Thu May 13 20:59:39.094175 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] port: 1521
+[Thu May 13 20:59:39.094182 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] utidb: hr
+[Thu May 13 20:59:39.094189 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] basedonnees: DB11G
+[Thu May 13 20:59:39.094199 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] mesmodules.ConnexionOracle
+[Thu May 13 20:59:39.094216 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 20:59:39.120832 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] __res__ {'connexion': 'OK'}
+[Thu May 13 20:59:39.120990 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] testrequete res:: {'connexion': 'OK'}
+[Thu May 13 20:59:39.121003 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] mesmodules.MesFonctions
+[Thu May 13 20:59:39.121010 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] __testerLaRequete2__
+[Thu May 13 20:59:39.121019 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Thu May 13 20:59:39.121027 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] __testerLaRequete2__ , sqlstr : select count(*) from dept
+[Thu May 13 20:59:39.121040 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] mesmodules.ConnexionOracle
+[Thu May 13 20:59:39.121057 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 20:59:39.142949 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] Error while connecting to Oracle DB ORA-00942: Table ou vue inexistante
+[Thu May 13 20:59:39.142984 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] Code:      942
+[Thu May 13 20:59:39.142996 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] Message    ORA-00942: Table ou vue inexistante
+[Thu May 13 20:59:39.143007 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36738] Context    dpiStmt_execute: execute
+[Thu May 13 21:01:44.159295 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] __testrequete___
+[Thu May 13 21:01:44.159739 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] testrequete data: {'port': '1521', 'serveur': '192.168.56.210', 'sqlstr': 'select count(*) from departements', 'repDestination': 'MENSUEL - ETAT DES DEPT', 'libelle': 'etat des DEPT', 'nom': 'CONNEXION  ORACLE TEST', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE'}
+[Thu May 13 21:01:44.159753 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] __testerLaConnexion__3__
+[Thu May 13 21:01:44.159762 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] code: CNX_ORACLE
+[Thu May 13 21:01:44.159769 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] serveur: 192.168.56.210
+[Thu May 13 21:01:44.159776 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] port: 1521
+[Thu May 13 21:01:44.159782 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] utidb: hr
+[Thu May 13 21:01:44.159789 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] basedonnees: DB11G
+[Thu May 13 21:01:44.159802 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] mesmodules.ConnexionOracle
+[Thu May 13 21:01:44.159819 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 21:01:44.184921 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] __res__ {'connexion': 'OK'}
+[Thu May 13 21:01:44.184957 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] testrequete res:: {'connexion': 'OK'}
+[Thu May 13 21:01:44.184967 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] mesmodules.MesFonctions
+[Thu May 13 21:01:44.184974 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] __testerLaRequete2__
+[Thu May 13 21:01:44.185106 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Thu May 13 21:01:44.185120 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] __testerLaRequete2__ , sqlstr : select count(*) from departements
+[Thu May 13 21:01:44.185134 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] mesmodules.ConnexionOracle
+[Thu May 13 21:01:44.185151 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 21:01:44.207876 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] Error while connecting to Oracle DB ORA-00942: Table ou vue inexistante
+[Thu May 13 21:01:44.207918 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] Code:      942
+[Thu May 13 21:01:44.207932 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] Message    ORA-00942: Table ou vue inexistante
+[Thu May 13 21:01:44.207942 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36746] Context    dpiStmt_execute: execute
+[Thu May 13 21:01:49.803313 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] __testrequete___
+[Thu May 13 21:01:49.803707 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] testrequete data: {'port': '1521', 'serveur': '192.168.56.210', 'sqlstr': 'select count(*) from departments', 'repDestination': 'MENSUEL - ETAT DES DEPT', 'libelle': 'etat des DEPT', 'nom': 'CONNEXION  ORACLE TEST', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE'}
+[Thu May 13 21:01:49.803728 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] __testerLaConnexion__3__
+[Thu May 13 21:01:49.803746 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] code: CNX_ORACLE
+[Thu May 13 21:01:49.803756 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] serveur: 192.168.56.210
+[Thu May 13 21:01:49.803765 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] port: 1521
+[Thu May 13 21:01:49.803773 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] utidb: hr
+[Thu May 13 21:01:49.803783 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] basedonnees: DB11G
+[Thu May 13 21:01:49.803795 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] mesmodules.ConnexionOracle
+[Thu May 13 21:01:49.803823 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 21:01:49.827421 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] __res__ {'connexion': 'OK'}
+[Thu May 13 21:01:49.827465 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] testrequete res:: {'connexion': 'OK'}
+[Thu May 13 21:01:49.827478 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] mesmodules.MesFonctions
+[Thu May 13 21:01:49.827568 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] __testerLaRequete2__
+[Thu May 13 21:01:49.827586 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Thu May 13 21:01:49.827654 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] __testerLaRequete2__ , sqlstr : select count(*) from departments
+[Thu May 13 21:01:49.827673 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] mesmodules.ConnexionOracle
+[Thu May 13 21:01:49.827695 2021] [wsgi:error] [pid 1994] [remote 192.168.56.220:36752] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 21:02:17.207599 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] app
+[Thu May 13 21:02:17.207624 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] createxmlfile
+[Thu May 13 21:02:17.208348 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/16'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/16{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/16/typeConnexion'}}}
+[Thu May 13 21:02:17.208390 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/16'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/16{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/16/typeConnexion'}}}
+[Thu May 13 21:02:17.208413 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Thu May 13 21:02:17.208426 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] contructeur __init__
+[Thu May 13 21:02:17.208432 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] mesmodules.ConnexionPostgres
+[Thu May 13 21:02:17.257795 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+[Thu May 13 21:02:17.257822 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] 
+[Thu May 13 21:02:17.257840 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+[Thu May 13 21:02:17.257933 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] testconnexion res: {'connexion': 'OK'}
+[Thu May 13 21:02:17.257948 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] contructeur __init__
+[Thu May 13 21:02:17.257955 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] mesmodules.ConnexionPostgres
+[Thu May 13 21:02:17.267179 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] [2021-05-13 21:02:17,266] ERROR in app: Exception on /api/pyflask/createxmlfile [POST]
+[Thu May 13 21:02:17.267208 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] Traceback (most recent call last):
+[Thu May 13 21:02:17.267211 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]   File "/usr/lib64/python3.6/pathlib.py", line 1248, in mkdir
+[Thu May 13 21:02:17.267218 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]     self._accessor.mkdir(self, mode)
+[Thu May 13 21:02:17.267220 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]   File "/usr/lib64/python3.6/pathlib.py", line 387, in wrapped
+[Thu May 13 21:02:17.267222 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]     return strfunc(str(pathobj), *args)
+[Thu May 13 21:02:17.267223 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] FileNotFoundError: [Errno 2] No such file or directory: '/mnt/win/Courant'
+[Thu May 13 21:02:17.267225 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] 
+[Thu May 13 21:02:17.267227 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] During handling of the above exception, another exception occurred:
+[Thu May 13 21:02:17.267228 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] 
+[Thu May 13 21:02:17.267230 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] Traceback (most recent call last):
+[Thu May 13 21:02:17.267232 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+[Thu May 13 21:02:17.267234 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]     response = self.full_dispatch_request()
+[Thu May 13 21:02:17.267236 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+[Thu May 13 21:02:17.267238 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]     rv = self.handle_user_exception(e)
+[Thu May 13 21:02:17.267240 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+[Thu May 13 21:02:17.267242 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]     return cors_after_request(app.make_response(f(*args, **kwargs)))
+[Thu May 13 21:02:17.267243 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+[Thu May 13 21:02:17.267245 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]     reraise(exc_type, exc_value, tb)
+[Thu May 13 21:02:17.267247 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+[Thu May 13 21:02:17.267248 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]     raise value
+[Thu May 13 21:02:17.267250 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+[Thu May 13 21:02:17.267252 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]     rv = self.dispatch_request()
+[Thu May 13 21:02:17.267253 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+[Thu May 13 21:02:17.267255 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]     return self.view_functions[rule.endpoint](**req.view_args)
+[Thu May 13 21:02:17.267256 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]   File "/var/www/html/bbg-reports/flask/api/app.py", line 555, in createxmlfile
+[Thu May 13 21:02:17.267258 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]     Path(Courant).mkdir(parents=True, exist_ok=True)
+[Thu May 13 21:02:17.267259 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]   File "/usr/lib64/python3.6/pathlib.py", line 1252, in mkdir
+[Thu May 13 21:02:17.267261 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]     self.parent.mkdir(parents=True, exist_ok=True)
+[Thu May 13 21:02:17.267263 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]   File "/usr/lib64/python3.6/pathlib.py", line 1248, in mkdir
+[Thu May 13 21:02:17.267266 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]     self._accessor.mkdir(self, mode)
+[Thu May 13 21:02:17.267268 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]   File "/usr/lib64/python3.6/pathlib.py", line 387, in wrapped
+[Thu May 13 21:02:17.267269 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762]     return strfunc(str(pathobj), *args)
+[Thu May 13 21:02:17.267272 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] PermissionError: [Errno 13] Permission denied: '/mnt/win'
+[Thu May 13 21:02:17.267286 2021] [wsgi:error] [pid 1993] [remote 192.168.56.220:36762] 
+[Thu May 13 21:14:00.383119 2021] [wsgi:info] [pid 1994] mod_wsgi (pid=1994): Shutdown requested 'flask.koufide.com'.
+[Thu May 13 21:14:00.383469 2021] [wsgi:info] [pid 1994] mod_wsgi (pid=1994): Stopping process 'flask.koufide.com'.
+[Thu May 13 21:14:00.383480 2021] [wsgi:info] [pid 1994] mod_wsgi (pid=1994): Destroying interpreters.
+[Thu May 13 21:14:00.383493 2021] [wsgi:info] [pid 1994] mod_wsgi (pid=1994): Destroy interpreter '192.168.56.220:5000|'.
+[Thu May 13 21:14:00.383686 2021] [wsgi:info] [pid 1994] mod_wsgi (pid=1994): End interpreter '192.168.56.220:5000|'.
+[Thu May 13 21:14:00.394555 2021] [wsgi:info] [pid 1993] mod_wsgi (pid=1993): Shutdown requested 'flask.koufide.com'.
+[Thu May 13 21:14:00.394733 2021] [wsgi:info] [pid 1993] mod_wsgi (pid=1993): Stopping process 'flask.koufide.com'.
+[Thu May 13 21:14:00.394738 2021] [wsgi:info] [pid 1993] mod_wsgi (pid=1993): Destroying interpreters.
+[Thu May 13 21:14:00.394746 2021] [wsgi:info] [pid 1993] mod_wsgi (pid=1993): Destroy interpreter '192.168.56.220:5000|'.
+[Thu May 13 21:14:00.394858 2021] [wsgi:info] [pid 1993] mod_wsgi (pid=1993): End interpreter '192.168.56.220:5000|'.
+[Thu May 13 21:14:00.736432 2021] [wsgi:info] [pid 1994] mod_wsgi (pid=1994): Cleanup interpreter ''.
+[Thu May 13 21:14:00.767998 2021] [wsgi:info] [pid 1994] mod_wsgi (pid=1994): Terminating Python.
+[Thu May 13 21:14:00.780717 2021] [wsgi:info] [pid 1993] mod_wsgi (pid=1993): Cleanup interpreter ''.
+[Thu May 13 21:14:00.812886 2021] [wsgi:info] [pid 1993] mod_wsgi (pid=1993): Terminating Python.
+[Thu May 13 21:14:00.871129 2021] [wsgi:info] [pid 1994] mod_wsgi (pid=1994): Python has shutdown.
+[Thu May 13 21:14:00.871164 2021] [wsgi:info] [pid 1994] mod_wsgi (pid=1994): Exiting process 'flask.koufide.com'.
+[Thu May 13 21:14:00.906099 2021] [wsgi:info] [pid 1993] mod_wsgi (pid=1993): Python has shutdown.
+[Thu May 13 21:14:00.906123 2021] [wsgi:info] [pid 1993] mod_wsgi (pid=1993): Exiting process 'flask.koufide.com'.
+[Thu May 13 21:14:01.872881 2021] [wsgi:info] [pid 15632] mod_wsgi (pid=15632): Attach interpreter ''.
+[Thu May 13 21:14:01.911479 2021] [wsgi:info] [pid 15635] mod_wsgi (pid=15635): Attach interpreter ''.
+[Thu May 13 21:14:02.067244 2021] [wsgi:info] [pid 15632] mod_wsgi (pid=15632): Imported 'mod_wsgi'.
+[Thu May 13 21:14:02.083140 2021] [wsgi:info] [pid 15635] mod_wsgi (pid=15635): Imported 'mod_wsgi'.
+[Thu May 13 21:16:03.763436 2021] [wsgi:info] [pid 15632] mod_wsgi (pid=15632): Create interpreter '192.168.56.220:5000|'.
+[Thu May 13 21:16:03.791772 2021] [wsgi:info] [pid 15632] [remote 192.168.56.220:43456] mod_wsgi (pid=15632, process='flask.koufide.com', application='192.168.56.220:5000|'): Loading Python script file '/var/www/html/bbg-reports/flask/wsgi/flask.wsgi'.
+[Thu May 13 21:16:03.792094 2021] [wsgi:error] [pid 15632] KF PREF : '/usr' 
+[Thu May 13 21:16:03.792114 2021] [wsgi:error] [pid 15632] KF PATH : ['/var/www/html/bbg-reports/flask/api', '/var/www/html/bbg-reports/flask/venv2', '/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages', '/usr/lib64/python36.zip', '/usr/lib64/python3.6', '/usr/lib64/python3.6/lib-dynload', '/home/iexploit/.local/lib/python3.6/site-packages', '/usr/local/lib64/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages', '/usr/lib64/python3.6/site-packages', '/usr/lib/python3.6/site-packages']  
+[Thu May 13 21:16:03.792145 2021] [wsgi:error] [pid 15632] PYTHONPATH: None
+[Thu May 13 21:16:03.792162 2021] [wsgi:error] [pid 15632] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+[Thu May 13 21:16:04.254765 2021] [wsgi:error] [pid 15632] __ConnexionSqlServer__
+[Thu May 13 21:16:04.919154 2021] [wsgi:error] [pid 15632] listorigins: ["http://192.168.56.220:4200","http://127.0.0.1:4100","http://192.168.56.220","http://192.168.56.1"]
+[Thu May 13 21:16:04.954473 2021] [wsgi:info] [pid 15635] mod_wsgi (pid=15635): Create interpreter '192.168.56.220:5000|'.
+[Thu May 13 21:16:04.981360 2021] [wsgi:info] [pid 15635] [remote 192.168.56.220:43456] mod_wsgi (pid=15635, process='flask.koufide.com', application='192.168.56.220:5000|'): Loading Python script file '/var/www/html/bbg-reports/flask/wsgi/flask.wsgi'.
+[Thu May 13 21:16:04.981689 2021] [wsgi:error] [pid 15635] KF PREF : '/usr' 
+[Thu May 13 21:16:04.981709 2021] [wsgi:error] [pid 15635] KF PATH : ['/var/www/html/bbg-reports/flask/api', '/var/www/html/bbg-reports/flask/venv2', '/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages', '/usr/lib64/python36.zip', '/usr/lib64/python3.6', '/usr/lib64/python3.6/lib-dynload', '/home/iexploit/.local/lib/python3.6/site-packages', '/usr/local/lib64/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages', '/usr/lib64/python3.6/site-packages', '/usr/lib/python3.6/site-packages']  
+[Thu May 13 21:16:04.981735 2021] [wsgi:error] [pid 15635] PYTHONPATH: None
+[Thu May 13 21:16:04.981750 2021] [wsgi:error] [pid 15635] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+[Thu May 13 21:16:05.432323 2021] [wsgi:error] [pid 15635] __ConnexionSqlServer__
+[Thu May 13 21:16:06.146672 2021] [wsgi:error] [pid 15635] listorigins: ["http://192.168.56.220:4200","http://127.0.0.1:4100","http://192.168.56.220","http://192.168.56.1"]
+[Thu May 13 21:16:06.155594 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] __testrequete___
+[Thu May 13 21:16:06.155967 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] testrequete data: {'port': '1521', 'serveur': '192.168.56.210', 'sqlstr': 'select * from employees', 'repDestination': 'MENSUEL - ETAT DES EMPLOYEES', 'libelle': 'etat des employees', 'nom': 'CONNEXION  ORACLE TEST', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE'}
+[Thu May 13 21:16:06.155981 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] __testerLaConnexion__3__
+[Thu May 13 21:16:06.155991 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] code: CNX_ORACLE
+[Thu May 13 21:16:06.155998 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] serveur: 192.168.56.210
+[Thu May 13 21:16:06.156004 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] port: 1521
+[Thu May 13 21:16:06.156011 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] utidb: hr
+[Thu May 13 21:16:06.156018 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] basedonnees: DB11G
+[Thu May 13 21:16:06.156029 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] mesmodules.ConnexionOracle
+[Thu May 13 21:16:06.156046 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 21:16:06.229695 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] __res__ {'connexion': 'OK'}
+[Thu May 13 21:16:06.229734 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] testrequete res:: {'connexion': 'OK'}
+[Thu May 13 21:16:06.229747 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] mesmodules.MesFonctions
+[Thu May 13 21:16:06.229754 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] __testerLaRequete2__
+[Thu May 13 21:16:06.229764 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Thu May 13 21:16:06.229771 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] __testerLaRequete2__ , sqlstr : select * from employees
+[Thu May 13 21:16:06.229783 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] mesmodules.ConnexionOracle
+[Thu May 13 21:16:06.229806 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43456] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 21:16:51.689658 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] app
+[Thu May 13 21:16:51.689688 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] createxmlfile
+[Thu May 13 21:16:51.690082 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/16'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/16{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/16/typeConnexion'}}}
+[Thu May 13 21:16:51.690117 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/16'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/16{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/16/typeConnexion'}}}
+[Thu May 13 21:16:51.690138 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Thu May 13 21:16:51.690148 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] contructeur __init__
+[Thu May 13 21:16:51.690156 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] mesmodules.ConnexionPostgres
+[Thu May 13 21:16:51.762601 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+[Thu May 13 21:16:51.762651 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] 
+[Thu May 13 21:16:51.762669 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+[Thu May 13 21:16:51.762732 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] testconnexion res: {'connexion': 'OK'}
+[Thu May 13 21:16:51.762742 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] contructeur __init__
+[Thu May 13 21:16:51.762748 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] mesmodules.ConnexionPostgres
+[Thu May 13 21:16:51.773398 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] [2021-05-13 21:16:51,771] ERROR in app: Exception on /api/pyflask/createxmlfile [POST]
+[Thu May 13 21:16:51.773416 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] Traceback (most recent call last):
+[Thu May 13 21:16:51.773419 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]   File "/usr/lib64/python3.6/pathlib.py", line 1248, in mkdir
+[Thu May 13 21:16:51.773422 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     self._accessor.mkdir(self, mode)
+[Thu May 13 21:16:51.773424 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]   File "/usr/lib64/python3.6/pathlib.py", line 387, in wrapped
+[Thu May 13 21:16:51.773426 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     return strfunc(str(pathobj), *args)
+[Thu May 13 21:16:51.773429 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] FileNotFoundError: [Errno 2] No such file or directory: '/mnt/win/Courant'
+[Thu May 13 21:16:51.773431 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] 
+[Thu May 13 21:16:51.773433 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] During handling of the above exception, another exception occurred:
+[Thu May 13 21:16:51.773436 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] 
+[Thu May 13 21:16:51.773438 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] Traceback (most recent call last):
+[Thu May 13 21:16:51.773444 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+[Thu May 13 21:16:51.773446 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     response = self.full_dispatch_request()
+[Thu May 13 21:16:51.773449 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+[Thu May 13 21:16:51.773451 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     rv = self.handle_user_exception(e)
+[Thu May 13 21:16:51.773454 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+[Thu May 13 21:16:51.773456 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     return cors_after_request(app.make_response(f(*args, **kwargs)))
+[Thu May 13 21:16:51.773458 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+[Thu May 13 21:16:51.773461 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     reraise(exc_type, exc_value, tb)
+[Thu May 13 21:16:51.773463 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+[Thu May 13 21:16:51.773465 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     raise value
+[Thu May 13 21:16:51.773468 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+[Thu May 13 21:16:51.773470 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     rv = self.dispatch_request()
+[Thu May 13 21:16:51.773472 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+[Thu May 13 21:16:51.773475 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     return self.view_functions[rule.endpoint](**req.view_args)
+[Thu May 13 21:16:51.773477 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]   File "/var/www/html/bbg-reports/flask/api/app.py", line 555, in createxmlfile
+[Thu May 13 21:16:51.773479 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     Path(Courant).mkdir(parents=True, exist_ok=True)
+[Thu May 13 21:16:51.773481 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]   File "/usr/lib64/python3.6/pathlib.py", line 1252, in mkdir
+[Thu May 13 21:16:51.773484 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     self.parent.mkdir(parents=True, exist_ok=True)
+[Thu May 13 21:16:51.773486 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]   File "/usr/lib64/python3.6/pathlib.py", line 1248, in mkdir
+[Thu May 13 21:16:51.773488 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     self._accessor.mkdir(self, mode)
+[Thu May 13 21:16:51.773490 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]   File "/usr/lib64/python3.6/pathlib.py", line 387, in wrapped
+[Thu May 13 21:16:51.773493 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     return strfunc(str(pathobj), *args)
+[Thu May 13 21:16:51.773496 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] PermissionError: [Errno 13] Permission denied: '/mnt/win'
+[Thu May 13 21:16:51.773525 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] 
