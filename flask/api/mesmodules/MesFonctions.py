@@ -434,6 +434,9 @@ def genererFichier(data, repertoire, nomfichier, SheetName, Engine):
 
     import pandas as pd
 
+
+    res_gen = None
+
     # print("connexion", connexion)
     print("repertoire", repertoire)
     print("nomfichier", nomfichier)
@@ -449,12 +452,15 @@ def genererFichier(data, repertoire, nomfichier, SheetName, Engine):
         if(res['nombreligne'] > 0):
             # print("OKOKO")
             print("genererLeFichierV2(data) data: {}".format(data))
-            genererLeFichierV2(data)
+            res_gen = genererLeFichierV2(data)
             # res = genererLeFichier(data)
 
             # cnx=testerLaRequete(data)
 
             # df = pd.read_sql(data['sqlstr'], con=cnx)
             # df.to_excel(repertoire+"/" + nomfichier, sheet_name=SheetName, engine=Engine)
+
+    return res_gen
+
 
 

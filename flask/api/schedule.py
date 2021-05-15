@@ -160,12 +160,26 @@ def main():
         print("annee_str: {} ".format(annee_str))
         # exit(1)
         
+
+
         for i in range(len(record)):
             # print(record[i])
             # print(record[i]['date_exec'])
             # print(record[i][3])
             # print(record[i][4])
             # print(record[i][4])
+            rd_id = (record[i]['id'])
+
+            # print("rd_id: {} ".format(rd_id))
+            # exit(1)
+
+            # updated_rows = cnx.updateDeclencheur(connection=cnx, id_requete_declencheur=rd_id, status=1)
+            updated_rows = cnx.updateDeclencheur(rd_id, 1)
+            print("updated_rows: {} ".format(updated_rows))
+            # exit(1)
+
+
+
             date_exec = (record[i]['date_exec'])
             heure_exec = (record[i]['heure_exec'])
             frequence = (record[i]['frequence'])
@@ -244,7 +258,12 @@ def main():
                     # df.to_excel(repDestination+"/"+libelle+'.xlsx', sheet_name='Sheet_name_1', engine='xlsxwriter')
                     # df.to_excel(destination+"/" + libelle + '_'+now_str+'.'+Extension,                                sheet_name=SheetName, engine=Engine)
 
-                    genererFichier(connexion, destination, nomfichier, SheetName, Engine)
+                    res_gen = genererFichier(connexion, destination, nomfichier, SheetName, Engine)
+                    print("res_gen: {} ".format(res_gen))
+
+                    if res_gen['generation']=='OK':
+                        updated_rows = cnx.updateDeclencheur(id_requete_declencheur=rd_id, status=3)
+                        print("updated_rows: {} ".format(updated_rows))
                     
 
 
