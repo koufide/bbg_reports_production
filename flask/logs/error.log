@@ -2058,3 +2058,37 @@
 [Thu May 13 21:16:51.773493 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850]     return strfunc(str(pathobj), *args)
 [Thu May 13 21:16:51.773496 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] PermissionError: [Errno 13] Permission denied: '/mnt/win'
 [Thu May 13 21:16:51.773525 2021] [wsgi:error] [pid 15635] [remote 192.168.56.220:43850] 
+[Thu May 13 22:29:39.221202 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] __testconnection__
+[Thu May 13 22:29:39.221875 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] testconnection data: {'libelletypeconnexion': 'CONNEXION ORACLE', 'nom': 'CONNEXION  ORACLE TEST', 'serveur': '192.168.56.210', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE', 'port': '1521', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/97'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/97{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/97/typeConnexion'}}}
+[Thu May 13 22:29:39.221942 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] testconnection data: {'libelletypeconnexion': 'CONNEXION ORACLE', 'nom': 'CONNEXION  ORACLE TEST', 'serveur': '192.168.56.210', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE', 'port': '1521', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/97'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/97{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/97/typeConnexion'}}}
+[Thu May 13 22:29:39.221955 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] __testerLaConnexion__3__
+[Thu May 13 22:29:39.221967 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] code: CNX_ORACLE
+[Thu May 13 22:29:39.221977 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] serveur: 192.168.56.210
+[Thu May 13 22:29:39.221986 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] port: 1521
+[Thu May 13 22:29:39.221995 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] utidb: hr
+[Thu May 13 22:29:39.222004 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] basedonnees: DB11G
+[Thu May 13 22:29:39.222018 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] mesmodules.ConnexionOracle
+[Thu May 13 22:29:39.222041 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 22:29:51.012598 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] __testconnection__
+[Thu May 13 22:29:51.013212 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] testconnection data: {'libelletypeconnexion': 'CONNEXION ORACLE', 'nom': 'CONNEXION  ORACLE TEST', 'serveur': '192.168.56.210', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE', 'port': '1521', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/97'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/97{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/97/typeConnexion'}}}
+[Thu May 13 22:29:51.013263 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] testconnection data: {'libelletypeconnexion': 'CONNEXION ORACLE', 'nom': 'CONNEXION  ORACLE TEST', 'serveur': '192.168.56.210', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE', 'port': '1521', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/97'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/97{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/97/typeConnexion'}}}
+[Thu May 13 22:29:51.013277 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] __testerLaConnexion__3__
+[Thu May 13 22:29:51.013288 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] code: CNX_ORACLE
+[Thu May 13 22:29:51.013297 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] serveur: 192.168.56.210
+[Thu May 13 22:29:51.013306 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] port: 1521
+[Thu May 13 22:29:51.013315 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] utidb: hr
+[Thu May 13 22:29:51.013324 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] basedonnees: DB11G
+[Thu May 13 22:29:51.013338 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] mesmodules.ConnexionOracle
+[Thu May 13 22:29:51.013360 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] hr hr 192.168.56.210 1521 DB11G
+[Thu May 13 22:29:54.148240 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] Error while connecting to Oracle ORA-12543: TNS : h\xc3\xb4te de destination impossible \xc3\xa0 atteindre
+[Thu May 13 22:29:54.148439 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] Code:      12543
+[Thu May 13 22:29:54.148463 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] Message    ORA-12543: TNS : h\xc3\xb4te de destination impossible \xc3\xa0 atteindre
+[Thu May 13 22:29:54.148634 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] Context    dpiConn_create: server attach
+[Thu May 13 22:29:54.148667 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] __res__ {'connexion': 'ORA-12543: TNS : h\xc3\xb4te de destination impossible \xc3\xa0 atteindre'}
+[Thu May 13 22:29:54.148839 2021] [wsgi:error] [pid 15635] [remote 192.168.56.1:65198] testconnection res: {'connexion': 'ORA-12543: TNS : h\xc3\xb4te de destination impossible \xc3\xa0 atteindre'}
+[Thu May 13 22:29:57.037801 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] Error while connecting to Oracle ORA-12543: TNS : h\xc3\xb4te de destination impossible \xc3\xa0 atteindre
+[Thu May 13 22:29:57.037833 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] Code:      12543
+[Thu May 13 22:29:57.037846 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] Message    ORA-12543: TNS : h\xc3\xb4te de destination impossible \xc3\xa0 atteindre
+[Thu May 13 22:29:57.037857 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] Context    dpiConn_create: server attach
+[Thu May 13 22:29:57.037876 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] __res__ {'connexion': 'ORA-12543: TNS : h\xc3\xb4te de destination impossible \xc3\xa0 atteindre'}
+[Thu May 13 22:29:57.037891 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] testconnection res: {'connexion': 'ORA-12543: TNS : h\xc3\xb4te de destination impossible \xc3\xa0 atteindre'}
