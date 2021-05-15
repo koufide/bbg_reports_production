@@ -379,7 +379,7 @@ class ConnexionPostgres:
         """
 
         sqlstr="""
-        SELECT 
+        SELECT rd.date_proch_exec,
             EXTRACT (YEAR FROM NOW()) AS YEAR,
             EXTRACT (MONTH FROM NOW()) AS MONTH,
             EXTRACT (DAY FROM NOW()) AS DAY,
@@ -391,9 +391,13 @@ class ConnexionPostgres:
         WHERE d.id=rd.declencheur_id AND r.id=rd.requete_id AND c.id=r.connexion_id
             AND tc.id=c.type_connexion_id AND p.id=r.processus_id
             AND d.frequence='MENSUEL'
-            AND d.date_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd')
+            AND (
+                    (d.date_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd') and rd.date_proch_exec is null) or
+                    ( rd.date_proch_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd')  ) 
+                )
             AND (rd.status is null or rd.status=0)
         ORDER BY d.frequence
+        FOR UPDATE
         """
 
 

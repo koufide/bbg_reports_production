@@ -1,0 +1,318 @@
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+Python 3.9.4
+pip 21.1.1 from /var/www/html/bbg-reports/flask/venv3/lib/python3.9/site-packages/pip (python 3.9)
+this_python (3, 9)
+==================== DEMARRAGE ====================
+__ConnexionSqlServer__
+contructeur __init__
+mesmodules.ConnexionPostgres
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+cnx.testconnexion:  {'connexion': 'OK'}
+mesmodules.ConnexionPostgres
+__getDeclencheur__
+nbre 1
+annee_str: 2021 
+mesmodules.ConnexionPostgres
+__updateDeclencheur__
+updated_rows: 1 
+datetime_exec_obj:  2021-05-15 12:44:00
+now:  2021-05-15 14:09:02.945405
+__main__
+__declencheurMensuel__
+=> trouve => jour  15
+mesmodules.MesFonctions
+__genererFichier__
+repertoire /mnt/win/Courant/ORGANISATION/MENSUEL - REQUETES
+nomfichier etat_des_requetes_20210515_140902.xlsx
+__testerLaConnexion__3__
+code: CNX_POSTGRES
+serveur: 192.168.56.220
+port: 5432
+utidb: postgres
+basedonnees: reportsdb
+contructeur __init__
+mesmodules.ConnexionPostgres
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+__res__ {'connexion': 'OK'}
+testerLaConnexion:: {'connexion': 'OK'}
+mesmodules.MesFonctions
+__testerLaRequete2__
+__testerLaRequete2__ , __code__ : CNX_POSTGRES
+__testerLaRequete2__ , sqlstr : select count(*) from requete
+contructeur __init__
+mesmodules.ConnexionPostgres
+testerLaRequete:: {'nombreligne': 1}
+genererLeFichierV2(data) data: {'code': 'CNX_POSTGRES', 'utidb': 'postgres', 'passdb': 'postgres', 'serveur': '192.168.56.220', 'port': '5432', 'basedonnees': 'reportsdb', 'sqlstr': 'select count(*) from requete', 'processus': 'ORGANISATION', 'libelle': 'etat des requetes', 'repDestination': 'MENSUEL - REQUETES'}
+mesmodules.MesFonctions
+__genererLeFichierV2__
+{'code': 'CNX_POSTGRES', 'utidb': 'postgres', 'passdb': 'postgres', 'serveur': '192.168.56.220', 'port': '5432', 'basedonnees': 'reportsdb', 'sqlstr': 'select count(*) from requete', 'processus': 'ORGANISATION', 'libelle': 'etat des requetes', 'repDestination': 'MENSUEL - REQUETES'}
+contructeur __init__
+mesmodules.ConnexionPostgres
+mesmodules.ConnexionPostgres
+ConnexionPostgres connexion::::
+192.168.56.220
+PostgreSQL server information
+{'user': 'postgres', 'dbname': 'reportsdb', 'host': '192.168.56.220', 'port': '5432', 'tty': '', 'options': '', 'sslmode': 'prefer', 'sslcompression': '0', 'krbsrvname': 'postgres', 'target_session_attrs': 'any'} 
+
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+   count
+0     17
+/mnt/win/Courant
+/mnt/win/Archives
+xlsx
+SheetName1
+xlsxwriter
+2021-05-15 14:09:02.981460
+20210515_140902
+etat des requetes
+res_gen: {'generation': 'OK'} 
+mesmodules.ConnexionPostgres
+__updateDeclencheur__
+updated_rows: 1 
+==================== FIN ==========================
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+Python 3.9.4
+pip 21.1.1 from /var/www/html/bbg-reports/flask/venv3/lib/python3.9/site-packages/pip (python 3.9)
+this_python (3, 9)
+==================== DEMARRAGE ====================
+__ConnexionSqlServer__
+contructeur __init__
+mesmodules.ConnexionPostgres
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+cnx.testconnexion:  {'connexion': 'OK'}
+mesmodules.ConnexionPostgres
+__getDeclencheur__
+nbre 0
+annee_str: 2021 
+==================== FIN ==========================
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+Python 3.9.4
+pip 21.1.1 from /var/www/html/bbg-reports/flask/venv3/lib/python3.9/site-packages/pip (python 3.9)
+this_python (3, 9)
+==================== DEMARRAGE ====================
+__ConnexionSqlServer__
+contructeur __init__
+mesmodules.ConnexionPostgres
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+cnx.testconnexion:  {'connexion': 'OK'}
+mesmodules.ConnexionPostgres
+__getDeclencheur__
+nbre 1
+annee_str: 2021 
+mesmodules.ConnexionPostgres
+__updateDeclencheur__
+updated_rows: 1 
+datetime_exec_obj:  2021-05-15 12:44:00
+now:  2021-05-15 14:11:02.470966
+__main__
+__declencheurMensuel__
+=> trouve => jour  15
+mesmodules.MesFonctions
+__genererFichier__
+repertoire /mnt/win/Courant/ORGANISATION/MENSUEL - REQUETES
+nomfichier etat_des_requetes_20210515_141102.xlsx
+__testerLaConnexion__3__
+code: CNX_POSTGRES
+serveur: 192.168.56.220
+port: 5432
+utidb: postgres
+basedonnees: reportsdb
+contructeur __init__
+mesmodules.ConnexionPostgres
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+__res__ {'connexion': 'OK'}
+testerLaConnexion:: {'connexion': 'OK'}
+mesmodules.MesFonctions
+__testerLaRequete2__
+__testerLaRequete2__ , __code__ : CNX_POSTGRES
+__testerLaRequete2__ , sqlstr : select count(*) from requete
+contructeur __init__
+mesmodules.ConnexionPostgres
+testerLaRequete:: {'nombreligne': 1}
+genererLeFichierV2(data) data: {'code': 'CNX_POSTGRES', 'utidb': 'postgres', 'passdb': 'postgres', 'serveur': '192.168.56.220', 'port': '5432', 'basedonnees': 'reportsdb', 'sqlstr': 'select count(*) from requete', 'processus': 'ORGANISATION', 'libelle': 'etat des requetes', 'repDestination': 'MENSUEL - REQUETES'}
+mesmodules.MesFonctions
+__genererLeFichierV2__
+{'code': 'CNX_POSTGRES', 'utidb': 'postgres', 'passdb': 'postgres', 'serveur': '192.168.56.220', 'port': '5432', 'basedonnees': 'reportsdb', 'sqlstr': 'select count(*) from requete', 'processus': 'ORGANISATION', 'libelle': 'etat des requetes', 'repDestination': 'MENSUEL - REQUETES'}
+contructeur __init__
+mesmodules.ConnexionPostgres
+mesmodules.ConnexionPostgres
+ConnexionPostgres connexion::::
+192.168.56.220
+PostgreSQL server information
+{'user': 'postgres', 'dbname': 'reportsdb', 'host': '192.168.56.220', 'port': '5432', 'tty': '', 'options': '', 'sslmode': 'prefer', 'sslcompression': '0', 'krbsrvname': 'postgres', 'target_session_attrs': 'any'} 
+
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+   count
+0     17
+/mnt/win/Courant
+/mnt/win/Archives
+xlsx
+SheetName1
+xlsxwriter
+2021-05-15 14:11:02.506055
+20210515_141102
+etat des requetes
+res_gen: {'generation': 'OK'} 
+mesmodules.ConnexionPostgres
+__updateDeclencheur__
+updated_rows: 1 
+==================== FIN ==========================
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+Python 3.9.4
+pip 21.1.1 from /var/www/html/bbg-reports/flask/venv3/lib/python3.9/site-packages/pip (python 3.9)
+this_python (3, 9)
+==================== DEMARRAGE ====================
+__ConnexionSqlServer__
+contructeur __init__
+mesmodules.ConnexionPostgres
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+cnx.testconnexion:  {'connexion': 'OK'}
+mesmodules.ConnexionPostgres
+__getDeclencheur__
+nbre 0
+annee_str: 2021 
+==================== FIN ==========================
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+Python 3.9.4
+pip 21.1.1 from /var/www/html/bbg-reports/flask/venv3/lib/python3.9/site-packages/pip (python 3.9)
+this_python (3, 9)
+==================== DEMARRAGE ====================
+__ConnexionSqlServer__
+contructeur __init__
+mesmodules.ConnexionPostgres
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+cnx.testconnexion:  {'connexion': 'OK'}
+mesmodules.ConnexionPostgres
+__getDeclencheur__
+nbre 0
+annee_str: 2021 
+==================== FIN ==========================
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+Python 3.9.4
+pip 21.1.1 from /var/www/html/bbg-reports/flask/venv3/lib/python3.9/site-packages/pip (python 3.9)
+this_python (3, 9)
+==================== DEMARRAGE ====================
+__ConnexionSqlServer__
+contructeur __init__
+mesmodules.ConnexionPostgres
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+cnx.testconnexion:  {'connexion': 'OK'}
+mesmodules.ConnexionPostgres
+__getDeclencheur__
+nbre 0
+annee_str: 2021 
+==================== FIN ==========================
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+Python 3.9.4
+pip 21.1.1 from /var/www/html/bbg-reports/flask/venv3/lib/python3.9/site-packages/pip (python 3.9)
+this_python (3, 9)
+==================== DEMARRAGE ====================
+__ConnexionSqlServer__
+contructeur __init__
+mesmodules.ConnexionPostgres
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+cnx.testconnexion:  {'connexion': 'OK'}
+mesmodules.ConnexionPostgres
+__getDeclencheur__
+nbre 0
+annee_str: 2021 
+==================== FIN ==========================
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+Python 3.9.4
+pip 21.1.1 from /var/www/html/bbg-reports/flask/venv3/lib/python3.9/site-packages/pip (python 3.9)
+this_python (3, 9)
+==================== DEMARRAGE ====================
+__ConnexionSqlServer__
+contructeur __init__
+mesmodules.ConnexionPostgres
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+cnx.testconnexion:  {'connexion': 'OK'}
+mesmodules.ConnexionPostgres
+__getDeclencheur__
+nbre 0
+annee_str: 2021 
+==================== FIN ==========================
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+Python 3.9.4
+pip 21.1.1 from /var/www/html/bbg-reports/flask/venv3/lib/python3.9/site-packages/pip (python 3.9)
+this_python (3, 9)
+==================== DEMARRAGE ====================
+__ConnexionSqlServer__
+contructeur __init__
+mesmodules.ConnexionPostgres
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+cnx.testconnexion:  {'connexion': 'OK'}
+mesmodules.ConnexionPostgres
+__getDeclencheur__
+nbre 0
+annee_str: 2021 
+==================== FIN ==========================
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+Python 3.9.4
+pip 21.1.1 from /var/www/html/bbg-reports/flask/venv3/lib/python3.9/site-packages/pip (python 3.9)
+this_python (3, 9)
+==================== DEMARRAGE ====================
+__ConnexionSqlServer__
+contructeur __init__
+mesmodules.ConnexionPostgres
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+cnx.testconnexion:  {'connexion': 'OK'}
+mesmodules.ConnexionPostgres
+__getDeclencheur__
+nbre 0
+annee_str: 2021 
+==================== FIN ==========================
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
+Python 3.9.4
+pip 21.1.1 from /var/www/html/bbg-reports/flask/venv3/lib/python3.9/site-packages/pip (python 3.9)
+this_python (3, 9)
+==================== DEMARRAGE ====================
+__ConnexionSqlServer__
+contructeur __init__
+mesmodules.ConnexionPostgres
+You are connected to -  ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',) 
+
+record: ('PostgreSQL 13.2 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit',)
+cnx.testconnexion:  {'connexion': 'OK'}
+mesmodules.ConnexionPostgres
+__getDeclencheur__
+nbre 0
+annee_str: 2021 
+==================== FIN ==========================
+pip 20.3.3 from /usr/lib/python2.7/site-packages/pip (python 2.7)
