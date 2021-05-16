@@ -21,8 +21,8 @@ class ConnexionPostgres:
 
         # def __init__(self):
         """ contructeur. initialisation: initialiser la classe """
-        print("contructeur __init__")
-        print(__name__)
+        # print("contructeur __init__")
+        # print(__name__)
         self.user = user
         self.password = password
         self.host = host
@@ -33,11 +33,12 @@ class ConnexionPostgres:
         """
         connexion: permet de se connecter à la base de donnée
      """
-        print(__name__)
-        print("ConnexionPostgres connexion::::")
+        # print(__name__)
+        # print("ConnexionPostgres connexion::::")
         # print(ConnexionPostgres.host)
-        print(self.host)
+        # print(self.host)
 
+        connection = None
         try:
             # Connect to an existing database
             connection = psycopg2.connect(user=self.user,
@@ -48,15 +49,15 @@ class ConnexionPostgres:
             # Create a cursor to perform database operations
             cursor = connection.cursor()
             # Print PostgreSQL details
-            print("PostgreSQL server information")
-            print(connection.get_dsn_parameters(), "\n")
+            # print("PostgreSQL server information")
+            # print(connection.get_dsn_parameters(), "\n")
             # Executing a SQL query
             cursor.execute("SELECT version();")
             # Fetch result
             record = cursor.fetchone()
-            print("You are connected to - ", record, "\n")
+            # print("You are connected to - ", record, "\n")
 
-            return connection
+            # return connection
 
         except (Exception, Error) as error:
             print("Error while connecting to PostgreSQL", error)
@@ -65,6 +66,7 @@ class ConnexionPostgres:
         #         cursor.close()
         #         connection.close()
         #         print("PostgreSQL connection is closed")
+        return connection
 
     def testconnexion(self, user, password, host, port, database):
         """
@@ -83,8 +85,8 @@ class ConnexionPostgres:
             cursor = connection.cursor()
             cursor.execute("SELECT version();")
             record = cursor.fetchone()
-            print("You are connected to - ", record, "\n")
-            print("record: {}".format(record))
+            # print("You are connected to - ", record, "\n")
+            # print("record: {}".format(record))
             if (record):
                 return {"connexion": "OK"}
             else:
@@ -278,8 +280,8 @@ class ConnexionPostgres:
                 connection.close()
 
     def getAllConnexionsDB(self):
-        print(__name__)
-        print("__getAllConnexionsDB__")
+        # print(__name__)
+        # print("__getAllConnexionsDB__")
 
         cnx = None
         curseur = None
@@ -307,8 +309,8 @@ class ConnexionPostgres:
             # print("PostgreSQL connection is closed")
 
     def updateDeclencheur(self, id_requete_declencheur, status):
-        print(__name__)
-        print("__updateDeclencheur__")
+        # print(__name__)
+        # print("__updateDeclencheur__")
 
         connection = psycopg2.connect(user=self.user,
                                           password=self.password,
@@ -345,13 +347,9 @@ class ConnexionPostgres:
         
         return updated_rows
 
-
-        
-
-
     def getDeclencheurs(self):
-        print(__name__)
-        print("__getDeclencheur__")
+        # print(__name__)
+        # print("__getDeclencheur__")
 
         # from datetime import datetime
 
@@ -405,12 +403,42 @@ class ConnexionPostgres:
 
         record = cursor.fetchall()
         nbre = len(record)
-        print("nbre de declencheurs: {}".format(nbre))
+        # print("nbre de declencheurs: {}".format(nbre))
         # print(self.user,self.password,self.host,self.port,self.database)
         # exit(1)
         return record
 
-        
+    def renitialiserRequeteDeclencheur(self, connection):
+        # print(__name__)
+        # print("__renitialiserRequeteDeclencheur__")
+        # print(connection)        
+
+
+        updated_rows = 0
+
+        try:
+
+            sqlstr = """
+            UPDATE requete_declencheur
+            SET status = %s
+            WHERE status is not null;
+            """
+
+            status = '0'
+
+            cursor = connection.cursor()
+            cursor.execute(sqlstr, (status))
+            updated_rows = cursor.rowcount
+            connection.commit()
+            cursor.close()
+
+        except (Exception, psycopg2.DatabaseError) as erreur:
+            print(erreur)
+        # finally:
+        #     if connection is not None:
+        #         connection.close()
+
+        return updated_rows
 
 
 

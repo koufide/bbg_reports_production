@@ -9,7 +9,7 @@ from mysql.connector import Error
 
 
 class ConnexionSqlServer:
-    print("__ConnexionSqlServer__")
+    # print("__ConnexionSqlServer__")
     """
     docstring
     """
@@ -72,7 +72,7 @@ class ConnexionSqlServer:
         """
         connexion: permet de se connecter à la base de donnée
         """
-        print(__name__)
+        # print(__name__)
 
         try:
             # Connect to an existing database
@@ -98,7 +98,7 @@ class ConnexionSqlServer:
 
             # 4) collecter et afficher le résultat
             row = cursor.fetchone()
-            print(row)
+            # print(row)
 
             return connection
             # while row:
@@ -164,7 +164,7 @@ class ConnexionSqlServer:
 
     # def testconnexion(self, username, password, server, port, database):
     def testconnexion(self):
-        print("__testconnexion__")
+        # print("__testconnexion__")
         """
         connexion: permet de tester la connexion à la base de donnée
         """
@@ -182,7 +182,7 @@ class ConnexionSqlServer:
             cursor.execute("SELECT @@version;")
 
             record = cursor.fetchone()
-            print("record: {}".format(record))
+            # print("record: {}".format(record))
             if (record):
                 return {"connexion": "OK"}
             else:
@@ -201,7 +201,7 @@ class ConnexionSqlServer:
                 connection.close()
 
     def testrequete(self, sqlstr):
-        print("__testrequete__>__")
+        # print("__testrequete__>__")
         """
         connexion: permet de tester la requete 
         """
@@ -246,6 +246,9 @@ class ConnexionSqlServer:
             if (connection):
                 cursor.close()
                 connection.close()
+
+
+
 
 
 # if(__name__ == "__main__"):

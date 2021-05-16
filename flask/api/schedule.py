@@ -115,25 +115,19 @@ def main():
     # print(serveur, port, basedonnees, utidb, passdb)
     # exit(1)
 
-    cnx = ConnexionPostgres(
+    cnxpostgres = ConnexionPostgres(
         utidb, passdb, serveur, port, basedonnees)
 
-    res_cnx = cnx.testconnexion(
-        utidb, passdb, serveur, port, basedonnees)
+    connection = cnxpostgres.connexion()
+
+    # res_cnx = cnx.testconnexion(
+    #     utidb, passdb, serveur, port, basedonnees)
     
-    print("cnx.testconnexion: ", res_cnx)
+    # print("cnx.testconnexion: ", res_cnx)
 
-    if(res_cnx['connexion']=='OK'):
-        record = cnx.getDeclencheurs()
-
-        # print(record)
-        # for r in record:
-        #     print(r)
-        
-        # i = 0
-        # while i < len(record):
-        #     print(record[i])
-            # i += 1
+    # if(res_cnx['connexion']=='OK'):
+    if(cnxpostgres):
+        record = cnxpostgres.getDeclencheurs()
         
         now = datetime.now()
         # print("now: {} ".format(now))
@@ -157,7 +151,7 @@ def main():
         # print("mois_int: {} ".format(mois_int))
 
         annee_str = now.strftime("%Y")
-        print("annee_str: {} ".format(annee_str))
+        # print("annee_str: {} ".format(annee_str))
         # exit(1)
         
 
@@ -174,7 +168,7 @@ def main():
             # exit(1)
 
             # updated_rows = cnx.updateDeclencheur(connection=cnx, id_requete_declencheur=rd_id, status=1)
-            updated_rows = cnx.updateDeclencheur(rd_id, 1)
+            updated_rows = cnxpostgres.updateDeclencheur(rd_id, 1)
             print("updated_rows: {} ".format(updated_rows))
             # exit(1)
 
@@ -260,19 +254,19 @@ def main():
                         # df.to_excel(repDestination+"/"+libelle+'.xlsx', sheet_name='Sheet_name_1', engine='xlsxwriter')
                         # df.to_excel(destination+"/" + libelle + '_'+now_str+'.'+Extension,                                sheet_name=SheetName, engine=Engine)
 
-                        genererFichier(connexion, destination, nomfichier, SheetName, Engine)
+                        # genererFichier(connexion, destination, nomfichier, SheetName, Engine)
+                        res_gen = genererFichier(connexion, destination, nomfichier, SheetName, Engine)
+                        print("res_gen: {} ".format(res_gen))
+
+                        if res_gen['generation']=='OK':
+                            updated_rows = cnxpostgres.updateDeclencheur(id_requete_declencheur=rd_id, status=3)
+                            print("updated_rows: {} ".format(updated_rows))
+                        else:
+                            print("Fichier non généré: {}/{}".format((destination,nomfichier)))
+                    
                     except OSError as erreur:
                         print("<= erreur: {}: ".format(erreur))
 
-<<<<<<< HEAD
-=======
-                    res_gen = genererFichier(connexion, destination, nomfichier, SheetName, Engine)
-                    print("res_gen: {} ".format(res_gen))
-
-                    if res_gen['generation']=='OK':
-                        updated_rows = cnx.updateDeclencheur(id_requete_declencheur=rd_id, status=3)
-                        print("updated_rows: {} ".format(updated_rows))
->>>>>>> home/work
                     
 
 

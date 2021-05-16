@@ -2288,3 +2288,82 @@
 [Sat May 15 12:45:00.087067 2021] [wsgi:error] [pid 15249] [remote 192.168.56.1:52634] mesmodules.ConnexionPostgres
 [Sat May 15 12:45:00.097666 2021] [wsgi:error] [pid 15249] [remote 192.168.56.1:52634] 2
 >>>>>>> home/work
+[Sun May 16 12:28:02.949648 2021] [wsgi:info] [pid 24262] mod_wsgi (pid=24262): Attach interpreter ''.
+[Sun May 16 12:28:02.955240 2021] [wsgi:info] [pid 24261] mod_wsgi (pid=24261): Attach interpreter ''.
+[Sun May 16 12:28:03.125645 2021] [wsgi:info] [pid 24262] mod_wsgi (pid=24262): Imported 'mod_wsgi'.
+[Sun May 16 12:28:03.128699 2021] [wsgi:info] [pid 24261] mod_wsgi (pid=24261): Imported 'mod_wsgi'.
+[Sun May 16 16:55:17.725334 2021] [wsgi:info] [pid 24262] mod_wsgi (pid=24262): Create interpreter '192.168.56.220:5000|'.
+[Sun May 16 16:55:17.779693 2021] [wsgi:info] [pid 24262] [remote 192.168.56.1:64013] mod_wsgi (pid=24262, process='flask.koufide.com', application='192.168.56.220:5000|'): Loading Python script file '/var/www/html/bbg-reports/flask/wsgi/flask.wsgi'.
+[Sun May 16 16:55:17.780051 2021] [wsgi:error] [pid 24262] KF PREF : '/usr' 
+[Sun May 16 16:55:17.780076 2021] [wsgi:error] [pid 24262] KF PATH : ['/var/www/html/bbg-reports/flask/api', '/var/www/html/bbg-reports/flask/venv2', '/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages', '/usr/lib64/python36.zip', '/usr/lib64/python3.6', '/usr/lib64/python3.6/lib-dynload', '/home/iexploit/.local/lib/python3.6/site-packages', '/usr/local/lib64/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages', '/usr/lib64/python3.6/site-packages', '/usr/lib/python3.6/site-packages']  
+[Sun May 16 16:55:17.780102 2021] [wsgi:error] [pid 24262] PYTHONPATH: None
+[Sun May 16 16:55:17.780120 2021] [wsgi:error] [pid 24262] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+[Sun May 16 16:55:19.187892 2021] [wsgi:error] [pid 24262] listorigins: ["http://192.168.56.220:4200","http://127.0.0.1:4100","http://192.168.56.220","http://192.168.56.1"]
+[Sun May 16 16:55:19.220835 2021] [wsgi:info] [pid 24261] mod_wsgi (pid=24261): Create interpreter '192.168.56.220:5000|'.
+[Sun May 16 16:55:19.248217 2021] [wsgi:info] [pid 24261] [remote 192.168.56.1:64013] mod_wsgi (pid=24261, process='flask.koufide.com', application='192.168.56.220:5000|'): Loading Python script file '/var/www/html/bbg-reports/flask/wsgi/flask.wsgi'.
+[Sun May 16 16:55:19.248574 2021] [wsgi:error] [pid 24261] KF PREF : '/usr' 
+[Sun May 16 16:55:19.248598 2021] [wsgi:error] [pid 24261] KF PATH : ['/var/www/html/bbg-reports/flask/api', '/var/www/html/bbg-reports/flask/venv2', '/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages', '/usr/lib64/python36.zip', '/usr/lib64/python3.6', '/usr/lib64/python3.6/lib-dynload', '/home/iexploit/.local/lib/python3.6/site-packages', '/usr/local/lib64/python3.6/site-packages', '/usr/local/lib/python3.6/site-packages', '/usr/lib64/python3.6/site-packages', '/usr/lib/python3.6/site-packages']  
+[Sun May 16 16:55:19.248623 2021] [wsgi:error] [pid 24261] PYTHONPATH: None
+[Sun May 16 16:55:19.248640 2021] [wsgi:error] [pid 24261] PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+[Sun May 16 16:55:20.276107 2021] [wsgi:error] [pid 24261] listorigins: ["http://192.168.56.220:4200","http://127.0.0.1:4100","http://192.168.56.220","http://192.168.56.1"]
+[Sun May 16 16:55:20.285601 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] __testrequete___
+[Sun May 16 16:55:20.285962 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] testrequete data: {'port': '1521', 'serveur': '192.168.56.210', 'sqlstr': 'select * from state', 'repDestination': 'MENSUEL - ETAT DE STATE', 'libelle': 'etat de state', 'nom': 'CONNEXION  ORACLE TEST', 'utidb': 'hr', 'passdb': 'hr', 'basedonnees': 'DB11G', 'code': 'CNX_ORACLE'}
+[Sun May 16 16:55:20.285976 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] __testerLaConnexion__3__
+[Sun May 16 16:55:20.285986 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] code: CNX_ORACLE
+[Sun May 16 16:55:20.285994 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] serveur: 192.168.56.210
+[Sun May 16 16:55:20.286001 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] port: 1521
+[Sun May 16 16:55:20.286009 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] utidb: hr
+[Sun May 16 16:55:20.286016 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] basedonnees: DB11G
+[Sun May 16 16:55:20.286028 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] mesmodules.ConnexionOracle
+[Sun May 16 16:55:20.286078 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] hr hr 192.168.56.210 1521 DB11G
+[Sun May 16 16:55:20.345830 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] __res__ {'connexion': 'OK'}
+[Sun May 16 16:55:20.345877 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] testrequete res:: {'connexion': 'OK'}
+[Sun May 16 16:55:20.345893 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] mesmodules.MesFonctions
+[Sun May 16 16:55:20.345901 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] __testerLaRequete2__
+[Sun May 16 16:55:20.345911 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Sun May 16 16:55:20.345919 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] __testerLaRequete2__ , sqlstr : select * from state
+[Sun May 16 16:55:20.345932 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] mesmodules.ConnexionOracle
+[Sun May 16 16:55:20.345950 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64013] hr hr 192.168.56.210 1521 DB11G
+[Sun May 16 16:55:56.974679 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] app
+[Sun May 16 16:55:56.974713 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] createxmlfile
+[Sun May 16 16:55:56.975387 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/16'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/16{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/16/typeConnexion'}}}
+[Sun May 16 16:55:56.975448 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/16'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/16{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/16/typeConnexion'}}}
+[Sun May 16 16:55:56.975472 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Sun May 16 16:55:57.039081 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] testconnexion res: {'connexion': 'OK'}
+[Sun May 16 16:56:27.062017 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] [2021-05-16 16:56:27,049] ERROR in app: Exception on /api/pyflask/createxmlfile [POST]
+[Sun May 16 16:56:27.062082 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] Traceback (most recent call last):
+[Sun May 16 16:56:27.062094 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/usr/lib64/python3.6/pathlib.py", line 1248, in mkdir
+[Sun May 16 16:56:27.062104 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     self._accessor.mkdir(self, mode)
+[Sun May 16 16:56:27.062113 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/usr/lib64/python3.6/pathlib.py", line 387, in wrapped
+[Sun May 16 16:56:27.062122 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     return strfunc(str(pathobj), *args)
+[Sun May 16 16:56:27.062131 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] OSError: [Errno 112] Host is down: '/mnt/win/Courant'
+[Sun May 16 16:56:27.062139 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] 
+[Sun May 16 16:56:27.062148 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] During handling of the above exception, another exception occurred:
+[Sun May 16 16:56:27.062157 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] 
+[Sun May 16 16:56:27.062165 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] Traceback (most recent call last):
+[Sun May 16 16:56:27.062175 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+[Sun May 16 16:56:27.062184 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     response = self.full_dispatch_request()
+[Sun May 16 16:56:27.062194 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+[Sun May 16 16:56:27.062203 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     rv = self.handle_user_exception(e)
+[Sun May 16 16:56:27.062212 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+[Sun May 16 16:56:27.062222 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     return cors_after_request(app.make_response(f(*args, **kwargs)))
+[Sun May 16 16:56:27.062231 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+[Sun May 16 16:56:27.062240 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     reraise(exc_type, exc_value, tb)
+[Sun May 16 16:56:27.062249 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+[Sun May 16 16:56:27.062258 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     raise value
+[Sun May 16 16:56:27.062276 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+[Sun May 16 16:56:27.062286 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     rv = self.dispatch_request()
+[Sun May 16 16:56:27.062295 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/var/www/html/bbg-reports/flask/venv2/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+[Sun May 16 16:56:27.062304 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     return self.view_functions[rule.endpoint](**req.view_args)
+[Sun May 16 16:56:27.062313 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/var/www/html/bbg-reports/flask/api/app.py", line 555, in createxmlfile
+[Sun May 16 16:56:27.062322 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     Path(Courant).mkdir(parents=True, exist_ok=True)
+[Sun May 16 16:56:27.062331 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/usr/lib64/python3.6/pathlib.py", line 1257, in mkdir
+[Sun May 16 16:56:27.062340 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     if not exist_ok or not self.is_dir():
+[Sun May 16 16:56:27.062348 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/usr/lib64/python3.6/pathlib.py", line 1348, in is_dir
+[Sun May 16 16:56:27.062357 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     return S_ISDIR(self.stat().st_mode)
+[Sun May 16 16:56:27.062366 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/usr/lib64/python3.6/pathlib.py", line 1158, in stat
+[Sun May 16 16:56:27.062376 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     return self._accessor.stat(self)
+[Sun May 16 16:56:27.062484 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]   File "/usr/lib64/python3.6/pathlib.py", line 387, in wrapped
+[Sun May 16 16:56:27.062497 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015]     return strfunc(str(pathobj), *args)
+[Sun May 16 16:56:27.062515 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] OSError: [Errno 112] Host is down: '/mnt/win/Courant'
+[Sun May 16 16:56:27.062630 2021] [wsgi:error] [pid 24261] [remote 192.168.56.1:64015] 
