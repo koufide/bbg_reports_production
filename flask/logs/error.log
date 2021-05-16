@@ -2092,3 +2092,25 @@
 [Thu May 13 22:29:57.037857 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] Context    dpiConn_create: server attach
 [Thu May 13 22:29:57.037876 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] __res__ {'connexion': 'ORA-12543: TNS : h\xc3\xb4te de destination impossible \xc3\xa0 atteindre'}
 [Thu May 13 22:29:57.037891 2021] [wsgi:error] [pid 15632] [remote 192.168.56.1:65197] testconnection res: {'connexion': 'ORA-12543: TNS : h\xc3\xb4te de destination impossible \xc3\xa0 atteindre'}
+[Sat May 15 18:44:43.417747 2021] [wsgi:info] [pid 15635] mod_wsgi (pid=15635): Shutdown requested 'flask.koufide.com'.
+[Sat May 15 18:44:43.418701 2021] [wsgi:info] [pid 15635] mod_wsgi (pid=15635): Stopping process 'flask.koufide.com'.
+[Sat May 15 18:44:43.418734 2021] [wsgi:info] [pid 15635] mod_wsgi (pid=15635): Destroying interpreters.
+[Sat May 15 18:44:43.418766 2021] [wsgi:info] [pid 15635] mod_wsgi (pid=15635): Destroy interpreter '192.168.56.220:5000|'.
+[Sat May 15 18:44:43.419306 2021] [wsgi:info] [pid 15635] mod_wsgi (pid=15635): End interpreter '192.168.56.220:5000|'.
+[Sat May 15 18:44:43.428696 2021] [wsgi:info] [pid 15632] mod_wsgi (pid=15632): Shutdown requested 'flask.koufide.com'.
+[Sat May 15 18:44:43.429044 2021] [wsgi:info] [pid 15632] mod_wsgi (pid=15632): Stopping process 'flask.koufide.com'.
+[Sat May 15 18:44:43.429055 2021] [wsgi:info] [pid 15632] mod_wsgi (pid=15632): Destroying interpreters.
+[Sat May 15 18:44:43.429067 2021] [wsgi:info] [pid 15632] mod_wsgi (pid=15632): Destroy interpreter '192.168.56.220:5000|'.
+[Sat May 15 18:44:43.429260 2021] [wsgi:info] [pid 15632] mod_wsgi (pid=15632): End interpreter '192.168.56.220:5000|'.
+[Sat May 15 18:44:43.754249 2021] [wsgi:info] [pid 15632] mod_wsgi (pid=15632): Cleanup interpreter ''.
+[Sat May 15 18:44:43.767329 2021] [wsgi:info] [pid 15635] mod_wsgi (pid=15635): Cleanup interpreter ''.
+[Sat May 15 18:44:43.785282 2021] [wsgi:info] [pid 15632] mod_wsgi (pid=15632): Terminating Python.
+[Sat May 15 18:44:43.798353 2021] [wsgi:info] [pid 15635] mod_wsgi (pid=15635): Terminating Python.
+[Sat May 15 18:44:43.885379 2021] [wsgi:info] [pid 15632] mod_wsgi (pid=15632): Python has shutdown.
+[Sat May 15 18:44:43.885405 2021] [wsgi:info] [pid 15632] mod_wsgi (pid=15632): Exiting process 'flask.koufide.com'.
+[Sat May 15 18:44:43.898112 2021] [wsgi:info] [pid 15635] mod_wsgi (pid=15635): Python has shutdown.
+[Sat May 15 18:44:43.898136 2021] [wsgi:info] [pid 15635] mod_wsgi (pid=15635): Exiting process 'flask.koufide.com'.
+[Sat May 15 18:44:45.093366 2021] [wsgi:info] [pid 19788] mod_wsgi (pid=19788): Attach interpreter ''.
+[Sat May 15 18:44:45.146075 2021] [wsgi:info] [pid 19787] mod_wsgi (pid=19787): Attach interpreter ''.
+[Sat May 15 18:44:45.264357 2021] [wsgi:info] [pid 19788] mod_wsgi (pid=19788): Imported 'mod_wsgi'.
+[Sat May 15 18:44:45.308804 2021] [wsgi:info] [pid 19787] mod_wsgi (pid=19787): Imported 'mod_wsgi'.
