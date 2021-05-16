@@ -306,6 +306,49 @@ class ConnexionPostgres:
                 cnx.close()
             # print("PostgreSQL connection is closed")
 
+    def updateDeclencheur(self, id_requete_declencheur, status):
+        print(__name__)
+        print("__updateDeclencheur__")
+
+        connection = psycopg2.connect(user=self.user,
+                                          password=self.password,
+                                          host=self.host,
+                                          port=self.port,
+                                          database=self.database)
+
+        sqlstr = """
+        UPDATE requete_declencheur
+        SET id=?, note=?, declencheur_id=?, requete_id=?, dern_date_heur_exec=?, proch_date_exec=?, proch_heure_exec=?, status=?
+        WHERE id=;
+        """
+
+        sqlstr = """
+        UPDATE requete_declencheur
+        SET status = %s
+        WHERE id = %s;
+        """
+        
+        updated_rows = 0
+
+        try:
+            cursor = connection.cursor()
+            cursor.execute(sqlstr, (status,id_requete_declencheur))
+            updated_rows = cursor.rowcount
+            connection.commit()
+            cursor.close()
+
+        except (Exception, psycopg2.DatabaseError) as erreur:
+            print(erreur)
+        finally:
+            if connection is not None:
+                connection.close()
+        
+        return updated_rows
+
+
+        
+
+
     def getDeclencheurs(self):
         print(__name__)
         print("__getDeclencheur__")
@@ -324,7 +367,7 @@ class ConnexionPostgres:
         # cursor = connection.cursor()
 
         sqlstr="""
-        SELECT rd.requete_id, rd.declencheur_id, d.date_exec, d.heure_exec, d.frequence, d.mois, d.jours_du_mois,
+        SELECT rd.id, rd.requete_id, rd.declencheur_id, d.date_exec, d.heure_exec, d.frequence, d.mois, d.jours_du_mois,
             r.libelle libelle_req, r.rep_destination, r.sqlstr,
             c.serveur, c.port, c.basedonnees, c.utidb, c.passdb, c.nom connexion_nom,
             tc.code typeconnexion_code, tc.libelle typeconnexion_libelle , p.nom processus_nom
@@ -332,7 +375,32 @@ class ConnexionPostgres:
         WHERE d.id=rd.declencheur_id AND r.id=rd.requete_id AND c.id=r.connexion_id
             AND tc.id=c.type_connexion_id AND p.id=r.processus_id
         ORDER BY d.frequence
+        FOR UPDATE
         """
+
+        sqlstr="""
+        SELECT rd.date_proch_exec,
+            EXTRACT (YEAR FROM NOW()) AS YEAR,
+            EXTRACT (MONTH FROM NOW()) AS MONTH,
+            EXTRACT (DAY FROM NOW()) AS DAY,
+            rd.id, rd.requete_id, rd.declencheur_id, d.date_exec, d.heure_exec, d.frequence, d.mois, d.jours_du_mois,
+                r.libelle libelle_req, r.rep_destination, r.sqlstr,
+                c.serveur, c.port, c.basedonnees, c.utidb, c.passdb, c.nom connexion_nom,
+                tc.code typeconnexion_code, tc.libelle typeconnexion_libelle , p.nom processus_nom
+        FROM requete_declencheur rd, declencheur d, requete r, connexion c, type_connexion tc, processus p
+        WHERE d.id=rd.declencheur_id AND r.id=rd.requete_id AND c.id=r.connexion_id
+            AND tc.id=c.type_connexion_id AND p.id=r.processus_id
+            AND d.frequence='MENSUEL'
+            AND (
+                    (d.date_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd') and rd.date_proch_exec is null) or
+                    ( rd.date_proch_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd')  ) 
+                )
+            AND (rd.status is null or rd.status=0)
+        ORDER BY d.frequence
+        FOR UPDATE
+        """
+
+
         cursor.execute(sqlstr)
 
         record = cursor.fetchall()
