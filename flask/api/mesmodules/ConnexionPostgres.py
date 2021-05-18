@@ -347,6 +347,52 @@ class ConnexionPostgres:
         
         return updated_rows
 
+
+
+    def updateDeclencheurV2(self, connection, sets, wheres):
+        # print(__name__)
+        # print("__updateDeclencheur__")
+
+        # connection = psycopg2.connect(user=self.user,
+        #                                   password=self.password,
+        #                                   host=self.host,
+        #                                   port=self.port,
+        #                                   database=self.database)
+        sqlstr = """
+        UPDATE requete_declencheur
+        SET status = %s
+        WHERE id = %s;
+        """
+
+        sqlstr = """
+        UPDATE requete_declencheur
+        SET """+sets+"""
+        WHERE """+wheres+""";
+        """
+
+        print("sqlstr: {}".format(sqlstr))
+        # exit(1)
+
+        
+        updated_rows = 0
+
+        try:
+            cursor = connection.cursor()
+            cursor.execute(sqlstr)
+            updated_rows = cursor.rowcount
+            connection.commit()
+            cursor.close()
+
+        except (Exception, psycopg2.DatabaseError) as erreur:
+            print(erreur)
+        finally:
+            if connection is not None:
+                connection.close()
+        
+        return updated_rows
+
+   
+   
     def getDeclencheurs(self):
         # print(__name__)
         # print("__getDeclencheur__")
@@ -403,6 +449,52 @@ class ConnexionPostgres:
 
         record = cursor.fetchall()
         nbre = len(record)
+        # print("nbre de declencheurs: {}".format(nbre))
+        # print(self.user,self.password,self.host,self.port,self.database)
+        # exit(1)
+        return record
+      
+    def getDeclencheursJournalier(self, connection):
+        print(__name__)
+        print("__getDeclencheursJournalier__")
+
+        # from datetime import datetime
+        # import psycopg2.extras
+
+        # connection = psycopg2.connect(user=self.user,
+        #                                   password=self.password,
+        #                                   host=self.host,
+        #                                   port=self.port,
+        #                                   database=self.database)
+
+        cursor = connection.cursor(cursor_factory = psycopg2.extras.RealDictCursor)
+        # cursor = connection.cursor()
+
+       
+
+        sqlstr="""
+        SELECT rd.id id_rd, rd.date_proch_exec, now(),
+        TO_TIMESTAMP(rd.date_proch_exec, 'yyyy-mm-dd HH24:MI:SS') date_proch_exec,
+        r.libelle, r.rep_destination, r.processus_id, r.sqlstr, r.id id_r,
+        d.date_exec, d.heure_exec, d.frequence, repeat_jours,
+        c.passdb, c.utidb, c.serveur, c.port, c.basedonnees, tc.code,
+        p.nom processus
+        FROM public.requete_declencheur rd, requete r, declencheur d, connexion c, type_connexion tc, processus p
+        WHERE (rd.status=0 or rd.status is NULL)
+        AND ( 
+            (rd.date_proch_exec is null AND d.date_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd') ) or 
+            ( TO_TIMESTAMP(rd.date_proch_exec, 'yyyy-mm-dd HH24:MI:SS')  <= NOW() ) 
+        )
+        AND d.id=rd.declencheur_id AND d.frequence='JOURNALIER' AND c.id=r.connexion_id AND tc.id=c.type_connexion_id
+        AND p.id=r.processus_id
+        FOR UPDATE
+        """
+
+
+        cursor.execute(sqlstr)
+
+        record = cursor.fetchall()
+        # nbre = len(record)
         # print("nbre de declencheurs: {}".format(nbre))
         # print(self.user,self.password,self.host,self.port,self.database)
         # exit(1)

@@ -163,11 +163,6 @@ def main():
         # while i < len(record):
         #     print(record[i])
             # i += 1
-        
-
-        
-        
-
 
         # for i in range(len(record)):
         #     # print(record[i])

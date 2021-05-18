@@ -1,6 +1,15 @@
 # coding: utf-8
 
+from datetime import timedelta
 import sys
+
+import configparser
+
+
+config = configparser.ConfigParser()
+config.read('/var/www/html/bbg-reports/flask/api/mesmodules/config.ini')
+
+
 
 this_python = sys.version_info[:2]
 print("this_python",this_python)
@@ -21,78 +30,58 @@ def declencheurMensuel(jour_str, jours_du_mois,  mois_str, mois):
     print(__name__)
     print("__declencheurMensuel__")
     res = False
-    # print(jour_str, jours_du_mois,  mois_str, mois)
 
     jours_du_moisTab = str(jours_du_mois).split(',')
 
-
-
-    # print("\n date_exec: {} - heure_exec: {} - frequence: {} - libelle_req: {} - rep_destination: {} - connexion_nom: {} - mois: {} \n"
-    #     .format(date_exec, heure_exec, frequence, libelle_req,rep_destination, connexion_nom, mois ))
-
-    # print("mois: {}".format(mois))
-    # print(type(mois))
-    # moisTab = (mois).split()
-    # print("moisTab: {}".format(moisTab))
     moisTab = (mois).split(',')
-    # print(type(moisTab))
-    # print("++++ mois_str: {}".format(moisTab))
-    # print("++++ moisTab: {}".format(moisTab))
-
-    # print("mois_str: {}".format(mois_str))
-    # print("moisTab: {}".format(moisTab))
-
-    # for m in moisTab:
-    #     print(m)
-    #     print(type(m))
-
-    # for j in jours_du_moisTab:
-    #     print(j)
-    #     print(type(j))
-
-    #     print((jour_str))
-    #     print(type(jour_str))
-    # exit(1)
 
     if mois_str in moisTab:
-        # print("=> trouve mois", mois_str)
-
-        # print("jour_str searched: x{}x".format(jour_str))
-
-        # print("jour_str: {}".format(jour_str))
-        # print("jours_du_moisTab: {}".format(jours_du_moisTab))
 
         if jour_str in jours_du_moisTab:
-            print("=> trouve => jour ", jour_str)
+            # print("=> trouve => jour ", jour_str)
             res = True
-
-
 
         else:
             print("<= nontrouve jour x{}x".format(jour_str))
-            # print(jours_du_moisTab)
-            # exit(1)
 
     else:
         print("=> nontrouve mois ",mois_str)
-        # print(":{}:".format(mois_str))
     
     return res
-    
+
+def declencheurJournalier():
+    print(__name__) 
+    print("__declencheurJournalier__") 
+
+    Courant = (config['Paths']['Courant'])
+
+    Archives = (config['Paths']['Archives'])
+
+    Extension = config['Fichiers']['Extension']
+
+    SheetName = config['Fichiers']['SheetName']
+
+    Engine = config['Fichiers']['Engine']
+
+
+
+
+
+
+
+
+
+
+
 
 def main():
     from datetime import datetime
     from pathlib import Path
     from mesmodules.ConnexionPostgres import ConnexionPostgres
     from mesmodules.MesFonctions import genererFichier
-    import configparser
+    from dateutil.relativedelta import relativedelta
+    
 
-
-
-    config = configparser.ConfigParser()
-    config.read('/var/www/html/bbg-reports/flask/api/mesmodules/config.ini')
-
-    # print(config['Paths']['Courant'])
     Courant = (config['Paths']['Courant'])
 
     Archives = (config['Paths']['Archives'])
@@ -104,7 +93,6 @@ def main():
     Engine = config['Fichiers']['Engine']
 
     
-
 
     serveur = config['ConnexionPostgres']['Serveur']
     port = config['ConnexionPostgres']['Port']
@@ -120,14 +108,7 @@ def main():
 
     connection = cnxpostgres.connexion()
 
-    # res_cnx = cnx.testconnexion(
-    #     utidb, passdb, serveur, port, basedonnees)
-    
-    # print("cnx.testconnexion: ", res_cnx)
-
-    # if(res_cnx['connexion']=='OK'):
     if(cnxpostgres):
-        record = cnxpostgres.getDeclencheurs()
         
         now = datetime.now()
         # print("now: {} ".format(now))
@@ -153,41 +134,28 @@ def main():
         annee_str = now.strftime("%Y")
         # print("annee_str: {} ".format(annee_str))
         # exit(1)
+
+
+        getDeclencheurJournalier(cnxpostgres)
+        exit(1)
+
+
         
 
+        record = cnxpostgres.getDeclencheurs()
 
         for i in range(len(record)):
-            # print(record[i])
-            # print(record[i]['date_exec'])
-            # print(record[i][3])
-            # print(record[i][4])
-            # print(record[i][4])
             rd_id = (record[i]['id'])
 
-            # print("rd_id: {} ".format(rd_id))
-            # exit(1)
-
-            # updated_rows = cnx.updateDeclencheur(connection=cnx, id_requete_declencheur=rd_id, status=1)
             updated_rows = cnxpostgres.updateDeclencheur(rd_id, 1)
             print("updated_rows: {} ".format(updated_rows))
-            # exit(1)
-
-
 
             date_exec = (record[i]['date_exec'])
             heure_exec = (record[i]['heure_exec'])
             frequence = (record[i]['frequence'])
             mois = (record[i]['mois'])
-            # # moisTab = (mois).split(',', mois)
-            # # print("moisTab: {}".format(moisTab))
-            # print("mois: {}".format(mois))
-            # exit(1)
 
             jours_du_mois =  (record[i]['jours_du_mois'])
-            # jours_du_moisTab = str(jours_du_mois).split(',')
-
-
-
 
             libelle_req = (record[i]['libelle_req'])
             rep_destination = (record[i]['rep_destination'])
@@ -202,25 +170,22 @@ def main():
             typeconnexion_code = (record[i]['typeconnexion_code'])
             typeconnexion_libelle = (record[i]['typeconnexion_libelle'])
 
-            
-            
-
-            # print("heure_exec:",heure_exec)
-            # print("frequence:",frequence)
 
             datetime_exec_obj = datetime.strptime(date_exec + " "+heure_exec, "%Y-%m-%d %H:%M")
             print("datetime_exec_obj: ",datetime_exec_obj)
             print("now: ",now)
 
             if(datetime_exec_obj <= now  ):
-                # print("continue => ")
 
                 res = False
+
                 if(frequence=='MENSUEL'):
                     # print("\n date_exec: {} - heure_exec: {} - frequence: {} - libelle_req: {} - rep_destination: {} - connexion_nom: {} \n".format(date_exec, heure_exec, frequence, libelle_req,rep_destination, connexion_nom))
                     res = declencheurMensuel(jour_str, jours_du_mois,  mois_str, mois)
                 
-                # print("res: {} ".format(res))
+                if frequence=='JOURNALIER':
+                    res = declencheurJournalier()
+                
 
                 if res == True:
                     connexion = {
@@ -234,7 +199,6 @@ def main():
                         'processus':processus_nom,
                         'libelle':libelle_req,
                         'repDestination': rep_destination
-
                     }
 
                     destination = Courant+"/" + processus_nom+"/" + rep_destination
@@ -242,45 +206,74 @@ def main():
                     try:
                         Path(destination).mkdir(parents=True, exist_ok=True)
                         
-                        # now = datetime.now()
-                        # print(now)
                         now_str = now.strftime("%Y%m%d_%H%M%S")
-                        # print(now_str)
-                        # print(libelle_req)
 
                         nomfichier = libelle_req+ '_'+now_str+'.'+Extension
                         nomfichier = str(nomfichier).replace(' ','_')
 
-                        # df.to_excel(repDestination+"/"+libelle+'.xlsx', sheet_name='Sheet_name_1', engine='xlsxwriter')
-                        # df.to_excel(destination+"/" + libelle + '_'+now_str+'.'+Extension,                                sheet_name=SheetName, engine=Engine)
-
-                        # genererFichier(connexion, destination, nomfichier, SheetName, Engine)
                         res_gen = genererFichier(connexion, destination, nomfichier, SheetName, Engine)
                         print("res_gen: {} ".format(res_gen))
 
+
                         if res_gen['generation']=='OK':
-                            updated_rows = cnxpostgres.updateDeclencheur(id_requete_declencheur=rd_id, status=3)
+
+                            # updated_rows = cnxpostgres.updateDeclencheur(id_requete_declencheur=rd_id, status=3)
+                            # # updated_rows = cnxpostgres.updateDeclencheur(id_requete_declencheur=rd_id, status=0)
+                            # print("updated_rows: {} ".format(updated_rows))
+
+
+                            ## --- calculer la prochaine date de regeneraton
+                            # 2021-05-17 13:39  ==> 2021-06-17 13:39
+                            print("datetime_exec_obj => ".format(datetime_exec_obj))
+                            date_exec_mois_str = datetime_exec_obj.strftime("%m")
+                            date_exec_mois_int = int(date_exec_mois_str)
+                            date_exec_mois_int =  date_exec_mois_int+1
+                            dt =  relativedelta(months=+1)
+                            print(datetime_exec_obj+ dt)
+
+
+                            # updated_rows = cnxpostgres.updateDeclencheur(id_requete_declencheur=rd_id, status=3)
+                            updated_rows = cnxpostgres.updateDeclencheurV2(connection,  "status='{}', date_proch_exec='{}'".format(3, (datetime_exec_obj+dt) ), "id={}".format(rd_id)  )
                             print("updated_rows: {} ".format(updated_rows))
+                            
+
+                            exit(1)
+
+
                         else:
                             print("Fichier non généré: {}/{}".format((destination,nomfichier)))
                     
                     except OSError as erreur:
                         print("<= erreur: {}: ".format(erreur))
 
-                    
-
-
-            # else:
-            #     print("saute <= ")
-            # exit(1)
-
-
-
-
     else:
         print("Impossible de se connecter: {},{},{},{}".format(serveur, port, basedonnees, utidb))
 
 
+
+def getDeclencheurJournalier(cnxpostgres):
+    print(__name__)
+    print("__getDeclencheurJournalier__")
+
+    # Courant = (config['Paths']['Courant'])
+    # Archives = (config['Paths']['Archives'])
+    # Extension = config['Fichiers']['Extension']
+    # SheetName = config['Fichiers']['SheetName']
+    # Engine = config['Fichiers']['Engine']
+    # serveur = config['ConnexionPostgres']['Serveur']
+    # port = config['ConnexionPostgres']['Port']
+    # basedonnees = config['ConnexionPostgres']['BaseDonnees']
+    # utidb = config['ConnexionPostgres']['Username']
+    # passdb = config['ConnexionPostgres']['Password']
+
+    connection = cnxpostgres.connexion()
+
+    record = cnxpostgres.getDeclencheursJournalier(connection)
+    # print("getDeclencheurJournalier - record: {}".format(record))
+    # for i in range(len(record)):
+    #     rd_id = (record[i]['id'])
+    for r in record:
+        print("r: {}".format(r))
 
 
 if(__name__=='__main__'):
