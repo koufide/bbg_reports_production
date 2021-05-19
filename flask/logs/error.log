@@ -3533,3 +3533,24 @@
 [Tue May 18 13:24:59.081773 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:60095] 
 [Tue May 18 13:24:59.081784 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:60095] mesmodules.ConnexionOracle
 [Tue May 18 13:24:59.081799 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:60095] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Wed May 19 17:40:27.304294 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] __testrequete___
+[Wed May 19 17:40:27.321031 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] testrequete data: {'port': '5432', 'serveur': '192.168.56.220', 'sqlstr': 'select * from requete', 'repDestination': 'MENSUEL ETAT DES REQUETES', 'libelle': 'etat des requetes', 'nom': 'CONNEXION POSTGRES', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', 'code': 'CNX_POSTGRES'}
+[Wed May 19 17:40:27.321067 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] __testerLaConnexion__3__
+[Wed May 19 17:40:27.321084 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] code: CNX_POSTGRES
+[Wed May 19 17:40:27.321093 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] serveur: 192.168.56.220
+[Wed May 19 17:40:27.321099 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] port: 5432
+[Wed May 19 17:40:27.321105 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] utidb: postgres
+[Wed May 19 17:40:27.321110 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] basedonnees: reportsdb
+[Wed May 19 17:40:27.331211 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] __res__ {'connexion': 'OK'}
+[Wed May 19 17:40:27.331249 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] testrequete res:: {'connexion': 'OK'}
+[Wed May 19 17:40:27.331262 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] mesmodules.MesFonctions
+[Wed May 19 17:40:27.331270 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] __testerLaRequete2__
+[Wed May 19 17:40:27.331282 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] __testerLaRequete2__ , __code__ : CNX_POSTGRES
+[Wed May 19 17:40:27.331301 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:55560] __testerLaRequete2__ , sqlstr : select * from requete
+[Wed May 19 17:41:31.989811 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:55612] app
+[Wed May 19 17:41:31.989845 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:55612] createxmlfile
+[Wed May 19 17:41:31.990328 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:55612] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Wed May 19 17:41:31.990365 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:55612] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Wed May 19 17:41:31.990384 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:55612] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Wed May 19 17:41:31.997617 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:55612] testconnexion res: {'connexion': 'OK'}
+[Wed May 19 17:41:32.006139 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:55612] 1

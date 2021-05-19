@@ -485,7 +485,49 @@ class ConnexionPostgres:
         # print(self.user,self.password,self.host,self.port,self.database)
         # exit(1)
         return record
-      
+    
+    
+    def getDeclencheursMensuel(self, connection):
+        print(__name__)
+        print("__getDeclencheursMensuel__")
+
+        cursor = connection.cursor(cursor_factory = psycopg2.extras.RealDictCursor)
+        # cursor = connection.cursor()
+
+       
+
+        sqlstr="""
+        SELECT rd.date_proch_exec,
+            EXTRACT (YEAR FROM NOW()) AS YEAR,
+            EXTRACT (MONTH FROM NOW()) AS MONTH,
+            EXTRACT (DAY FROM NOW()) AS DAY,
+            rd.id, rd.requete_id, rd.declencheur_id, d.date_exec, d.heure_exec, d.frequence, d.mois, d.jours_du_mois,
+                r.libelle libelle_req, r.rep_destination, r.sqlstr,
+                c.serveur, c.port, c.basedonnees, c.utidb, c.passdb, c.nom connexion_nom,
+                tc.code typeconnexion_code, tc.libelle typeconnexion_libelle , p.nom processus_nom
+        FROM requete_declencheur rd, declencheur d, requete r, connexion c, type_connexion tc, processus p
+        WHERE d.id=rd.declencheur_id AND r.id=rd.requete_id AND c.id=r.connexion_id
+            AND tc.id=c.type_connexion_id AND p.id=r.processus_id
+            AND d.frequence='MENSUEL'
+            AND ( ( (d.date_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd') and rd.date_proch_exec is null)   AND  
+                    TO_CHAR(d.heure_exec::TIME,'HH24:MI') <= TO_CHAR(now()::TIME,'HH24:MI')
+			         ) or ( rd.date_proch_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd')  )  )
+            AND (rd.status is null or rd.status=0)
+        ORDER BY d.frequence
+        FOR UPDATE
+        """
+
+
+        cursor.execute(sqlstr)
+
+        record = cursor.fetchall()
+        # nbre = len(record)
+        # print("nbre de declencheurs: {}".format(nbre))
+        # print(self.user,self.password,self.host,self.port,self.database)
+        # exit(1)
+        return record
+
+
     def getDeclencheursJournalier(self, connection):
         print(__name__)
         print("__getDeclencheursJournalier__")
@@ -568,7 +610,12 @@ class ConnexionPostgres:
 
         return updated_rows
 
-
+    
+    def closeConnexion(self, connection):
+        print(__name__)
+        print("__closeConnexion__")
+        if connection:
+            connection.close()
 
 # if(__name__ == "__main__"):
 #     print(__name__)
