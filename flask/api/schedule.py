@@ -1,7 +1,13 @@
 # coding: utf-8
 
 from datetime import timedelta
+from datetime import datetime
+from pathlib import Path
+from mesmodules.MesFonctions import genererFichier
+from mesmodules.ConnexionPostgres import ConnexionPostgres
+from dateutil.relativedelta import relativedelta
 import sys
+
 
 import configparser
 
@@ -49,37 +55,25 @@ def declencheurMensuel(jour_str, jours_du_mois,  mois_str, mois):
     
     return res
 
-def declencheurJournalier():
-    print(__name__) 
-    print("__declencheurJournalier__") 
+# def declencheurJournalier():
+#     print(__name__) 
+#     print("__declencheurJournalier__") 
 
-    Courant = (config['Paths']['Courant'])
+#     Courant = (config['Paths']['Courant'])
 
-    Archives = (config['Paths']['Archives'])
+#     Archives = (config['Paths']['Archives'])
 
-    Extension = config['Fichiers']['Extension']
+#     Extension = config['Fichiers']['Extension']
 
-    SheetName = config['Fichiers']['SheetName']
+#     SheetName = config['Fichiers']['SheetName']
 
-    Engine = config['Fichiers']['Engine']
-
-
-
-
-
-
-
+#     Engine = config['Fichiers']['Engine']
 
 
 
 
 
 def main():
-    from datetime import datetime
-    from pathlib import Path
-    from mesmodules.ConnexionPostgres import ConnexionPostgres
-    from mesmodules.MesFonctions import genererFichier
-    from dateutil.relativedelta import relativedelta
     
 
     Courant = (config['Paths']['Courant'])
@@ -183,8 +177,8 @@ def main():
                     # print("\n date_exec: {} - heure_exec: {} - frequence: {} - libelle_req: {} - rep_destination: {} - connexion_nom: {} \n".format(date_exec, heure_exec, frequence, libelle_req,rep_destination, connexion_nom))
                     res = declencheurMensuel(jour_str, jours_du_mois,  mois_str, mois)
                 
-                if frequence=='JOURNALIER':
-                    res = declencheurJournalier()
+                # if frequence=='JOURNALIER':
+                #     res = declencheurJournalier()
                 
 
                 if res == True:
@@ -254,12 +248,13 @@ def main():
 def getDeclencheurJournalier(cnxpostgres):
     print(__name__)
     print("__getDeclencheurJournalier__")
+    import time
 
-    # Courant = (config['Paths']['Courant'])
+    Courant = (config['Paths']['Courant'])
     # Archives = (config['Paths']['Archives'])
-    # Extension = config['Fichiers']['Extension']
-    # SheetName = config['Fichiers']['SheetName']
-    # Engine = config['Fichiers']['Engine']
+    Extension = config['Fichiers']['Extension']
+    SheetName = config['Fichiers']['SheetName']
+    Engine = config['Fichiers']['Engine']
     # serveur = config['ConnexionPostgres']['Serveur']
     # port = config['ConnexionPostgres']['Port']
     # basedonnees = config['ConnexionPostgres']['BaseDonnees']
@@ -274,6 +269,101 @@ def getDeclencheurJournalier(cnxpostgres):
     #     rd_id = (record[i]['id'])
     for r in record:
         print("r: {}".format(r))
+
+        debut = datetime.now()
+        # print("now: {} ".format(now))
+        dt_string = debut.strftime("%d/%m/%Y %H:%M:%S")
+        print("==== debut dt_string: {} ".format(dt_string))
+        # today_str = now.strftime("%d/%m/%Y")
+        # print("today_str: {} ".format(today_str))
+        # time_str = now.strftime("%H:%M:%S")
+        # time_str = now.strftime("%H:%M")
+        # print("time_str: {} ".format(time_str))
+
+        date_exec=r['date_exec']
+        heure_exec=r['heure_exec']
+        print("Date execution: {} {}".format(date_exec,heure_exec))
+        # time.sleep(60)
+        datetime_exec_obj = datetime.strptime(date_exec + " "+heure_exec, "%Y-%m-%d %H:%M")
+        print("datetime_exec_obj: ",datetime_exec_obj)
+
+        serveur=r['serveur']
+        port=r['port']
+        basedonnees=r['basedonnees']
+        utidb=r['utidb']
+        passdb=r['passdb']
+        sqlstr=r['sqlstr']
+        processus=r['processus']
+        libelle=r['libelle']
+        rep_destination=r['rep_destination']
+        repeat_jours=r['repeat_jours']
+        repeat_jours=r['repeat_jours']
+        frequence=r['frequence']
+        date_proch_exec=r['date_proch_exec']
+        id_rd=r['id_rd']
+        code=r['code']
+
+        updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  "status='{}'".format(1), "id={}".format(id_rd)  )
+        print("updated_rows: {}".format(updated_rows))
+
+        connexion = {
+                        'code': code,
+                        'utidb': utidb,
+                        'passdb': passdb,
+                        'serveur':serveur,
+                        'port': port,
+                        'basedonnees': basedonnees,
+                        'sqlstr':sqlstr,
+                        'processus':processus,
+                        'libelle':libelle,
+                        'repDestination': rep_destination
+                    }
+
+        destination = Courant+"/" + processus+"/" + rep_destination
+
+        try:
+            Path(destination).mkdir(parents=True, exist_ok=True)
+	
+            now_str = debut.strftime("%Y%m%d_%H%M%S")
+
+            nomfichier = libelle+ '_'+now_str+'.'+Extension
+            nomfichier = str(nomfichier).replace(' ','_')
+
+            res_gen = genererFichier(connexion, destination, nomfichier, SheetName, Engine)
+            print("res_gen: {} ".format(res_gen))
+
+            if res_gen['generation']=='OK':
+                ## --- calculer la prochaine date de regeneraton
+                print("res_gen OK ")
+                print(datetime_exec_obj)
+                dt =  relativedelta(days=+int(repeat_jours))
+                datetime_exec_obj_modif=(datetime_exec_obj+dt)
+                print(datetime_exec_obj_modif)
+
+
+                updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  "status='{}', date_proch_exec='{}' ".format(3, datetime_exec_obj_modif ), "id={}".format(id_rd)  )
+                print("updated_rows: {} ".format(updated_rows))
+            else:
+                print("res_gen NOK ")
+
+
+
+        except OSError as erreur:
+            print("<= erreur: {}: ".format(erreur))
+        
+        
+        
+
+
+
+        fin = datetime.now()
+        # print("now: {} ".format(now))
+        dt_string = fin.strftime("%d/%m/%Y %H:%M:%S")
+        print("==== fin dt_string: {} ".format(dt_string))
+        temps_ecoule = fin - debut
+        print("==== temps_ecoule: {} seconde(s) ".format(temps_ecoule.seconds))
+
+
 
 
 if(__name__=='__main__'):

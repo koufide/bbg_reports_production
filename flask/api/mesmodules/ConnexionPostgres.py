@@ -392,6 +392,38 @@ class ConnexionPostgres:
         return updated_rows
 
    
+    def updateTable(self, connection, table, sets, wheres):
+        # print(__name__)
+        # print("__updateTable__")
+
+        
+
+        sqlstr = """
+        UPDATE """+table+"""
+        SET """+sets+"""
+        WHERE """+wheres+""";
+        """
+
+        print("sqlstr: {}".format(sqlstr))
+        # exit(1)
+
+        
+        updated_rows = 0
+
+        try:
+            cursor = connection.cursor()
+            cursor.execute(sqlstr)
+            updated_rows = cursor.rowcount
+            connection.commit()
+            cursor.close()
+
+        except (Exception, psycopg2.DatabaseError) as erreur:
+            print(erreur)
+        # finally:
+        #     if connection is not None:
+        #         connection.close()
+        
+        return updated_rows
    
     def getDeclencheurs(self):
         # print(__name__)
@@ -482,10 +514,13 @@ class ConnexionPostgres:
         FROM public.requete_declencheur rd, requete r, declencheur d, connexion c, type_connexion tc, processus p
         WHERE (rd.status=0 or rd.status is NULL)
         AND ( 
-            (rd.date_proch_exec is null AND d.date_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd') ) or 
+            (rd.date_proch_exec is null AND (d.date_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd')  
+											AND TO_CHAR(d.heure_exec::TIME,'HH24:MI') <= TO_CHAR(now()::TIME,'HH24:MI')
+											) ) or 
             ( TO_TIMESTAMP(rd.date_proch_exec, 'yyyy-mm-dd HH24:MI:SS')  <= NOW() ) 
         )
-        AND d.id=rd.declencheur_id AND d.frequence='JOURNALIER' AND c.id=r.connexion_id AND tc.id=c.type_connexion_id
+        AND d.id=rd.declencheur_id AND d.frequence='JOURNALIER' 
+		AND c.id=r.connexion_id AND tc.id=c.type_connexion_id
         AND p.id=r.processus_id
         FOR UPDATE
         """
@@ -500,6 +535,7 @@ class ConnexionPostgres:
         # exit(1)
         return record
 
+    
     def renitialiserRequeteDeclencheur(self, connection):
         # print(__name__)
         # print("__renitialiserRequeteDeclencheur__")
