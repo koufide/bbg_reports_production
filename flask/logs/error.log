@@ -3554,3 +3554,241 @@
 [Wed May 19 17:41:31.990384 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:55612] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
 [Wed May 19 17:41:31.997617 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:55612] testconnexion res: {'connexion': 'OK'}
 [Wed May 19 17:41:32.006139 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:55612] 1
+[Fri May 21 14:33:56.143115 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] __testrequete___
+[Fri May 21 14:33:56.162469 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] testrequete data: {'port': '1521', 'serveur': '192.168.2.204', 'sqlstr': "select sum( z.posdisp) from (\\nselect  posdisp from CGB.CPT where client='102198'\\n) z", 'repDestination': 'QUOTIDIEN - DEPASSEMENT', 'libelle': 'depassement', 'nom': 'CONNEXION  ORACLE PROD', 'utidb': 'bbgquery', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'code': 'CNX_ORACLE'}
+[Fri May 21 14:33:56.162493 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] __testerLaConnexion__3__
+[Fri May 21 14:33:56.162501 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] code: CNX_ORACLE
+[Fri May 21 14:33:56.162507 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] serveur: 192.168.2.204
+[Fri May 21 14:33:56.162513 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] port: 1521
+[Fri May 21 14:33:56.162518 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] utidb: bbgquery
+[Fri May 21 14:33:56.162524 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] basedonnees: EXP
+[Fri May 21 14:33:56.162534 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] mesmodules.ConnexionOracle
+[Fri May 21 14:33:56.162549 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Fri May 21 14:33:56.239675 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] __res__ {'connexion': 'OK'}
+[Fri May 21 14:33:56.239709 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] testrequete res:: {'connexion': 'OK'}
+[Fri May 21 14:33:56.239717 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] mesmodules.MesFonctions
+[Fri May 21 14:33:56.239723 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] __testerLaRequete2__
+[Fri May 21 14:33:56.239731 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Fri May 21 14:33:56.239737 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] __testerLaRequete2__ , sqlstr : select sum( z.posdisp) from (
+[Fri May 21 14:33:56.239739 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] select  posdisp from CGB.CPT where client='102198'
+[Fri May 21 14:33:56.239741 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] ) z
+[Fri May 21 14:33:56.239754 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] 
+[Fri May 21 14:33:56.239765 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] mesmodules.ConnexionOracle
+[Fri May 21 14:33:56.239779 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:60291] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Fri May 21 14:34:38.766891 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:60326] app
+[Fri May 21 14:34:38.766950 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:60326] createxmlfile
+[Fri May 21 14:34:38.767336 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:60326] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Fri May 21 14:34:38.767368 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:60326] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Fri May 21 14:34:38.767387 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:60326] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Fri May 21 14:34:38.780757 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:60326] testconnexion res: {'connexion': 'OK'}
+[Fri May 21 14:34:38.799464 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:60326] 2
+[Fri May 21 14:56:35.417336 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] __testrequete___
+[Fri May 21 14:56:35.417764 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] testrequete data: {'port': '1521', 'serveur': '192.168.2.204', 'sqlstr': "select g2.annee, sum(g2.nbre) from (\\nselect to_char(g.datdep,'yyyy') annee , count(*) nbre from (\\nselect p.*\\nfrom CGB.PRTCLI p\\nwhere P.DATDEP between '01/01/2018' and '31/12/2020'\\n--and (P.VALIDE='V'\\nand P.MNTPRT !=0\\nand (P.VALIDE='V' or P.VALIDE='A')\\nand P.NUMSEQ = (\\n    select min(NUMSEQ) from CGB.PRTCLI where nooper=p.nooper\\n)\\norder by P.NOOPER desc\\n) g\\ngroup by g.datdep\\n) g2\\ngroup by g2.annee\\n;", 'repDestination': 'MENSUEL - ETAT DES ENGAGEMENT', 'libelle': 'nombre engagements', 'nom': 'CONNEXION  ORACLE PROD', 'utidb': 'bbgquery', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'code': 'CNX_ORACLE'}
+[Fri May 21 14:56:35.417814 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] __testerLaConnexion__3__
+[Fri May 21 14:56:35.417835 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] code: CNX_ORACLE
+[Fri May 21 14:56:35.417848 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] serveur: 192.168.2.204
+[Fri May 21 14:56:35.417858 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] port: 1521
+[Fri May 21 14:56:35.417868 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] utidb: bbgquery
+[Fri May 21 14:56:35.417880 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] basedonnees: EXP
+[Fri May 21 14:56:35.417891 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] mesmodules.ConnexionOracle
+[Fri May 21 14:56:35.417913 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Fri May 21 14:56:35.503624 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] __res__ {'connexion': 'OK'}
+[Fri May 21 14:56:35.503661 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] testrequete res:: {'connexion': 'OK'}
+[Fri May 21 14:56:35.503669 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] mesmodules.MesFonctions
+[Fri May 21 14:56:35.503700 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] __testerLaRequete2__
+[Fri May 21 14:56:35.503710 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Fri May 21 14:56:35.503716 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] __testerLaRequete2__ , sqlstr : select g2.annee, sum(g2.nbre) from (
+[Fri May 21 14:56:35.503719 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] select to_char(g.datdep,'yyyy') annee , count(*) nbre from (
+[Fri May 21 14:56:35.503720 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] select p.*
+[Fri May 21 14:56:35.503722 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] from CGB.PRTCLI p
+[Fri May 21 14:56:35.503724 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] where P.DATDEP between '01/01/2018' and '31/12/2020'
+[Fri May 21 14:56:35.503726 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] --and (P.VALIDE='V'
+[Fri May 21 14:56:35.503728 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] and P.MNTPRT !=0
+[Fri May 21 14:56:35.503729 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] and (P.VALIDE='V' or P.VALIDE='A')
+[Fri May 21 14:56:35.503731 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] and P.NUMSEQ = (
+[Fri May 21 14:56:35.503733 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225]     select min(NUMSEQ) from CGB.PRTCLI where nooper=p.nooper
+[Fri May 21 14:56:35.503735 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] )
+[Fri May 21 14:56:35.503736 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] order by P.NOOPER desc
+[Fri May 21 14:56:35.503738 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] ) g
+[Fri May 21 14:56:35.503740 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] group by g.datdep
+[Fri May 21 14:56:35.503742 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] ) g2
+[Fri May 21 14:56:35.503744 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] group by g2.annee
+[Fri May 21 14:56:35.503746 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] ;
+[Fri May 21 14:56:35.503749 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] 
+[Fri May 21 14:56:35.503760 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] mesmodules.ConnexionOracle
+[Fri May 21 14:56:35.503774 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Fri May 21 14:56:35.802972 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] Error while connecting to Oracle DB ORA-00911: caract\xc3\xa8re non valide
+[Fri May 21 14:56:35.803012 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] Code:      911
+[Fri May 21 14:56:35.803024 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] Message    ORA-00911: caract\xc3\xa8re non valide
+[Fri May 21 14:56:35.803037 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61225] Context    dpiStmt_execute: execute
+[Fri May 21 14:56:44.981889 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] __testrequete___
+[Fri May 21 14:56:44.982304 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] testrequete data: {'port': '1521', 'serveur': '192.168.2.204', 'sqlstr': "select g2.annee, sum(g2.nbre) from (\\nselect to_char(g.datdep,'yyyy') annee , count(*) nbre from (\\nselect p.*\\nfrom CGB.PRTCLI p\\nwhere P.DATDEP between '01/01/2018' and '31/12/2020'\\n--and (P.VALIDE='V'\\nand P.MNTPRT !=0\\nand (P.VALIDE='V' or P.VALIDE='A')\\nand P.NUMSEQ = (\\n    select min(NUMSEQ) from CGB.PRTCLI where nooper=p.nooper\\n)\\norder by P.NOOPER desc\\n) g\\ngroup by g.datdep\\n) g2\\ngroup by g2.annee\\n", 'repDestination': 'MENSUEL - ETAT DES ENGAGEMENT', 'libelle': 'nombre engagements', 'nom': 'CONNEXION  ORACLE PROD', 'utidb': 'bbgquery', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'code': 'CNX_ORACLE'}
+[Fri May 21 14:56:44.982321 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] __testerLaConnexion__3__
+[Fri May 21 14:56:44.982332 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] code: CNX_ORACLE
+[Fri May 21 14:56:44.982349 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] serveur: 192.168.2.204
+[Fri May 21 14:56:44.982356 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] port: 1521
+[Fri May 21 14:56:44.982361 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] utidb: bbgquery
+[Fri May 21 14:56:44.982367 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] basedonnees: EXP
+[Fri May 21 14:56:44.982377 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] mesmodules.ConnexionOracle
+[Fri May 21 14:56:44.982392 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Fri May 21 14:56:45.046022 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] __res__ {'connexion': 'OK'}
+[Fri May 21 14:56:45.046060 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] testrequete res:: {'connexion': 'OK'}
+[Fri May 21 14:56:45.046068 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] mesmodules.MesFonctions
+[Fri May 21 14:56:45.046074 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] __testerLaRequete2__
+[Fri May 21 14:56:45.046084 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Fri May 21 14:56:45.046090 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] __testerLaRequete2__ , sqlstr : select g2.annee, sum(g2.nbre) from (
+[Fri May 21 14:56:45.046093 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] select to_char(g.datdep,'yyyy') annee , count(*) nbre from (
+[Fri May 21 14:56:45.046094 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] select p.*
+[Fri May 21 14:56:45.046096 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] from CGB.PRTCLI p
+[Fri May 21 14:56:45.046098 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] where P.DATDEP between '01/01/2018' and '31/12/2020'
+[Fri May 21 14:56:45.046100 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] --and (P.VALIDE='V'
+[Fri May 21 14:56:45.046102 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] and P.MNTPRT !=0
+[Fri May 21 14:56:45.046103 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] and (P.VALIDE='V' or P.VALIDE='A')
+[Fri May 21 14:56:45.046105 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] and P.NUMSEQ = (
+[Fri May 21 14:56:45.046107 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235]     select min(NUMSEQ) from CGB.PRTCLI where nooper=p.nooper
+[Fri May 21 14:56:45.046109 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] )
+[Fri May 21 14:56:45.046111 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] order by P.NOOPER desc
+[Fri May 21 14:56:45.046112 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] ) g
+[Fri May 21 14:56:45.046114 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] group by g.datdep
+[Fri May 21 14:56:45.046116 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] ) g2
+[Fri May 21 14:56:45.046118 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] group by g2.annee
+[Fri May 21 14:56:45.046121 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] 
+[Fri May 21 14:56:45.046131 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] mesmodules.ConnexionOracle
+[Fri May 21 14:56:45.046146 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61235] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Fri May 21 14:58:11.438125 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61333] app
+[Fri May 21 14:58:11.438156 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61333] createxmlfile
+[Fri May 21 14:58:11.438618 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61333] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Fri May 21 14:58:11.438667 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61333] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Fri May 21 14:58:11.438688 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61333] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Fri May 21 14:58:11.466668 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61333] testconnexion res: {'connexion': 'OK'}
+[Fri May 21 14:58:11.499625 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61333] 3
+[Fri May 21 14:58:40.445779 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61359] app
+[Fri May 21 14:58:40.445804 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61359] createxmlfile
+[Fri May 21 14:58:40.446216 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61359] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Fri May 21 14:58:40.446259 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61359] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Fri May 21 14:58:40.446281 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61359] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Fri May 21 14:58:40.461843 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61359] testconnexion res: {'connexion': 'OK'}
+[Fri May 21 14:58:40.487435 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61359] 3
+[Fri May 21 14:59:43.252475 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] __testrequete___
+[Fri May 21 14:59:43.252844 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] testrequete data: {'port': '1521', 'serveur': '192.168.2.204', 'sqlstr': "select g2.annee, sum(g2.nbre) from (\\nselect to_char(g.datdep,'yyyy') annee , count(*) nbre from (\\nselect p.*\\nfrom CGB.PRTCLI p\\nwhere P.DATDEP between '01/01/2018' and '31/12/2020'\\n--and (P.VALIDE='V'\\nand P.MNTPRT !=0\\nand (P.VALIDE='V' or P.VALIDE='A')\\nand P.NUMSEQ = (\\n    select min(NUMSEQ) from CGB.PRTCLI where nooper=p.nooper\\n)\\norder by P.NOOPER desc\\n) g\\ngroup by g.datdep\\n) g2\\ngroup by g2.annee\\n", 'repDestination': 'MENSUEL - ENGAGMENTS', 'libelle': 'etat des engagements', 'nom': 'CONNEXION  ORACLE PROD', 'utidb': 'bbgquery', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'code': 'CNX_ORACLE'}
+[Fri May 21 14:59:43.252857 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] __testerLaConnexion__3__
+[Fri May 21 14:59:43.252865 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] code: CNX_ORACLE
+[Fri May 21 14:59:43.252871 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] serveur: 192.168.2.204
+[Fri May 21 14:59:43.252877 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] port: 1521
+[Fri May 21 14:59:43.252883 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] utidb: bbgquery
+[Fri May 21 14:59:43.252888 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] basedonnees: EXP
+[Fri May 21 14:59:43.252903 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] mesmodules.ConnexionOracle
+[Fri May 21 14:59:43.252917 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Fri May 21 14:59:43.406726 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] __res__ {'connexion': 'OK'}
+[Fri May 21 14:59:43.406778 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] testrequete res:: {'connexion': 'OK'}
+[Fri May 21 14:59:43.406788 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] mesmodules.MesFonctions
+[Fri May 21 14:59:43.406794 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] __testerLaRequete2__
+[Fri May 21 14:59:43.406802 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Fri May 21 14:59:43.406808 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] __testerLaRequete2__ , sqlstr : select g2.annee, sum(g2.nbre) from (
+[Fri May 21 14:59:43.406810 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] select to_char(g.datdep,'yyyy') annee , count(*) nbre from (
+[Fri May 21 14:59:43.406812 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] select p.*
+[Fri May 21 14:59:43.406814 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] from CGB.PRTCLI p
+[Fri May 21 14:59:43.406816 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] where P.DATDEP between '01/01/2018' and '31/12/2020'
+[Fri May 21 14:59:43.406818 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] --and (P.VALIDE='V'
+[Fri May 21 14:59:43.406819 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] and P.MNTPRT !=0
+[Fri May 21 14:59:43.406821 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] and (P.VALIDE='V' or P.VALIDE='A')
+[Fri May 21 14:59:43.406823 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] and P.NUMSEQ = (
+[Fri May 21 14:59:43.406825 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410]     select min(NUMSEQ) from CGB.PRTCLI where nooper=p.nooper
+[Fri May 21 14:59:43.406826 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] )
+[Fri May 21 14:59:43.406828 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] order by P.NOOPER desc
+[Fri May 21 14:59:43.406830 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] ) g
+[Fri May 21 14:59:43.406832 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] group by g.datdep
+[Fri May 21 14:59:43.406834 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] ) g2
+[Fri May 21 14:59:43.406835 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] group by g2.annee
+[Fri May 21 14:59:43.406839 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] 
+[Fri May 21 14:59:43.406850 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] mesmodules.ConnexionOracle
+[Fri May 21 14:59:43.406865 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61410] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Fri May 21 15:00:16.560124 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61447] app
+[Fri May 21 15:00:16.560149 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61447] createxmlfile
+[Fri May 21 15:00:16.560499 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61447] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Fri May 21 15:00:16.560530 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61447] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Fri May 21 15:00:16.560603 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61447] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Fri May 21 15:00:16.584333 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61447] testconnexion res: {'connexion': 'OK'}
+[Fri May 21 15:00:16.610113 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61447] 3
+[Fri May 21 15:00:26.981782 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] __testrequete___
+[Fri May 21 15:00:26.982387 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] testrequete data: {'port': '1521', 'processus': 'DRP', 'sqlstr': "select g2.annee, sum(g2.nbre) from (\\nselect to_char(g.datdep,'yyyy') annee , count(*) nbre from (\\nselect p.*\\nfrom CGB.PRTCLI p\\nwhere P.DATDEP between '01/01/2018' and '31/12/2020'\\n--and (P.VALIDE='V'\\nand P.MNTPRT !=0\\nand (P.VALIDE='V' or P.VALIDE='A')\\nand P.NUMSEQ = (\\n    select min(NUMSEQ) from CGB.PRTCLI where nooper=p.nooper\\n)\\norder by P.NOOPER desc\\n) g\\ngroup by g.datdep\\n) g2\\ngroup by g2.annee\\n", 'repDestination': 'MENSUEL - ENGAGMENTS', 'nom': 'CONNEXION  ORACLE PROD', 'serveur': '192.168.2.204', 'utidb': 'bbgquery', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'code': 'CNX_ORACLE', 'libelle': 'etat des engagements', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/requetes/2989'}, 'requete': {'href': 'http://192.168.56.220:8085/api/requetes/2989{?projection}', 'templated': True}, 'connexion': {'href': 'http://192.168.56.220:8085/api/requetes/2989/connexion{?projection}', 'templated': True}, 'requeteDeclencheurs': {'href': 'http://192.168.56.220:8085/api/requetes/2989/requeteDeclencheurs'}, 'processus': {'href': 'http://192.168.56.220:8085/api/requetes/2989/processus'}, 'requeteUtilisateurs': {'href': 'http://192.168.56.220:8085/api/requetes/2989/requeteUtilisateurs{?projection}', 'templated': True}}}
+[Fri May 21 15:00:26.982405 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] __testerLaConnexion__3__
+[Fri May 21 15:00:26.982415 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] code: CNX_ORACLE
+[Fri May 21 15:00:26.982422 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] serveur: 192.168.2.204
+[Fri May 21 15:00:26.982427 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] port: 1521
+[Fri May 21 15:00:26.982433 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] utidb: bbgquery
+[Fri May 21 15:00:26.982439 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] basedonnees: EXP
+[Fri May 21 15:00:26.982448 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] mesmodules.ConnexionOracle
+[Fri May 21 15:00:26.982462 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Fri May 21 15:00:27.049341 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] __res__ {'connexion': 'OK'}
+[Fri May 21 15:00:27.049379 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] testrequete res:: {'connexion': 'OK'}
+[Fri May 21 15:00:27.049388 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] mesmodules.MesFonctions
+[Fri May 21 15:00:27.049394 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] __testerLaRequete2__
+[Fri May 21 15:00:27.049402 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Fri May 21 15:00:27.049408 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] __testerLaRequete2__ , sqlstr : select g2.annee, sum(g2.nbre) from (
+[Fri May 21 15:00:27.049410 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] select to_char(g.datdep,'yyyy') annee , count(*) nbre from (
+[Fri May 21 15:00:27.049412 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] select p.*
+[Fri May 21 15:00:27.049414 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] from CGB.PRTCLI p
+[Fri May 21 15:00:27.049416 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] where P.DATDEP between '01/01/2018' and '31/12/2020'
+[Fri May 21 15:00:27.049423 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] --and (P.VALIDE='V'
+[Fri May 21 15:00:27.049426 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] and P.MNTPRT !=0
+[Fri May 21 15:00:27.049427 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] and (P.VALIDE='V' or P.VALIDE='A')
+[Fri May 21 15:00:27.049429 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] and P.NUMSEQ = (
+[Fri May 21 15:00:27.049431 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460]     select min(NUMSEQ) from CGB.PRTCLI where nooper=p.nooper
+[Fri May 21 15:00:27.049433 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] )
+[Fri May 21 15:00:27.049434 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] order by P.NOOPER desc
+[Fri May 21 15:00:27.049436 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] ) g
+[Fri May 21 15:00:27.049438 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] group by g.datdep
+[Fri May 21 15:00:27.049440 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] ) g2
+[Fri May 21 15:00:27.049441 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] group by g2.annee
+[Fri May 21 15:00:27.049445 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] 
+[Fri May 21 15:00:27.049456 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] mesmodules.ConnexionOracle
+[Fri May 21 15:00:27.049470 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61460] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Fri May 21 15:00:31.124203 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61469] app
+[Fri May 21 15:00:31.124228 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61469] createxmlfile
+[Fri May 21 15:00:31.125578 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61469] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Fri May 21 15:00:31.125620 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61469] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Fri May 21 15:00:31.125640 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61469] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Fri May 21 15:00:31.144846 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61469] testconnexion res: {'connexion': 'OK'}
+[Fri May 21 15:00:31.177268 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61469] 3
+[Fri May 21 15:01:19.012805 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] __testrequete___
+[Fri May 21 15:01:19.013310 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] testrequete data: {'port': '1521', 'serveur': '192.168.2.204', 'sqlstr': "select g2.annee, sum(g2.nbre) from (\\nselect to_char(g.datdep,'yyyy') annee , count(*) nbre from (\\nselect p.*\\nfrom CGB.PRTCLI p\\nwhere P.DATDEP between '01/01/2018' and '31/12/2020'\\n--and (P.VALIDE='V'\\nand P.MNTPRT !=0\\nand (P.VALIDE='V' or P.VALIDE='A')\\nand P.NUMSEQ = (\\n    select min(NUMSEQ) from CGB.PRTCLI where nooper=p.nooper\\n)\\norder by P.NOOPER desc\\n) g\\ngroup by g.datdep\\n) g2\\ngroup by g2.annee\\n", 'repDestination': 'MENSUEL - ENGAGEMENTS', 'libelle': 'etat des engagements', 'nom': 'CONNEXION  ORACLE PROD', 'utidb': 'bbgquery', 'passdb': 'bbg2010query', 'basedonnees': 'EXP', 'code': 'CNX_ORACLE'}
+[Fri May 21 15:01:19.013344 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] __testerLaConnexion__3__
+[Fri May 21 15:01:19.013359 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] code: CNX_ORACLE
+[Fri May 21 15:01:19.013370 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] serveur: 192.168.2.204
+[Fri May 21 15:01:19.013379 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] port: 1521
+[Fri May 21 15:01:19.013389 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] utidb: bbgquery
+[Fri May 21 15:01:19.013400 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] basedonnees: EXP
+[Fri May 21 15:01:19.013414 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] mesmodules.ConnexionOracle
+[Fri May 21 15:01:19.013428 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Fri May 21 15:01:19.091734 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] __res__ {'connexion': 'OK'}
+[Fri May 21 15:01:19.091760 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] testrequete res:: {'connexion': 'OK'}
+[Fri May 21 15:01:19.091769 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] mesmodules.MesFonctions
+[Fri May 21 15:01:19.091774 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] __testerLaRequete2__
+[Fri May 21 15:01:19.091783 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] __testerLaRequete2__ , __code__ : CNX_ORACLE
+[Fri May 21 15:01:19.091788 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] __testerLaRequete2__ , sqlstr : select g2.annee, sum(g2.nbre) from (
+[Fri May 21 15:01:19.091791 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] select to_char(g.datdep,'yyyy') annee , count(*) nbre from (
+[Fri May 21 15:01:19.091793 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] select p.*
+[Fri May 21 15:01:19.091794 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] from CGB.PRTCLI p
+[Fri May 21 15:01:19.091796 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] where P.DATDEP between '01/01/2018' and '31/12/2020'
+[Fri May 21 15:01:19.091798 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] --and (P.VALIDE='V'
+[Fri May 21 15:01:19.091800 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] and P.MNTPRT !=0
+[Fri May 21 15:01:19.091801 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] and (P.VALIDE='V' or P.VALIDE='A')
+[Fri May 21 15:01:19.091803 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] and P.NUMSEQ = (
+[Fri May 21 15:01:19.091805 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518]     select min(NUMSEQ) from CGB.PRTCLI where nooper=p.nooper
+[Fri May 21 15:01:19.091807 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] )
+[Fri May 21 15:01:19.091809 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] order by P.NOOPER desc
+[Fri May 21 15:01:19.091810 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] ) g
+[Fri May 21 15:01:19.091812 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] group by g.datdep
+[Fri May 21 15:01:19.091814 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] ) g2
+[Fri May 21 15:01:19.091816 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] group by g2.annee
+[Fri May 21 15:01:19.091819 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] 
+[Fri May 21 15:01:19.091829 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] mesmodules.ConnexionOracle
+[Fri May 21 15:01:19.091843 2021] [wsgi:error] [pid 16034] [remote 192.168.56.1:61518] bbgquery bbg2010query 192.168.2.204 1521 EXP
+[Fri May 21 15:01:51.925155 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61553] app
+[Fri May 21 15:01:51.925179 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61553] createxmlfile
+[Fri May 21 15:01:51.925538 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61553] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Fri May 21 15:01:51.925579 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61553] createxmlfile data: {'nom': 'CONNEXION POSTGRES', 'serveur': '192.168.56.220', 'port': '5432', 'utidb': 'postgres', 'passdb': 'postgres', 'basedonnees': 'reportsdb', '_links': {'self': {'href': 'http://192.168.56.220:8085/api/connexions/961'}, 'connexion': {'href': 'http://192.168.56.220:8085/api/connexions/961{?projection}', 'templated': True}, 'typeConnexion': {'href': 'http://192.168.56.220:8085/api/connexions/961/typeConnexion'}}}
+[Fri May 21 15:01:51.925600 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61553] CONNEXION POSTGRES 192.168.56.220 5432 postgres postgres reportsdb
+[Fri May 21 15:01:51.945109 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61553] testconnexion res: {'connexion': 'OK'}
+[Fri May 21 15:01:51.980374 2021] [wsgi:error] [pid 16035] [remote 192.168.56.1:61553] 3

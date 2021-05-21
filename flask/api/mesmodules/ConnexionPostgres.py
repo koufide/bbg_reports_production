@@ -497,21 +497,19 @@ class ConnexionPostgres:
        
 
         sqlstr="""
-        SELECT rd.date_proch_exec,
-            EXTRACT (YEAR FROM NOW()) AS YEAR,
-            EXTRACT (MONTH FROM NOW()) AS MONTH,
-            EXTRACT (DAY FROM NOW()) AS DAY,
-            rd.id, rd.requete_id, rd.declencheur_id, d.date_exec, d.heure_exec, d.frequence, d.mois, d.jours_du_mois,
-                r.libelle libelle_req, r.rep_destination, r.sqlstr,
+        SELECT  EXTRACT (YEAR FROM NOW()) AS anneedb, EXTRACT (MONTH FROM NOW()) AS moisdb, EXTRACT (DAY FROM NOW()) AS jourdb, rd.date_proch_exec,
+ 			TO_CHAR(NOW() , 'yyyy-mm-dd HH24:MI:SS') now_str,
+            rd.id id_rd, rd.requete_id, rd.declencheur_id, d.date_exec, d.heure_exec, d.frequence, d.mois, d.jours_du_mois,
+                r.libelle libelle, r.rep_destination, r.sqlstr,
                 c.serveur, c.port, c.basedonnees, c.utidb, c.passdb, c.nom connexion_nom,
-                tc.code typeconnexion_code, tc.libelle typeconnexion_libelle , p.nom processus_nom
+                tc.code, tc.libelle typeconnexion_libelle , p.nom processus
         FROM requete_declencheur rd, declencheur d, requete r, connexion c, type_connexion tc, processus p
         WHERE d.id=rd.declencheur_id AND r.id=rd.requete_id AND c.id=r.connexion_id
             AND tc.id=c.type_connexion_id AND p.id=r.processus_id
             AND d.frequence='MENSUEL'
-            AND ( ( (d.date_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd') and rd.date_proch_exec is null)   AND  
-                    TO_CHAR(d.heure_exec::TIME,'HH24:MI') <= TO_CHAR(now()::TIME,'HH24:MI')
-			         ) or ( rd.date_proch_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd')  )  )
+            AND ( (d.date_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd') and rd.date_proch_exec is null   AND  
+                        TO_CHAR(d.heure_exec::TIME,'HH24:MI') <= TO_CHAR(now()::TIME,'HH24:MI')
+			        ) or ( rd.date_proch_exec <= TO_CHAR(NOW(), 'yyyy-mm-dd HH24:MI:SS')  ) )
             AND (rd.status is null or rd.status=0)
         ORDER BY d.frequence
         FOR UPDATE

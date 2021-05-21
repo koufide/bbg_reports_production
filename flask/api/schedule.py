@@ -298,12 +298,15 @@ def getDeclencheurMensuel(cnxpostgres):
         processus=r['processus']
         libelle=r['libelle']
         rep_destination=r['rep_destination']
-        repeat_jours=r['repeat_jours']
-        repeat_jours=r['repeat_jours']
+        mois=r['mois']
+        jours_du_mois=r['jours_du_mois']
         frequence=r['frequence']
         date_proch_exec=r['date_proch_exec']
         id_rd=r['id_rd']
         code=r['code']
+        jourdb=r['jourdb']
+        moisdb=r['moisdb']
+        anneedb=r['anneedb']
 
         updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  "status='{}'".format(1), "id={}".format(id_rd)  )
         print("updated_rows: {}".format(updated_rows))
@@ -339,11 +342,13 @@ def getDeclencheurMensuel(cnxpostgres):
                 print("res_gen OK ")
                 print(datetime_exec_obj)
                 dt =  relativedelta(months=+int(1))  # a revoir
-                datetime_exec_obj_modif=(datetime_exec_obj+dt)
+                datetime_exec_obj_modif=(debut+dt)
                 print(datetime_exec_obj_modif)
+                datetime_exec_obj_modif_str=datetime_exec_obj_modif.strftime("%Y-%m-%d %H:%M:%S")
+                print(datetime_exec_obj_modif_str)
 
 
-                updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  "status='{}', date_proch_exec='{}' ".format(3, datetime_exec_obj_modif ), "id={}".format(id_rd)  )
+                updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  "status='{}', date_proch_exec='{}' ".format(0, datetime_exec_obj_modif_str ), "id={}".format(id_rd)  )
                 print("updated_rows: {} ".format(updated_rows))
             else:
                 print("res_gen NOK ")
@@ -458,12 +463,16 @@ def getDeclencheurJournalier(cnxpostgres):
                 ## --- calculer la prochaine date de regeneraton
                 print("res_gen OK ")
                 print(datetime_exec_obj)
+                print(debut)
                 dt =  relativedelta(days=+int(repeat_jours))
-                datetime_exec_obj_modif=(datetime_exec_obj+dt)
+                # datetime_exec_obj_modif=(datetime_exec_obj+dt)
+                datetime_exec_obj_modif=(debut+dt)
                 print(datetime_exec_obj_modif)
+                datetime_exec_obj_modif_str=datetime_exec_obj_modif.strftime("%Y-%m-%d %H:%M:%S")
+                print(datetime_exec_obj_modif_str)
 
 
-                updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  "status='{}', date_proch_exec='{}' ".format(3, datetime_exec_obj_modif ), "id={}".format(id_rd)  )
+                updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  "status='{}', date_proch_exec='{}' ".format(0, datetime_exec_obj_modif_str ), "id={}".format(id_rd)  )
                 print("updated_rows: {} ".format(updated_rows))
             else:
                 print("res_gen NOK ")
