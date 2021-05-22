@@ -560,6 +560,7 @@ class ConnexionPostgres:
             ( TO_TIMESTAMP(rd.date_proch_exec, 'yyyy-mm-dd HH24:MI:SS')  <= NOW() ) 
         )
         AND d.id=rd.declencheur_id AND d.frequence='JOURNALIER' 
+        AND r.id=rd.requete_id
 		AND c.id=r.connexion_id AND tc.id=c.type_connexion_id
         AND p.id=r.processus_id
         FOR UPDATE
