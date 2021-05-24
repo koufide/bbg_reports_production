@@ -553,15 +553,114 @@ class ConnexionPostgres:
         p.nom processus
         FROM public.requete_declencheur rd, requete r, declencheur d, connexion c, type_connexion tc, processus p
         WHERE (rd.status=0 or rd.status is NULL)
+        AND d.frequence='JOURNALIER'
         AND ( 
             (rd.date_proch_exec is null AND (d.date_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd')  
 											AND TO_CHAR(d.heure_exec::TIME,'HH24:MI') <= TO_CHAR(now()::TIME,'HH24:MI')
 											) ) or 
             ( TO_TIMESTAMP(rd.date_proch_exec, 'yyyy-mm-dd HH24:MI:SS')  <= NOW() ) 
         )
-        AND d.id=rd.declencheur_id AND d.frequence='JOURNALIER' 
+        AND d.id=rd.declencheur_id
         AND r.id=rd.requete_id
 		AND c.id=r.connexion_id AND tc.id=c.type_connexion_id
+        AND p.id=r.processus_id
+        FOR UPDATE
+        """
+
+
+        cursor.execute(sqlstr)
+
+        record = cursor.fetchall()
+        # nbre = len(record)
+        # print("nbre de declencheurs: {}".format(nbre))
+        # print(self.user,self.password,self.host,self.port,self.database)
+        # exit(1)
+        return record
+
+    def getDeclencheursHebdomadaire(self, connection):
+        print(__name__)
+        print("__getDeclencheursHebdomadaire__")
+
+
+        cursor = connection.cursor(cursor_factory = psycopg2.extras.RealDictCursor)
+        # cursor = connection.cursor()
+
+       
+
+        sqlstr="""
+        SELECT 
+        array[d.jours] jours_tab,
+        cast(EXTRACT (DOW FROM NOW()) as int) AS dowdb, 
+        EXTRACT (YEAR FROM NOW()) AS anneedb, 
+        EXTRACT (MONTH FROM NOW()) AS moisdb, 
+        EXTRACT (DAY FROM NOW()) AS jourdb,
+            d.jours, d.repeat_semaines,
+            rd.id id_rd, rd.date_proch_exec, now(),
+            TO_TIMESTAMP(rd.date_proch_exec, 'yyyy-mm-dd HH24:MI:SS') date_proch_exec,
+            r.libelle, r.rep_destination, r.processus_id, r.sqlstr, r.id id_r,
+            d.date_exec, d.heure_exec, d.frequence, repeat_jours,
+            c.passdb, c.utidb, c.serveur, c.port, c.basedonnees, tc.code,
+            p.nom processus
+            FROM public.requete_declencheur rd, requete r, declencheur d, connexion c, type_connexion tc, processus p
+            WHERE (rd.status=0 or rd.status is NULL)
+            AND d.frequence='HEBDOMADAIRE'
+            AND ( 
+                    (
+                        rd.date_proch_exec is null 
+                        AND (
+                                d.date_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd')  
+                                AND TO_CHAR(d.heure_exec::TIME,'HH24:MI') <= TO_CHAR(now()::TIME,'HH24:MI')
+                        ) 
+                    ) 
+                or ( TO_TIMESTAMP(rd.date_proch_exec, 'yyyy-mm-dd HH24:MI:SS')  <= NOW() ) 
+            )
+            AND d.id=rd.declencheur_id 
+            AND r.id=rd.requete_id
+            AND c.id=r.connexion_id 
+            AND tc.id=c.type_connexion_id
+            AND p.id=r.processus_id
+            FOR UPDATE
+        """
+
+
+        cursor.execute(sqlstr)
+
+        record = cursor.fetchall()
+        # nbre = len(record)
+        # print("nbre de declencheurs: {}".format(nbre))
+        # print(self.user,self.password,self.host,self.port,self.database)
+        # exit(1)
+        return record
+
+
+    def getDeclencheursUnefois(self, connection):
+        print(__name__)
+        print("__getDeclencheursUnefois__")
+
+        cursor = connection.cursor(cursor_factory = psycopg2.extras.RealDictCursor)
+        # cursor = connection.cursor()
+
+       
+
+        sqlstr="""
+        SELECT rd.id id_rd, rd.date_proch_exec, now(),
+        TO_TIMESTAMP(rd.date_proch_exec, 'yyyy-mm-dd HH24:MI:SS') date_proch_exec,
+        r.libelle, r.rep_destination, r.processus_id, r.sqlstr, r.id id_r,
+        d.date_exec, d.heure_exec, d.frequence, repeat_jours,
+        c.passdb, c.utidb, c.serveur, c.port, c.basedonnees, tc.code,
+        p.nom processus
+        FROM public.requete_declencheur rd, requete r, declencheur d, connexion c, type_connexion tc, processus p
+        WHERE (rd.status=0 or rd.status is NULL)
+        AND d.frequence='UNEFOIS'
+        AND (
+			rd.date_proch_exec is null
+			AND d.date_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd')  
+			AND TO_CHAR(d.heure_exec::TIME,'HH24:MI') <= TO_CHAR(now()::TIME,'HH24:MI')
+		) 
+        AND d.id=rd.declencheur_id 
+        AND r.id=rd.requete_id
+		AND c.id=r.connexion_id 
+		AND tc.id=c.type_connexion_id
         AND p.id=r.processus_id
         FOR UPDATE
         """
