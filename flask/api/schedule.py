@@ -224,6 +224,11 @@ def getDeclencheurMensuel(cnxpostgres):
 
         except OSError as erreur:
             print("<= erreur: {}: ".format(erreur))
+        except:
+            # exit("quite")
+            print("<= erreur: ",str(sys.exc_info()))
+            # print ("<= erreur: Unexpected error:", sys.exc_info()[0])
+            # raise
         
 
 
@@ -340,6 +345,11 @@ def getDeclencheurJournalier(cnxpostgres):
 
         except OSError as erreur:
             print("<= erreur: {}: ".format(erreur))
+        except:
+            # exit("quite")
+            print("<= erreur: ",str(sys.exc_info()))
+            # print ("<= erreur: Unexpected error:", sys.exc_info()[0])
+            # raise
         
         
         
@@ -457,6 +467,11 @@ def getDeclencheurUnefois(cnxpostgres):
 
         except OSError as erreur:
             print("<= erreur: {}: ".format(erreur))
+        except:
+            # exit("quite")
+            print("<= erreur: ",str(sys.exc_info()))
+            # print ("<= erreur: Unexpected error:", sys.exc_info()[0])
+            # raise
         
 
 

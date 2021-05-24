@@ -352,3 +352,7 @@
 192.168.56.1 - - [24/May/2021:21:11:39 +0000] "GET /bbg-reports/angular/app/main.b401d5a4e89358ce0554.js HTTP/1.1" 200 1338757 "http://192.168.56.220:4200/bbg-reports/angular/app/param/requete" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
 192.168.56.1 - - [24/May/2021:21:11:39 +0000] "GET /bbg-reports/angular/app/favicon.ico HTTP/1.1" 200 948 "http://192.168.56.220:4200/bbg-reports/angular/app/param/requete" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
 192.168.56.1 - - [24/May/2021:21:12:30 +0000] "-" 408 - "-" "-"
+192.168.56.1 - - [24/May/2021:22:51:45 +0000] "GET /bbg-reports/angular/app/param/requete HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+192.168.56.1 - - [24/May/2021:22:51:45 +0000] "GET /bbg-reports/angular/app/main.b401d5a4e89358ce0554.js HTTP/1.1" 304 - "http://192.168.56.220:4200/bbg-reports/angular/app/param/requete" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+192.168.56.1 - - [24/May/2021:22:51:45 +0000] "GET /bbg-reports/angular/app/favicon.ico HTTP/1.1" 200 948 "http://192.168.56.220:4200/bbg-reports/angular/app/param/requete" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+192.168.56.1 - - [24/May/2021:22:52:36 +0000] "-" 408 - "-" "-"
