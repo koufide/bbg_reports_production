@@ -166,7 +166,11 @@ def getDeclencheurMensuel(cnxpostgres):
         libelle=r['libelle']
         rep_destination=r['rep_destination']
         mois=r['mois']
+        mois_tab=r['mois_tab']
+        print("mois_tab: {}".format(mois_tab))
         jours_du_mois=r['jours_du_mois']
+        jours_du_mois_tab=r['jours_du_mois_tab']
+        print("jours_du_mois_tab: {}".format(jours_du_mois_tab))
         frequence=r['frequence']
         date_proch_exec=r['date_proch_exec']
         id_rd=r['id_rd']
@@ -175,76 +179,79 @@ def getDeclencheurMensuel(cnxpostgres):
         moisdb=r['moisdb']
         anneedb=r['anneedb']
 
-        updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  "status='{}'".format(1), "id={}".format(id_rd)  )
-        print("updated_rows: {}".format(updated_rows))
+        if str(jourdb) in jours_du_mois_tab and str(moisdb) in mois_tab:
+            print("=> {} in {}, {} in {}".format(str(jourdb), jours_du_mois_tab,  str(moisdb), mois_tab ))
 
-        connexion = {
-                        'code': code,
-                        'utidb': utidb,
-                        'passdb': passdb,
-                        'serveur':serveur,
-                        'port': port,
-                        'basedonnees': basedonnees,
-                        'sqlstr':sqlstr,
-                        'processus':processus,
-                        'libelle':libelle,
-                        'repDestination': rep_destination
-                    }
+            updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  "status='{}'".format(1), "id={}".format(id_rd)  )
+            print("updated_rows: {}".format(updated_rows))
 
-        destination = Courant+"/" + processus+"/" + rep_destination
+            connexion = {
+                            'code': code,
+                            'utidb': utidb,
+                            'passdb': passdb,
+                            'serveur':serveur,
+                            'port': port,
+                            'basedonnees': basedonnees,
+                            'sqlstr':sqlstr,
+                            'processus':processus,
+                            'libelle':libelle,
+                            'repDestination': rep_destination
+                        }
 
-        try:
-            Path(destination).mkdir(parents=True, exist_ok=True)
-	
-            now_str = debut.strftime("%Y%m%d_%H%M%S")
+            destination = Courant+"/" + processus+"/" + rep_destination
 
-            nomfichier = libelle+ '_'+now_str+'.'+Extension
-            nomfichier = str(nomfichier).replace(' ','_')
-
-            res_gen = genererFichier(connexion, destination, nomfichier, SheetName, Engine)
-            print("res_gen: {} ".format(res_gen))
-
-            if res_gen['generation']=='OK':
-                ## --- calculer la prochaine date de regeneraton
-                print("res_gen OK ")
-                print(datetime_exec_obj)
-                dt =  relativedelta(months=+int(1))  # a revoir
-                datetime_exec_obj_modif=(datetime_exec_obj+dt)
-                # datetime_exec_obj_modif=(debut+dt)
-                print(datetime_exec_obj_modif)
-                datetime_exec_obj_modif_str=datetime_exec_obj_modif.strftime("%Y-%m-%d %H:%M:%S")
-                print(datetime_exec_obj_modif_str)
-
-
-                updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  "status='{}', date_proch_exec='{}' ".format(0, datetime_exec_obj_modif_str ), "id={}".format(id_rd)  )
-                print("updated_rows: {} ".format(updated_rows))
-            else:
-                print("res_gen NOK ")
-
-
-
-        except OSError as erreur:
-            print("<= erreur: {}: ".format(erreur))
-        except:
-            # exit("quite")
-            print("<= erreur: ",str(sys.exc_info()))
-            # print ("<= erreur: Unexpected error:", sys.exc_info()[0])
-            # raise
+            try:
+                Path(destination).mkdir(parents=True, exist_ok=True)
         
+                now_str = debut.strftime("%Y%m%d_%H%M%S")
+
+                nomfichier = libelle+ '_'+now_str+'.'+Extension
+                nomfichier = str(nomfichier).replace(' ','_')
+
+                res_gen = genererFichier(connexion, destination, nomfichier, SheetName, Engine)
+                print("res_gen: {} ".format(res_gen))
+
+                if res_gen['generation']=='OK':
+                    ## --- calculer la prochaine date de regeneraton
+                    print("res_gen OK ")
+                    print(datetime_exec_obj)
+                    dt =  relativedelta(months=+int(1))  # a revoir
+                    datetime_exec_obj_modif=(datetime_exec_obj+dt)
+                    # datetime_exec_obj_modif=(debut+dt)
+                    print(datetime_exec_obj_modif)
+                    datetime_exec_obj_modif_str=datetime_exec_obj_modif.strftime("%Y-%m-%d %H:%M:%S")
+                    print(datetime_exec_obj_modif_str)
+
+
+                    updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  "status='{}', date_proch_exec='{}' ".format(0, datetime_exec_obj_modif_str ), "id={}".format(id_rd)  )
+                    print("updated_rows: {} ".format(updated_rows))
+                else:
+                    print("res_gen NOK ")
 
 
 
-        fin = datetime.now()
-        # print("now: {} ".format(now))
-        dt_string = fin.strftime("%d/%m/%Y %H:%M:%S")
-        print("==== fin dt_string: {} ".format(dt_string))
-        temps_ecoule = fin - debut
-        print("==== temps_ecoule: {} seconde(s) ".format(temps_ecoule.seconds))
+            except OSError as erreur:
+                print("<= erreur: {}: ".format(erreur))
+            except:
+                # exit("quite")
+                print("<= erreur: ",str(sys.exc_info()))
+                # print ("<= erreur: Unexpected error:", sys.exc_info()[0])
+                # raise
+            
 
-        updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  
-        "log_debut_exec='{}', log_fin_exec='{}', log_duree_exec='{}' ".format(debut,fin,temps_ecoule.seconds ), 
-        "id={}".format(id_rd)  )
-        print("updated_rows: {} ".format(updated_rows))
+
+
+            fin = datetime.now()
+            # print("now: {} ".format(now))
+            dt_string = fin.strftime("%d/%m/%Y %H:%M:%S")
+            print("==== fin dt_string: {} ".format(dt_string))
+            temps_ecoule = fin - debut
+            print("==== temps_ecoule: {} seconde(s) ".format(temps_ecoule.seconds))
+
+            updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  
+            "log_debut_exec='{}', log_fin_exec='{}', log_duree_exec='{}' ".format(debut,fin,temps_ecoule.seconds ), 
+            "id={}".format(id_rd)  )
+            print("updated_rows: {} ".format(updated_rows))
 
     cnxpostgres.closeConnexion(connection)
 
@@ -539,85 +546,95 @@ def getDeclencheurHebdomadaire(cnxpostgres):
         anneedb=r['anneedb']
         dowdb=r['dowdb']
         jours_tab=r['jours_tab']
+        # print("type:::: ",type(jours_tab))
+        print("jours_tab:::: ",(jours_tab))
+        print("dowdb:::: ",(dowdb))
+        # print("type:::: ",type(jours_tab[0]))
+        # print("type:::: ",(jours_tab[0]))
+        # if dowdb in jours_tab:
+        #     print("{} in {} ".format(dowdb, jours_tab))
+        
+        if str(dowdb) in jours_tab:
+            print("str {} in {} ".format(str(dowdb), jours_tab))
 
-        updated_rows = cnxpostgres.updateTable(connection, 
-        "requete_declencheur",  "status='{}'".format(1), 
-        "id={}".format(id_rd)  )
-        print("updated_rows: {}".format(updated_rows))
-       
-
-        connexion = {
-                        'code': code,
-                        'utidb': utidb,
-                        'passdb': passdb,
-                        'serveur':serveur,
-                        'port': port,
-                        'basedonnees': basedonnees,
-                        'sqlstr':sqlstr,
-                        'processus':processus,
-                        'libelle':libelle,
-                        'repDestination': rep_destination
-                    }
-
-        destination = Courant+"/" + processus+"/" + rep_destination
-
-        try:
-            # print("destination",destination)
-            Path(destination).mkdir(parents=True, exist_ok=True)
-            # exit(1)
-	
-            now_str = debut.strftime("%Y%m%d_%H%M%S")
-
-            nomfichier = libelle+ '_'+now_str+'.'+Extension
-            nomfichier = str(nomfichier).replace(' ','_')
-
-            res_gen = genererFichier(connexion, destination, nomfichier, SheetName, Engine)
-            print("res_gen: {} ".format(res_gen))
-
-            if res_gen['generation']=='OK':
-                ## --- calculer la prochaine date de regeneraton
-                print("res_gen OK ")
-                print(datetime_exec_obj)
-                print(debut)
-                dt =  relativedelta(weeks=+int(repeat_semaines))
-                datetime_exec_obj_modif=(datetime_exec_obj+dt)
-                # datetime_exec_obj_modif=(debut+dt)
-                print(datetime_exec_obj_modif)
-                datetime_exec_obj_modif_str=datetime_exec_obj_modif.strftime("%Y-%m-%d %H:%M:%S")
-                print(datetime_exec_obj_modif_str)
-
-
-                updated_rows = cnxpostgres.updateTable(connection, 
-                "requete_declencheur",  
-                "status='{}', date_proch_exec='{}' ".format(0, datetime_exec_obj_modif_str ),
-                 "id={}".format(id_rd)  )
-                print("updated_rows: {} ".format(updated_rows))
-            else:
-                print("res_gen NOK ")
-
-
-
-        except OSError as erreur:
-            print("<= erreur: {}: ".format(erreur))
-        except:
-            # exit("quite")
-            print("<= erreur: ",str(sys.exc_info()))
-            # print ("<= erreur: Unexpected error:", sys.exc_info()[0])
-            # raise
+            updated_rows = cnxpostgres.updateTable(connection, 
+            "requete_declencheur",  "status='{}'".format(1), 
+            "id={}".format(id_rd)  )
+            print("updated_rows: {}".format(updated_rows))
         
 
+            connexion = {
+                            'code': code,
+                            'utidb': utidb,
+                            'passdb': passdb,
+                            'serveur':serveur,
+                            'port': port,
+                            'basedonnees': basedonnees,
+                            'sqlstr':sqlstr,
+                            'processus':processus,
+                            'libelle':libelle,
+                            'repDestination': rep_destination
+                        }
 
-        fin = datetime.now()
-        # print("now: {} ".format(now))
-        dt_string = fin.strftime("%d/%m/%Y %H:%M:%S")
-        print("==== fin dt_string: {} ".format(dt_string))
-        temps_ecoule = fin - debut
-        print("==== temps_ecoule: {} seconde(s) ".format(temps_ecoule.seconds))
+            destination = Courant+"/" + processus+"/" + rep_destination
 
-        updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  
-        "log_debut_exec='{}', log_fin_exec='{}', log_duree_exec='{}' ".format(debut,fin,temps_ecoule.seconds ), 
-        "id={}".format(id_rd)  )
-        print("updated_rows: {} ".format(updated_rows))
+            try:
+                # print("destination",destination)
+                Path(destination).mkdir(parents=True, exist_ok=True)
+                # exit(1)
+        
+                now_str = debut.strftime("%Y%m%d_%H%M%S")
+
+                nomfichier = libelle+ '_'+now_str+'.'+Extension
+                nomfichier = str(nomfichier).replace(' ','_')
+
+                res_gen = genererFichier(connexion, destination, nomfichier, SheetName, Engine)
+                print("res_gen: {} ".format(res_gen))
+
+                if res_gen['generation']=='OK':
+                    ## --- calculer la prochaine date de regeneraton
+                    print("res_gen OK ")
+                    print(datetime_exec_obj)
+                    print(debut)
+                    dt =  relativedelta(weeks=+int(repeat_semaines))
+                    datetime_exec_obj_modif=(datetime_exec_obj+dt)
+                    # datetime_exec_obj_modif=(debut+dt)
+                    print(datetime_exec_obj_modif)
+                    datetime_exec_obj_modif_str=datetime_exec_obj_modif.strftime("%Y-%m-%d %H:%M:%S")
+                    print(datetime_exec_obj_modif_str)
+
+
+                    updated_rows = cnxpostgres.updateTable(connection, 
+                    "requete_declencheur",  
+                    "status='{}', date_proch_exec='{}' ".format(0, datetime_exec_obj_modif_str ),
+                    "id={}".format(id_rd)  )
+                    print("updated_rows: {} ".format(updated_rows))
+                else:
+                    print("res_gen NOK ")
+
+
+
+            except OSError as erreur:
+                print("<= erreur: {}: ".format(erreur))
+            except:
+                # exit("quite")
+                print("<= erreur: ",str(sys.exc_info()))
+                # print ("<= erreur: Unexpected error:", sys.exc_info()[0])
+                # raise
+            
+
+
+            fin = datetime.now()
+            # print("now: {} ".format(now))
+            dt_string = fin.strftime("%d/%m/%Y %H:%M:%S")
+            print("==== fin dt_string: {} ".format(dt_string))
+            temps_ecoule = fin - debut
+            print("==== temps_ecoule: {} seconde(s) ".format(temps_ecoule.seconds))
+
+            updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  
+            "log_debut_exec='{}', log_fin_exec='{}', log_duree_exec='{}' ".format(debut,fin,temps_ecoule.seconds ), 
+            "id={}".format(id_rd)  )
+            print("updated_rows: {} ".format(updated_rows))
 
     cnxpostgres.closeConnexion(connection)
 

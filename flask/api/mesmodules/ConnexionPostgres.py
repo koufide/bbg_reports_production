@@ -499,10 +499,11 @@ class ConnexionPostgres:
         sqlstr="""
         SELECT  EXTRACT (YEAR FROM NOW()) AS anneedb, EXTRACT (MONTH FROM NOW()) AS moisdb, EXTRACT (DAY FROM NOW()) AS jourdb, rd.date_proch_exec,
  			TO_CHAR(NOW() , 'yyyy-mm-dd HH24:MI:SS') now_str,
-            rd.id id_rd, rd.requete_id, rd.declencheur_id, d.date_exec, d.heure_exec, d.frequence, d.mois, d.jours_du_mois,
-                r.libelle libelle, r.rep_destination, r.sqlstr,
-                c.serveur, c.port, c.basedonnees, c.utidb, c.passdb, c.nom connexion_nom,
-                tc.code, tc.libelle typeconnexion_libelle , p.nom processus
+            rd.id id_rd, rd.requete_id, rd.declencheur_id, d.date_exec, d.heure_exec, d.frequence, 
+			d.mois,  array[d.mois] mois_tab,  d.jours_du_mois, array[d.jours_du_mois] jours_du_mois_tab,
+            r.libelle libelle, r.rep_destination, r.sqlstr,
+            c.serveur, c.port, c.basedonnees, c.utidb, c.passdb, c.nom connexion_nom,
+            tc.code, tc.libelle typeconnexion_libelle , p.nom processus
         FROM requete_declencheur rd, declencheur d, requete r, connexion c, type_connexion tc, processus p
         WHERE d.id=rd.declencheur_id AND r.id=rd.requete_id AND c.id=r.connexion_id
             AND tc.id=c.type_connexion_id AND p.id=r.processus_id

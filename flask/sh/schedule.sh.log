@@ -4,15 +4,27 @@ pip 21.1.1 from /var/www/html/bbg-reports/flask/venv3/lib/python3.9/site-package
 this_python (3, 9)
 ==================== DEMARRAGE ====================
 __main__
+__getDeclencheurMensuel__
+mesmodules.ConnexionPostgres
+__getDeclencheursMensuel__
+mesmodules.ConnexionPostgres
+__closeConnexion__
+__main__
+__getDeclencheurHebdomadaire__
+mesmodules.ConnexionPostgres
+__getDeclencheursHebdomadaire__
+mesmodules.ConnexionPostgres
+__closeConnexion__
+__main__
 __getDeclencheurJournalier__
 mesmodules.ConnexionPostgres
 __getDeclencheursJournalier__
 mesmodules.ConnexionPostgres
 __closeConnexion__
 __main__
-__getDeclencheurMensuel__
+__getDeclencheurUnefois__
 mesmodules.ConnexionPostgres
-__getDeclencheursMensuel__
+__getDeclencheursUnefois__
 mesmodules.ConnexionPostgres
 __closeConnexion__
 ==================== FIN ==========================
