@@ -166,10 +166,12 @@ def getDeclencheurMensuel(cnxpostgres):
         libelle=r['libelle']
         rep_destination=r['rep_destination']
         mois=r['mois']
-        mois_tab=r['mois_tab']
+        # mois_tab=r['mois_tab']
+        mois_tab = list(str(mois).split(','))
         print("mois_tab: {}".format(mois_tab))
         jours_du_mois=r['jours_du_mois']
-        jours_du_mois_tab=r['jours_du_mois_tab']
+        # jours_du_mois_tab=r['jours_du_mois_tab']
+        jours_du_mois_tab=list(str(jours_du_mois).split(','))
         print("jours_du_mois_tab: {}".format(jours_du_mois_tab))
         frequence=r['frequence']
         date_proch_exec=r['date_proch_exec']
@@ -178,8 +180,22 @@ def getDeclencheurMensuel(cnxpostgres):
         jourdb=r['jourdb']
         moisdb=r['moisdb']
         anneedb=r['anneedb']
+        # print("jours_du_mois_tab.count(str(jourdb) ) => {}".format( jours_du_mois_tab.count(str(jourdb)) ))
+        # print("mois_tab.count(str(moisdb)) => {}".format( mois_tab.count(str(moisdb)) ))
+        # print(" => x{}x => {}".format( moisdb, mois_tab ))
+        # print("=> type(mois_tab) : {}".format( type(mois_tab)  ))
+        # print("=> mois_tab.count('5') : {}".format( mois_tab.count('5')  ))
+        # print("=> mois_tab.count(5) : {}".format( mois_tab.count(5)  ))
+        # une_liste = mois_tab
+        # print("=> une_liste.count('5') : {}".format( une_liste.count('5')  ))
+        # print("=> une_liste.count(5) : {}".format( une_liste.count(5)  ))
+        # ma_liste = list(str(mois).split(','))
+        # print("ma_liste: {}".format(ma_liste))
 
-        if str(jourdb) in jours_du_mois_tab and str(moisdb) in mois_tab:
+
+
+        # if str(jourdb) in jours_du_mois_tab and str(moisdb) in mois_tab:
+        if jours_du_mois_tab.count(str(jourdb)) > 0 and  mois_tab.count(str(moisdb))>0:
             print("=> {} in {}, {} in {}".format(str(jourdb), jours_du_mois_tab,  str(moisdb), mois_tab ))
 
             updated_rows = cnxpostgres.updateTable(connection, "requete_declencheur",  "status='{}'".format(1), "id={}".format(id_rd)  )
@@ -252,7 +268,8 @@ def getDeclencheurMensuel(cnxpostgres):
             "log_debut_exec='{}', log_fin_exec='{}', log_duree_exec='{}' ".format(debut,fin,temps_ecoule.seconds ), 
             "id={}".format(id_rd)  )
             print("updated_rows: {} ".format(updated_rows))
-
+        else:
+            print("<= str(jourdb): {}, jours_du_mois_tab:{}, str(moisdb):{}, mois_tab:{} ".format(str(jourdb), jours_du_mois_tab, str(moisdb), mois_tab ))
     cnxpostgres.closeConnexion(connection)
 
 def getDeclencheurJournalier(cnxpostgres):
@@ -545,7 +562,8 @@ def getDeclencheurHebdomadaire(cnxpostgres):
         moisdb=r['moisdb']
         anneedb=r['anneedb']
         dowdb=r['dowdb']
-        jours_tab=r['jours_tab']
+        # jours_tab=r['jours_tab']
+        jours_tab=list(str(jours).split(','))
         # print("type:::: ",type(jours_tab))
         print("jours_tab:::: ",(jours_tab))
         print("dowdb:::: ",(dowdb))

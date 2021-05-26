@@ -497,10 +497,13 @@ class ConnexionPostgres:
        
 
         sqlstr="""
-        SELECT  EXTRACT (YEAR FROM NOW()) AS anneedb, EXTRACT (MONTH FROM NOW()) AS moisdb, EXTRACT (DAY FROM NOW()) AS jourdb, rd.date_proch_exec,
- 			TO_CHAR(NOW() , 'yyyy-mm-dd HH24:MI:SS') now_str,
+        SELECT  cast(EXTRACT (YEAR FROM NOW()) as varchar) AS anneedb, 
+            cast(EXTRACT (MONTH FROM NOW()) as varchar) AS moisdb, 
+            cast(EXTRACT (DAY FROM NOW()) as varchar) AS jourdb, 
+            rd.date_proch_exec,
+            TO_CHAR(NOW() , 'yyyy-mm-dd HH24:MI:SS') now_str,
             rd.id id_rd, rd.requete_id, rd.declencheur_id, d.date_exec, d.heure_exec, d.frequence, 
-			d.mois,  array[d.mois] mois_tab,  d.jours_du_mois, array[d.jours_du_mois] jours_du_mois_tab,
+            d.mois,  array[d.mois] mois_tab,  d.jours_du_mois, array[d.jours_du_mois] jours_du_mois_tab,
             r.libelle libelle, r.rep_destination, r.sqlstr,
             c.serveur, c.port, c.basedonnees, c.utidb, c.passdb, c.nom connexion_nom,
             tc.code, tc.libelle typeconnexion_libelle , p.nom processus
@@ -510,7 +513,7 @@ class ConnexionPostgres:
             AND d.frequence='MENSUEL'
             AND ( (d.date_exec = TO_CHAR(NOW() :: DATE, 'yyyy-mm-dd') and rd.date_proch_exec is null   AND  
                         TO_CHAR(d.heure_exec::TIME,'HH24:MI') <= TO_CHAR(now()::TIME,'HH24:MI')
-			        ) or ( rd.date_proch_exec <= TO_CHAR(NOW(), 'yyyy-mm-dd HH24:MI:SS')  ) )
+                    ) or ( rd.date_proch_exec <= TO_CHAR(NOW(), 'yyyy-mm-dd HH24:MI:SS')  ) )
             AND (rd.status is null or rd.status=0)
         ORDER BY d.frequence
         FOR UPDATE
